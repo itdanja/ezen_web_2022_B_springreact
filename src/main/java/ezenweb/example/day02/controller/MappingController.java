@@ -33,7 +33,7 @@ public class MappingController {
     @RequestMapping( value = "/orange" , method = RequestMethod.DELETE )
     @ResponseBody
     public String deleteOrange(){
-        log.info("클라이언트로부터 putOrange 메소드 요청이 들어옴");
+        log.info("클라이언트로부터 deleteOrange 메소드 요청이 들어옴");
         return  "정상 응답";
     }
 }
