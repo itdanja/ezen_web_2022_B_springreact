@@ -28,6 +28,13 @@ public class PostMappingController {
         log.info( "post method3 : " + map );
         return map ;
     }
+    // 3. @RequestParam [ 실패 ]
+    @PostMapping("/method33")
+    public Map<String , String > method33( @RequestBody Map<String , String > map ){
+        log.info( "post method3 : " + map );
+        return map ;
+    }
+
     // 4. @ModelAttribute [ 실패 ]
     @PostMapping("/method4")
     public ParamDto method4( @ModelAttribute ParamDto dto ){
