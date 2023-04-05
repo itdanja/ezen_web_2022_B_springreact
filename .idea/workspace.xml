@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day65 MVC패턴">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680657847564</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="day65 MVC패턴">
+      <created>1680661533128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680661533128</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
