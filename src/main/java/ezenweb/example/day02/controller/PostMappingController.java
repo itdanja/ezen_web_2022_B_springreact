@@ -28,7 +28,7 @@ public class PostMappingController {
         log.info( "post method3 : " + map );
         return map ;
     }
-    // 3. @RequestParam [ 실패 ]
+    // 3. @RequestParam [ 성공 ]
     @PostMapping("/method33")
     public Map<String , String > method33( @RequestBody Map<String , String > map ){
         log.info( "post method3 : " + map );
