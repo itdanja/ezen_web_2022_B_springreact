@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day65 MVC패턴">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/note.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/note.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680664988996</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="day65 MVC패턴">
+      <created>1680670360027</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680670360027</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

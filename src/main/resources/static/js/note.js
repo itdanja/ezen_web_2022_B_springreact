@@ -23,6 +23,74 @@ function onget(){
     $.ajax({ // AJAX 이용한 @GetMapping 에게 요청응답
         url : "/note/get",
         method : "get" ,
-        success : (r) => { console.log(r) }
+        success : (r) => {
+            console.log(r)
+
+            let html = `
+                    <tr>
+                        <th>번호</th><th>내용</th><th>비고</th>
+                    </tr>
+            `;
+            r.forEach( ( n ) =>{
+
+                html += `
+                        <tr>
+                            <th>${ n.nno }</th><th>${ n.ncontents }</th>
+                            <th>
+                                <button onclick="ondelete(${n.nno})" type="button">삭제</button>
+                                <button onclick="onupdate(${n.nno})" type="button">수정</button>
+                            </th>
+                        </tr>
+                `;
+            })
+            document.querySelector(".notetable").innerHTML = html;
+        }
     })
 }
+// 3. 삭제
+function ondelete( nno ){
+    $.ajax({
+        url : "/note/delete",
+        method : "delete",
+        data : { "nno" : nno } ,
+        success : (r)=>{  console.log(r);
+            if( r == true ){  alert('글 삭제성공'); onget(); }
+            else{ alert('글삭제 실패 ')}
+        }
+    })
+}
+// 4. 수정
+function onupdate( nno ){
+    let ncontents = prompt("수정할내용 : "); console.log( ncontents);
+    $.ajax({
+        url : "/note/update",
+        method : "put",
+        data : JSON.stringify(  { "nno" : nno , "ncontents" : ncontents } ) ,
+        contentType : "application/json" ,
+        success : (r) =>{ console.log(r);
+            if( r == true ){  alert('글 수정 성공'); onget(); }
+            else{ alert('글수정 실패 ')}
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
