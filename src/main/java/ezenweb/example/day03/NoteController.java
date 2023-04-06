@@ -28,7 +28,8 @@ public class NoteController {
     @PostMapping("/write")  // http://localhost:8080/note/write   // { "ncontents" : "내용물"}
     public boolean write( @RequestBody NoteDto noteDto ){ log.info(" write in : " + noteDto );
         // 1. 인스턴스 객체
-            // NoteService service = new NoteService();     service.write( noteDto );
+            // NoteService service = new NoteService();
+            // service.write( noteDto );
         // 2. @Autowired
         boolean result =  noteService.write( noteDto );
         // * response.getwritr.print() == return
