@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Data@Builder@NoArgsConstructor@AllArgsConstructor
 public class ProductEntity extends BaseTime {
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue( strategy = GenerationType.AUTO)
     private int pno;
     @Column
     private String pname;

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day65 MVC패턴">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day67 회원 컨트롤러 구현중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day03/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/domain/entity/product/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/domain/entity/product/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/AppStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/AppStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,13 +54,13 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ezenweb.example.day04.AppStart">
+  <component name="RunManager" selected="Application.ezenweb.web.AppStart">
     <configuration name="AppStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ezenweb.example.day01.AppStart" />
+      <option name="MAIN_CLASS_NAME" value="ezenweb.web.AppStart" />
       <module name="ezenweb.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ezenweb.example.day01.*" />
+          <option name="PATTERN" value="ezenweb.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ezenweb.web.AppStart" />
         <item itemvalue="Application.ezenweb.example.day04.AppStart" />
         <item itemvalue="Application.ezenweb.example.day03.AppStart" />
         <item itemvalue="Application.SpringStart" />
         <item itemvalue="Application.ezenweb.example.day01Q.AppStart" />
-        <item itemvalue="Application.AppStart" />
       </list>
     </recent_temporary>
   </component>
@@ -199,13 +202,29 @@
       <option name="project" value="LOCAL" />
       <updated>1680672480218</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="day66 MVC 레이어드 구조 / 패키지 구조 / 엔티티 날짜 주입">
+      <created>1680757454752</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680757454752</updated>
+    </task>
+    <task id="LOCAL-00011" summary="day67 회원 컨트롤러 구현중">
+      <created>1681089669329</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681089669330</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day64 restful api" />
     <MESSAGE value="day65 MVC패턴" />
-    <option name="LAST_COMMIT_MESSAGE" value="day65 MVC패턴" />
+    <MESSAGE value="day66 MVC 레이어드 구조 / 패키지 구조 / 엔티티 날짜 주입" />
+    <MESSAGE value="day67 회원 컨트롤러 구현중" />
+    <option name="LAST_COMMIT_MESSAGE" value="day67 회원 컨트롤러 구현중" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
