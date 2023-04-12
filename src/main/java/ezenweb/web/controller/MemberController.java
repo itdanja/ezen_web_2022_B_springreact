@@ -48,4 +48,21 @@ public class MemberController {
         boolean result = memberService.delete( mno );
         return result;
     }
+
+    // -------------- 스프링 시큐리티 사용하기 전 --------------- //
+    @PostMapping("/login")
+    public boolean login( @RequestBody MemberDto memberDto ){
+        boolean result = memberService.login( memberDto );
+        return result;
+    }
+
+
 }
+
+
+
+
+
+
+
+

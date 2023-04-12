@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day67 회원 컨트롤러 구현중">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day70 index,signup,login 페이지 매핑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/domain/entity/product/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day04/domain/entity/product/ProductEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/AppStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/AppStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -38,23 +37,24 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/504t/Documents/카카오톡 받은 파일/ezen_web_2022_B_springreact",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ezenweb.web.AppStart">
+  <component name="RunManager" selected="Application.AppStart">
     <configuration name="AppStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.web.AppStart" />
       <module name="ezenweb.main" />
@@ -122,7 +122,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ezenweb.web.AppStart" />
         <item itemvalue="Application.ezenweb.example.day04.AppStart" />
         <item itemvalue="Application.ezenweb.example.day03.AppStart" />
         <item itemvalue="Application.SpringStart" />
@@ -216,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681089669330</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트">
+      <created>1681096784727</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681096784727</updated>
+    </task>
+    <task id="LOCAL-00013" summary="day70 index,signup,login 페이지 매핑">
+      <created>1681266059185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681266059185</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -224,7 +237,9 @@
     <MESSAGE value="day65 MVC패턴" />
     <MESSAGE value="day66 MVC 레이어드 구조 / 패키지 구조 / 엔티티 날짜 주입" />
     <MESSAGE value="day67 회원 컨트롤러 구현중" />
-    <option name="LAST_COMMIT_MESSAGE" value="day67 회원 컨트롤러 구현중" />
+    <MESSAGE value="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트" />
+    <MESSAGE value="day70 index,signup,login 페이지 매핑" />
+    <option name="LAST_COMMIT_MESSAGE" value="day70 index,signup,login 페이지 매핑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
