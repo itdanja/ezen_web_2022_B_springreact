@@ -5,6 +5,7 @@ import ezenweb.web.domain.member.MemberEntity;
 import ezenweb.web.domain.member.MemberEntityRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -79,19 +80,6 @@ public class MemberService implements UserDetailsService {
         return false;
     }
     */
-    // 2. [세션에 존재하는 ] 회원정보
-    @Transactional
-    public MemberDto info(  ){
-        String memail = (String)request.getSession().getAttribute("login");
-        if( memail != null ){
-            MemberEntity entity = memberEntityRepository.findByMemail( memail );
-            return entity.todto();
-        }
-        return null;
-    }
-    // 2. [ 세션에 존재하는 정보 제거 ] 로그아웃
-    @Transactional
-    public boolean logout(){ request.getSession().setAttribute("login",null); return true; }
 
     // 3. 회원수정
     @Transactional
@@ -116,6 +104,12 @@ public class MemberService implements UserDetailsService {
         }
         return false;
     }
+    /*
+    // 2. [ 세션에 존재하는 정보 제거 ] 로그아웃
+    @Transactional
+    public boolean logout(){ request.getSession().setAttribute("login",null); return true; }
+     */
+
 
     // [ 스프링 시큐리티 적용했을때 사용되는 로그인 메소드 ]
     @Override
@@ -126,6 +120,34 @@ public class MemberService implements UserDetailsService {
         MemberEntity entity = memberEntityRepository.findByMemail(memail);
         if( entity == null ){ return null; }
         // 3. 검증후 세션에 저장할 DTO 반환
-        return new MemberDto();
+        MemberDto dto = entity.todto();
+        log.info( "dto:" + dto);
+        return dto;
     }
+    // 2. [세션에 존재하는 ] 회원정보
+    @Transactional
+    public MemberDto info(  ){
+        // 1. 시큐리티 인증[로그인] 된 UserDetails객체[세션]로 관리 했을때 [ Spring ]
+            // SecurityContextHolder : 시큐리티 정보 저장소
+            // SecurityContextHolder.getContext()  : 시큐리티 저장된 정보 호출
+            // SecurityContextHolder.getContext().getAuthentication();  // 인증 전체 정보 호출
+            // log.info(" Auth : " + SecurityContextHolder.getContext().getAuthentication() );
+            // log.info(" Auth : " + SecurityContextHolder.getContext().getAuthentication().getPrincipal() );
+        Object o = SecurityContextHolder.getContext().getAuthentication().getPrincipal(); // 인증된 회원의 정보 호출
+        if( o == null ){ return null; }
+
+        // 2. 인증된 객체내 회원정보[ Principal ] 타입 변환
+        return (MemberDto)o; //  Object ---> dto
+        /*
+        // 2. 일반 세션으로 로그인 정보를 관리 했을때 [ JSP ]
+        String memail = (String)request.getSession().getAttribute("login");
+        if( memail != null ){
+            MemberEntity entity = memberEntityRepository.findByMemail( memail );
+            return entity.todto();
+        }
+        return null;
+         */
+    }
+
+
 }
