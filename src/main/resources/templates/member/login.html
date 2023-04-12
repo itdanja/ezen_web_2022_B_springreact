@@ -9,9 +9,9 @@
     <div>
         <a href="/">홈으로</a>
         <h3> 로그인 페이지 </h3>
-        <form>
-            아이디[이메일] : <input type="text" class="memail"> </br>
-            비밀번호 : <input type="text" class="mpassword">  </br>
+        <form action="/member/login" method="post">
+            아이디[이메일] : <input type="text" name="memail"> </br>
+            비밀번호 : <input type="text" name="mpassword">  </br>
             <button onclick="onLogin()" type="button"> 로그인 </button>
         </form>
     </div>

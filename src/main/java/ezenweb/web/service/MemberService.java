@@ -5,6 +5,9 @@ import ezenweb.web.domain.member.MemberEntity;
 import ezenweb.web.domain.member.MemberEntityRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,7 +21,9 @@ import java.util.Optional;
 
 @Service // 서비스 레이어
 @Slf4j
-public class MemberService {
+public class MemberService implements UserDetailsService {
+
+
 
     @Autowired
     private MemberEntityRepository memberEntityRepository;
@@ -39,7 +44,11 @@ public class MemberService {
         if( entity.getMno() > 0 ){ return  true;}
         return false;
     }
+    // **** 로그인 [ 시큐리티 사용 했을때 ]
+        // 시큐리티는 API [ 누군가 미리 만들어진 메소드 안에서 커스터마이징[ 수정 ]
+
     // *2 로그인 [ 시큐리티 사용 하기 전 ]
+    /*
     @Transactional
     public boolean login( MemberDto memberDto  ){
         // 1. 입력받은 이메일 로 엔티티 찾기
@@ -51,7 +60,7 @@ public class MemberService {
             request.getSession().setAttribute("login", entity.getMemail() );
             return true;
         }
-        /*
+        *//*
         // 2. 입력받은 이메일과 패스워드가 동일한지
         Optional<MemberEntity> result = memberEntityRepository.findByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
         log.info("result : " + result  );
@@ -60,15 +69,16 @@ public class MemberService {
             return  true;
         }
 
-        */
-        /*
+        *//*
+        *//*
         // 3.
         boolean result = memberEntityRepository.existsByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
             log.info( "result : " + result );
         if( result == true ){ request.getSession().setAttribute("login", memberDto.getMemail()); return true; }
-        */
+        *//*
         return false;
     }
+    */
     // 2. [세션에 존재하는 ] 회원정보
     @Transactional
     public MemberDto info(  ){
@@ -105,5 +115,17 @@ public class MemberService {
             return true;
         }
         return false;
+    }
+
+    // [ 스프링 시큐리티 적용했을때 사용되는 로그인 메소드 ]
+    @Override
+    public UserDetails loadUserByUsername(String memail ) throws UsernameNotFoundException {
+        // 1. UserDetailsService 인터페이스 구현
+        // 2. loadUserByUsername() 메소드 : 아이디 검증
+            // 패스워드 검증 [ 시큐리티 자동 ]
+        MemberEntity entity = memberEntityRepository.findByMemail(memail);
+        if( entity == null ){ return null; }
+        // 3. 검증후 세션에 저장할 DTO 반환
+        return new MemberDto();
     }
 }
