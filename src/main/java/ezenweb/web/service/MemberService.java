@@ -42,20 +42,15 @@ public class MemberService {
     // *2 로그인 [ 시큐리티 사용 하기 전 ]
     @Transactional
     public boolean login( MemberDto memberDto  ){
-        /*
         // 1. 입력받은 이메일 로 엔티티 찾기
-        MemberEntity entity = memberEntityRepository.findBymemail( memberDto.getMemail() );
-            log.info( "entity : " + entity );
-         // 2. 패스워드 검증
-        if( entity.getMpassword().equals( memberDto.getMpassword() ) ) {
-            // == 스택 메모리 내 데이터 비교
-            // .equals() 힙 메모리 내 데이터 비교
-            // matches() : 문자열 주어진 패턴 포함 동일여부 체크
-            // 세션 사용 : 메소드 밖 필드에 @Autowired private HttpServletRequest request;
-            request.getSession().setAttribute("login", entity.getMno() );
+        MemberEntity entity = memberEntityRepository.findByMemail( memberDto.getMemail() );  log.info( "entity : " + entity );
+         // 2. 찾은 엔티티 안에는 암호화된 패스워드
+            // 엔티티안에 있는 패스워드[암호화된상태] 와 입력받은 패스워드[안된상태] 와 비교
+        if( new BCryptPasswordEncoder().matches(  memberDto.getMpassword() , entity.getMpassword() )  ) {
+           // 세션 사용 : 메소드 밖 필드에 @Autowired private HttpServletRequest request;
+            request.getSession().setAttribute("login", entity.getMemail() );
             return true;
         }
-        */
         /*
         // 2. 입력받은 이메일과 패스워드가 동일한지
         Optional<MemberEntity> result = memberEntityRepository.findByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
@@ -64,11 +59,14 @@ public class MemberService {
             request.getSession().setAttribute("login", result.get().getMno() );
             return  true;
         }
+
         */
+        /*
         // 3.
         boolean result = memberEntityRepository.existsByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
             log.info( "result : " + result );
         if( result == true ){ request.getSession().setAttribute("login", memberDto.getMemail()); return true; }
+        */
         return false;
     }
     // 2. [세션에 존재하는 ] 회원정보
