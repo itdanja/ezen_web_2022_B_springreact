@@ -46,6 +46,7 @@ public class MemberService {
             return true;
         }
         */
+        /*
         // 2. 입력받은 이메일과 패스워드가 동일한지
         Optional<MemberEntity> result = memberEntityRepository.findByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
         log.info("result : " + result  );
@@ -53,18 +54,28 @@ public class MemberService {
             request.getSession().setAttribute("login", result.get().getMno() );
             return  true;
         }
+
+        */
+        // 3.
+        boolean result = memberEntityRepository.existsByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
+            log.info( "result : " + result );
+        if( result == true ){ request.getSession().setAttribute("login", memberDto.getMemail()); return true; }
         return false;
     }
-    // 2. 회원정보
+    // 2. [세션에 존재하는 ] 회원정보
     @Transactional
-    public MemberDto info( int mno ){
-        Optional<MemberEntity> entityOptional = memberEntityRepository.findById( mno );
-        if( entityOptional.isPresent() ){
-            MemberEntity entity =  entityOptional.get();
+    public MemberDto info(  ){
+        String memail = (String)request.getSession().getAttribute("login");
+        if( memail != null ){
+            MemberEntity entity = memberEntityRepository.findByMemail( memail );
             return entity.todto();
         }
         return null;
     }
+    // 2. [ 세션에 존재하는 정보 제거 ] 로그아웃
+    @Transactional
+    public boolean logout(){ request.getSession().setAttribute("login",null); return true; }
+
     // 3. 회원수정
     @Transactional
     public boolean update(  MemberDto memberDto ){

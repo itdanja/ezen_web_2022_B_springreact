@@ -30,12 +30,12 @@ public class MemberController {
         boolean result = memberService.write( memberDto);
         return result;
     }
+    // 2. 회원정보[세션 ] 로그아웃
+    @GetMapping("/logout")public boolean logout(){ return memberService.logout(); }
     // 2. [R]회원정보 호출
     @GetMapping("/info")
-    public MemberDto info( @RequestParam int mno ){  log.info(" member info info : " + mno );
-        MemberDto result = memberService.info( mno );
-        return result;
-    }
+    public MemberDto info( ){   MemberDto result = memberService.info(  ); return result; }
+
     // 3. [U]회원정보 수정
     @PutMapping("/info")
     public boolean update( @RequestBody MemberDto memberDto ){  log.info(" member info update : " + memberDto );
