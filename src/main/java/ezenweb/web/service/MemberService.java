@@ -5,6 +5,8 @@ import ezenweb.web.domain.member.MemberEntity;
 import ezenweb.web.domain.member.MemberEntityRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +27,14 @@ public class MemberService {
     // 1. 회원가입
     @Transactional
     public boolean write( MemberDto memberDto ){
+        // 스프링 시큐리티에서 제공하는 암호화[ 사람이 이해하기 어렵고 컴퓨터는 이해할수 있는 단어 ] 사용하기
+            // DB 내에서 패스워드 감추기 , 정보가 이동하면 패스워드 노출 방지
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+                // 인코더 : 특정 형식으로변경  // 디코더 : 원본으로 되돌리기
+            log.info("비크립트 암호화 사용 : " + passwordEncoder.encode( "1234") );
+        // 입력받은[DTO] 패스워드 암호화 해서 다시 DTO에 저장하자.
+        memberDto.setMpassword( passwordEncoder.encode( memberDto.getMpassword() ) );
+
         MemberEntity entity = memberEntityRepository.save( memberDto.toEntity() );
         if( entity.getMno() > 0 ){ return  true;}
         return false;
@@ -54,7 +64,6 @@ public class MemberService {
             request.getSession().setAttribute("login", result.get().getMno() );
             return  true;
         }
-
         */
         // 3.
         boolean result = memberEntityRepository.existsByMemailAndMpassword(memberDto.getMemail(), memberDto.getMpassword());
