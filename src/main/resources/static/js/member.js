@@ -33,3 +33,32 @@ function onLogin(){
         }
     })
 }
+getMember();
+function getMember(){
+    $.ajax({
+        url : "/member/info",
+        method : "get",
+        success : (r)=>{
+            document.querySelector('.infobox').innerHTML = `${ r.mname }님`
+            document.querySelector('.infobox').innerHTML += `<button onclick="getLogout()" type="button">로그아웃</button>`
+        }
+    })
+}
+function getLogout(){
+    $.ajax({
+        url : "/member/logout",
+        method : "get" ,
+        success : (r)=>{
+            location.href="/";
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
