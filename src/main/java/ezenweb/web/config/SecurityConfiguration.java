@@ -28,9 +28,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //super.configure(http); // super : 부모 클래스 호출
         http
-                .csrf() // 사이트 간 요청 위조 [ post,put http 사용 불가능 ]
-                    .ignoringAntMatchers("/member/info") // 특정 매핑URL csrf 무시
-                    .ignoringAntMatchers("/member/login")
+                // 권한에 따른 HTTP GET 요청 제한
+                .authorizeHttpRequests() // HTTP 인증 요청
+                    .antMatchers("/member/info/mypage")// 인증시에만 사용할 URL
+                    .hasRole("user") // 위 URL 패턴을 요청할수 있는 권한명
+                .antMatchers("/admin/**") // localhost:8080/admin/ ~~ 이하 페이지는 모두 제한
+                    .hasRole("admin")
+                .antMatchers("/board/write")// 글쓰기 페이지는 회원만 가능
+                    .hasRole("user")
+                .antMatchers("/**") // localhost:8080 ~ 이하 페이지는 권한 해제
+                    .permitAll() // 권한 해제
+                    // 토큰 ( ROLE_user ) :  ROLE_ 제외한 권한명 작성 // 인증 자체가 없을경우 로그인페이지 자동 이동
+                .and()
+                        .csrf() // 사이트 간 요청 위조 [ post,put http 사용 불가능 ]
+                            .ignoringAntMatchers("/member/info") // 특정 매핑URL csrf 무시
+                            .ignoringAntMatchers("/member/login")
                 .and()//  기능 추가/구분 할때 사용되는 메소드
                     .formLogin()
                         .loginPage("/member/login") // 로그인 으로 사용될 페이지의 매핑 URL
@@ -46,3 +58,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         .invalidateHttpSession( true ); // 세션 초기화x
     }
 }
+
+
+/*
+    http 오류
+        404 : 페이지 없거나 , 경로 문제
+        403 : 요청 거절
+
+ */
