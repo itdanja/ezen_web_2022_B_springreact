@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day71 회원가입 일반유저 user 권한 부여 , 로그인시 인증 권한 UserDetails 포함">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day71 인증[권한] 결과를 이용한 HTTP 요청 제한">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -67,6 +64,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\static" />
+      <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\templates\error" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ezenweb.example.day02.controller" />
     </key>
@@ -303,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681352461786</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="day71 인증[권한] 결과를 이용한 HTTP 요청 제한">
+      <created>1681354784749</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681354784749</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -320,7 +328,8 @@
     <MESSAGE value="day70 스프링 시큐리티 로그인기능 커스터마이징 하기" />
     <MESSAGE value="day70 스프링 시큐리티 로그인 세션 관리 [ getPrincipal ]" />
     <MESSAGE value="day71 회원가입 일반유저 user 권한 부여 , 로그인시 인증 권한 UserDetails 포함" />
-    <option name="LAST_COMMIT_MESSAGE" value="day71 회원가입 일반유저 user 권한 부여 , 로그인시 인증 권한 UserDetails 포함" />
+    <MESSAGE value="day71 인증[권한] 결과를 이용한 HTTP 요청 제한" />
+    <option name="LAST_COMMIT_MESSAGE" value="day71 인증[권한] 결과를 이용한 HTTP 요청 제한" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
