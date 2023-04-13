@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Set;
 
 // 시큐리티[UserDetails] + 일반DTO
 @Getter@Setter@ToString@AllArgsConstructor@NoArgsConstructor@Builder
@@ -17,7 +18,8 @@ public class MemberDto implements UserDetails{
     private String mpassword; // 3. 회원비밀번호
     private String mname; // 4. 회원이름
     private String mphone; // 5. 회원전화번호
-    private String mrole;// 6. 회원등급
+    private String mrole;// 6. 회원등급 [ 가입용 ]
+    private Set<GrantedAuthority> 권한목록; //7.[ 인증용 ]
 
     // 추가
     private LocalDateTime cdate;
@@ -27,13 +29,13 @@ public class MemberDto implements UserDetails{
         return MemberEntity.builder()
                 .mno( this.mno ) .memail( this.memail )
                 .mname( this.mname ).mphone( this.mphone )
-                .mpassword( this.mpassword )
+                .mpassword( this.mpassword ).mrole(this.getMrole())
                 .build();
     }
 
     @Override // 인증된 권한 반환
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return this.권한목록;
     }
 
     @Override // 패스워드 반환
