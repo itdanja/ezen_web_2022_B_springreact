@@ -35,7 +35,7 @@ dependencies {
     runtimeOnly 'com.mysql:mysql-connector-j'       // mysql 드라이버
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA [ application.properties DB연동 필수 ]
     implementation 'org.springframework.boot:spring-boot-starter-security' // 스프링 시큐리티
-
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client' // Oauth2
 }
 
 tasks.named('test') {
