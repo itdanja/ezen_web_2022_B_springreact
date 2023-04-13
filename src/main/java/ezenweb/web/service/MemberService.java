@@ -34,30 +34,40 @@ import java.util.*;
 @Slf4j
 public class MemberService implements UserDetailsService , OAuth2UserService<OAuth2UserRequest , OAuth2User> {
 
-    @Override //
+    @Override // 토큰 결과 [ JSON { 필드명 : 값 , 필드명 : 값  } VS Map { 키 = 값 , 키 = 값 , 키 = 값 } ]
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
-
         // 1. 인증[로그인] 결과 토큰 확인
+        log.info( "토큰 결과 정보 : " +userRequest );
+        // 2. 전달받은 토큰을 이용한 회원정보 요청
         OAuth2UserService oAuth2UserService = new DefaultOAuth2UserService();
             log.info( "서비스 정보 : " +oAuth2UserService.loadUser( userRequest ) );
-        // 2. 전달받은 정보 객체
         OAuth2User oAuth2User = oAuth2UserService.loadUser( userRequest );
             log.info("회원정보 : " + oAuth2User.getAuthorities() );
         // !!!! : oAuth2User.getAttributes()  map< String , Object >구조
         //  {sub=114044778334166488538, name=아이티단자, given_name=단자,email=kgs2072@naver.com}
         // 구글의 이메일 호출
-            String email =  (String)oAuth2User.getAttributes().get( "email" );
-                    log.info(" google name : " + email );
+            String email =  (String)oAuth2User.getAttributes().get( "email" );  log.info(" google name : " + email );
         // 구글의 이름 호출
-            String name =  (String)oAuth2User.getAttributes().get( "name" );
-                    log.info(" google email : " + name );
+            String name =  (String)oAuth2User.getAttributes().get( "name" );    log.info(" google email : " + name );
+
+        // 인가 객체 [ OAuth2User----> MemberDto 통합Dto( 일반+oauth) ]
         MemberDto memberDto = new MemberDto();
+        memberDto.set소셜회원정보( oAuth2User.getAttributes() );
         memberDto.setMemail( email );
         memberDto.setMname( name );
             Set<GrantedAuthority> 권한목록 = new HashSet<>();
             SimpleGrantedAuthority 권한 = new SimpleGrantedAuthority("ROLE_oauthuser");
             권한목록.add( 권한 );
         memberDto.set권한목록( 권한목록 );
+        // 1. DB 저장하기 전에 해당 이메일로 된 이메일 존재하는지 검사
+        MemberEntity entity = memberEntityRepository.findByMemail( email );
+        if( entity == null ){ // 첫방문
+            // DB 처리 [ 첫 방문시에만 db등록  , 두번째 방문시 부터는 db수정  ]
+            memberDto.setMrole("oauthuser"); // DB에 저장할 권한명
+            memberEntityRepository.save( memberDto.toEntity() );
+        }else{// 두번째 방문 이상 수정 처리
+            entity.setMname( name );
+        }
         return memberDto;
     }
 
