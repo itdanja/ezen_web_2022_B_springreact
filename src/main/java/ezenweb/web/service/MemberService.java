@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -39,16 +40,29 @@ public class MemberService implements UserDetailsService , OAuth2UserService<OAu
         // 1. 인증[로그인] 결과 토큰 확인
         log.info( "토큰 결과 정보 : " +userRequest );
         // 2. 전달받은 토큰을 이용한 회원정보 요청
-        OAuth2UserService oAuth2UserService = new DefaultOAuth2UserService();
-            log.info( "서비스 정보 : " +oAuth2UserService.loadUser( userRequest ) );
-        OAuth2User oAuth2User = oAuth2UserService.loadUser( userRequest );
-            log.info("회원정보 : " + oAuth2User.getAuthorities() );
-        // !!!! : oAuth2User.getAttributes()  map< String , Object >구조
-        //  {sub=114044778334166488538, name=아이티단자, given_name=단자,email=kgs2072@naver.com}
-        // 구글의 이메일 호출
-            String email =  (String)oAuth2User.getAttributes().get( "email" );  log.info(" google name : " + email );
-        // 구글의 이름 호출
-            String name =  (String)oAuth2User.getAttributes().get( "name" );    log.info(" google email : " + name );
+        OAuth2UserService oAuth2UserService = new DefaultOAuth2UserService();    log.info( "서비스 정보 : " +oAuth2UserService.loadUser( userRequest ) );
+        OAuth2User oAuth2User = oAuth2UserService.loadUser( userRequest );   log.info("회원정보 : " + oAuth2User.getAttributes() );
+        // 3. 클라이언트ID 식별 [ 응답된 JSON 구조 다르기 때문에 클라이언트ID별(구글VS카카오VS네이버) 로 처리  ]
+        String registrationId = userRequest.getClientRegistration().getRegistrationId();    log.info("클라이언트ID : " + registrationId );
+
+        String email = null;
+        String name = null;
+        // oAuth2User.getAttributes()  map< String , Object >구조
+        if( registrationId.equals("kakao") ) { // 만약에 카카오 회원이면
+            // 카카오 Attributes = {id=206798674 , kakao_account={profile_nickname_needs_agreement=false, profile={nickname=김현수} , email=itdanja@kakao.com} }
+            Map<String , Object >  kakao_account = (Map<String , Object>)oAuth2User.getAttributes().get("kakao_account");  log.info( "카카오 회원정보 "+ kakao_account );
+            Map<String , Object > profile = (Map<String , Object>) kakao_account.get("profile");     log.info( "카카오 프로필 "+ profile );
+
+            email = (String)kakao_account.get("email");
+            name = (String)profile.get("nickname");
+
+        }else if( registrationId.equals("naver")){ // 만약에 네이버 회원이면
+
+        }else if( registrationId.equals("google")){ // 만약에 구글 회원이면
+            // 구글 Attributes = {sub=114044778334166488538, name=아이티단자, given_name=단자,email=kgs2072@naver.com}
+            email =  (String)oAuth2User.getAttributes().get( "email" );  log.info(" google name : " + email ); // 구글의 이메일 호출
+            name =  (String)oAuth2User.getAttributes().get( "name" );    log.info(" google email : " + name );  // 구글의 이름 호출
+        }
 
         // 인가 객체 [ OAuth2User----> MemberDto 통합Dto( 일반+oauth) ]
         MemberDto memberDto = new MemberDto();

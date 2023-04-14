@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day71 oauth2 구글 DB처리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,7 +335,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681362300460</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기">
+      <created>1681366250144</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681366250144</updated>
+    </task>
+    <task id="LOCAL-00027" summary="day71 oauth2 구글 DB처리">
+      <created>1681368579077</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681368579077</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -358,7 +370,9 @@
     <MESSAGE value="day71 HTTP 오류 코드에 따른 HTML 반환" />
     <MESSAGE value="day71 로그아웃 함수에서 a 태그로 변경" />
     <MESSAGE value="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입" />
-    <option name="LAST_COMMIT_MESSAGE" value="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입" />
+    <MESSAGE value="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기" />
+    <MESSAGE value="day71 oauth2 구글 DB처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="day71 oauth2 구글 DB처리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
