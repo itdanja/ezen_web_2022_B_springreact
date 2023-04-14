@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day71 oauth2 구글 DB처리">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day71 oauth2 카카오로그인 서비스 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -349,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681368579077</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="day71 oauth2 카카오로그인 서비스 구현">
+      <created>1681439159763</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681439159763</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -372,7 +378,8 @@
     <MESSAGE value="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입" />
     <MESSAGE value="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기" />
     <MESSAGE value="day71 oauth2 구글 DB처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="day71 oauth2 구글 DB처리" />
+    <MESSAGE value="day71 oauth2 카카오로그인 서비스 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="day71 oauth2 카카오로그인 서비스 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

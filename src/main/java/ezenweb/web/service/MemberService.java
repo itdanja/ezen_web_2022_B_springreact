@@ -57,6 +57,11 @@ public class MemberService implements UserDetailsService , OAuth2UserService<OAu
             name = (String)profile.get("nickname");
 
         }else if( registrationId.equals("naver")){ // 만약에 네이버 회원이면
+            // 네이버 Attributes {resultcode=00, message=success, response={id=Hq9vZhky2c775-RmPtIeB95Rz2dnBbYgKTJPAHSsvDQ, nickname=아이티단자, email=kgs2072@naver.com}}
+            Map<String , Object> response = (Map<String , Object>)oAuth2User.getAttributes().get("response");
+
+            email = (String) response.get("email");
+            name = (String) response.get("nickname");
 
         }else if( registrationId.equals("google")){ // 만약에 구글 회원이면
             // 구글 Attributes = {sub=114044778334166488538, name=아이티단자, given_name=단자,email=kgs2072@naver.com}
@@ -70,7 +75,7 @@ public class MemberService implements UserDetailsService , OAuth2UserService<OAu
         memberDto.setMemail( email );
         memberDto.setMname( name );
             Set<GrantedAuthority> 권한목록 = new HashSet<>();
-            SimpleGrantedAuthority 권한 = new SimpleGrantedAuthority("ROLE_oauthuser");
+            SimpleGrantedAuthority 권한 = new SimpleGrantedAuthority("ROLE_user");
             권한목록.add( 권한 );
         memberDto.set권한목록( 권한목록 );
         // 1. DB 저장하기 전에 해당 이메일로 된 이메일 존재하는지 검사
