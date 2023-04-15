@@ -181,11 +181,12 @@ public class MemberService implements UserDetailsService , OAuth2UserService<OAu
     // [ 스프링 시큐리티 적용했을때 사용되는 로그인 메소드 ]
     @Override
     public UserDetails loadUserByUsername(String memail ) throws UsernameNotFoundException {
+        log.info( "memail : " + memail );
         // 1. UserDetailsService 인터페이스 구현
         // 2. loadUserByUsername() 메소드 : 아이디 검증
             // 패스워드 검증 [ 시큐리티 자동 ]
         MemberEntity entity = memberEntityRepository.findByMemail(memail);
-        if( entity == null ){ return null; }
+        if( entity == null ){ throw new UsernameNotFoundException("이미 존재하는 회원입니다."); }
         // 3. 검증후 세션에 저장할 DTO 반환
         MemberDto dto = entity.todto();
             // Dto 권한(여러개) 넣어주기

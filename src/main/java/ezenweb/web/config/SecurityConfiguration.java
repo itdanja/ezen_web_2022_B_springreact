@@ -1,5 +1,6 @@
 package ezenweb.web.config;
 
+import ezenweb.web.controller.auth.AjaxAuthenticationSuccessHandler;
 import ezenweb.web.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +12,9 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration // 스프링 빈에 등록 [ MVC 컴포넌트 ]
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private AjaxAuthenticationSuccessHandler ajaxAuthenticationSuccessHandler;
 
     @Autowired
     private MemberService memberService;
@@ -47,10 +51,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .formLogin()
                         .loginPage("/member/login") // 로그인 으로 사용될 페이지의 매핑 URL
                         .loginProcessingUrl("/member/login") // 로그인을 처리할 매핑 URL
-                        .defaultSuccessUrl("/") // 로그인 성공했을때 이동할 매핑 URL
-                        .failureUrl("/member/login")// 로그인 실패했을때 이동할 매핑 URL
+                        //.defaultSuccessUrl("/") // 로그인 성공했을때 이동할 매핑 URL
+
+                .successHandler( ajaxAuthenticationSuccessHandler ) // 로그인 성공시 해당 핸들러 실행
+                .failureHandler( ajaxAuthenticationSuccessHandler ) // ���그인 실��시 해�� �
+                        //.failureUrl("/member/login")// 로그인 실패했을때 이동할 매핑 URL
                         .usernameParameter("memail") // 로그인시 사용될 계정 아이디 의 필드명
                         .passwordParameter("mpassword")// 로그인시 사용될 계정 패스워드 의 필드명
+
                 .and()
                     .logout()
                         .logoutRequestMatcher( new AntPathRequestMatcher("/member/logout") ) // 로그아웃 처리 를 요청할 매핑 URL

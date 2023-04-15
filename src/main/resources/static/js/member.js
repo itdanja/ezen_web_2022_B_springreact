@@ -17,25 +17,32 @@ function onSignup(){
         }
     })
 }
-/*
+
     // 시큐리티 사용하므로 폼 전송으로 로그인 요청
     function onLogin(){
+        console.log('onLogin')
+        let form = document.querySelectorAll(".loginForm")[0];
+        console.log(form);
+        let formdata = new FormData(form);
+        console.log(formdata);
         let info = {
             memail : document.querySelector(".memail").value,
             mpassword : document.querySelector(".mpassword").value
         }
+        console.log(info)
         $.ajax({
             url : "/member/login",
             method : "post" ,
-            data : JSON.stringify(info) ,
-            contentType : "application/json",
+            data : formdata ,
+            contentType : false ,
+            processData : false ,
             success : (r)=>{
                 console.log(r);
                 if( r == true ){ alert('로그인이 되셨습니다.'); }
             }
         })
     }
-*/
+
 getMember();
 function getMember(){
     $.ajax({
