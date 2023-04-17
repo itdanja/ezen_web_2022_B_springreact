@@ -4,6 +4,8 @@ import ezenweb.web.domain.member.MemberEntity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity@Table(name = "board")
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
@@ -26,5 +28,10 @@ public class BoardEntity {
     @JoinColumn(name="mno")
     @ToString.Exclude
     private MemberEntity memberEntity;
+
+    // 댓글목록
+    @OneToMany(mappedBy = "boardEntity")
+    @Builder.Default
+    private List<ReplyEntity> replyEntityList = new ArrayList<>();
 
 }

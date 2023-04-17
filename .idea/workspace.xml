@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day73 JPA 조인테이블 단방향 구현">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day73 JPA 조인테이블 양방향 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day06_객체관계/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day06_객체관계/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day06_객체관계/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day06_객체관계/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/example/day06_객체관계/실행.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/example/day06_객체관계/실행.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" afterDir="false" />
@@ -385,7 +382,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681711595959</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="day73 JPA 조인테이블 양방향 구현">
+      <created>1681714084194</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681714084194</updated>
+    </task>
+    <task id="LOCAL-00033" summary="day73 JPA 조인테이블 양방향 구현">
+      <created>1681714209672</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681714209672</updated>
+    </task>
+    <task id="LOCAL-00034" summary="day73 JPA 조인테이블 양방향 구현">
+      <created>1681714284131</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681714284131</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -412,7 +430,8 @@
     <MESSAGE value="day73 시큐리티 인증성공/실패 핸들러" />
     <MESSAGE value="day73 시큐리티 성공/실패 핸들러 ( oauth 포함 )" />
     <MESSAGE value="day73 JPA 조인테이블 단방향 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="day73 JPA 조인테이블 단방향 구현" />
+    <MESSAGE value="day73 JPA 조인테이블 양방향 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="day73 JPA 조인테이블 양방향 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

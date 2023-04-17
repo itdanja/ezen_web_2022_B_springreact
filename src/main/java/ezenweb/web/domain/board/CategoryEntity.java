@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity@Table(name = "bcategory")
+@Entity@Table(name = "category")
 @Data@NoArgsConstructor@AllArgsConstructor@Builder
 public class CategoryEntity {
     @Id
