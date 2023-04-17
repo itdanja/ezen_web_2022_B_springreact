@@ -15,6 +15,7 @@ import java.util.Map;
 @RestController
 @Slf4j
 @RequestMapping("/board")
+@CrossOrigin(origins = "http://localhost:3000") // 리액트와 연결하기 위한 리액트 포트번호
 public class BoardController {
     @Autowired private BoardService boardService;
 
