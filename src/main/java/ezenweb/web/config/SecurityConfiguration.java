@@ -44,8 +44,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     // 토큰 ( ROLE_user ) :  ROLE_ 제외한 권한명 작성 // 인증 자체가 없을경우 로그인페이지 자동 이동
                 .and()
                         .csrf() // 사이트 간 요청 위조 [ post,put http 사용 불가능 ]
+                        // .disable() // 모든 http csrf 해제
+                            // 특정 http url 해제
                             .ignoringAntMatchers("/member/info") // 특정 매핑URL csrf 무시
                             .ignoringAntMatchers("/member/login")
+                            .ignoringAntMatchers("/board/category/write")
+                            .ignoringAntMatchers("/board/set")
                 .and()//  기능 추가/구분 할때 사용되는 메소드
                     .formLogin()
                         .loginPage("/member/login") // 로그인 으로 사용될 페이지의 매핑 URL
