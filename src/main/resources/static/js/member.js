@@ -1,4 +1,4 @@
-
+// 1. 회원가입
 function onSignup(){
     let info = {
         memail : document.querySelector(".memail").value,
@@ -16,6 +16,23 @@ function onSignup(){
             if( r == true  ){ alert('가입이 되셨습니다.')}
         }
     })
+}
+// 2. 로그인
+function onLogin(){
+    let loginForm = document.querySelectorAll('.loginForm')[0];
+    let loginFormData = new FormData(loginForm);
+
+    $.ajax({ // 폼전송[ 시큐리티 formLogin() 사용하기 때문에 폼전송 ]
+        url : "/member/login",
+        method : 'POST',
+        data : loginFormData,
+        contentType : false,
+        processData : false,
+        success : (r)=>{
+            console.log(r);
+        }
+    })
+
 }
 /*
     // 시큐리티 사용하므로 폼 전송으로 로그인 요청
@@ -36,6 +53,7 @@ function onSignup(){
         })
     }
 */
+// 3. 로그인 정보 요청
 getMember();
 function getMember(){
     $.ajax({
@@ -49,6 +67,7 @@ function getMember(){
         }
     })
 }
+// 4. 로그아웃 요청
 /*
 function getLogout(){
     $.ajax({

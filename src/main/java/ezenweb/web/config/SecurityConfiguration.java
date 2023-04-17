@@ -1,5 +1,6 @@
 package ezenweb.web.config;
 
+import ezenweb.web.controller.AuthSuccessFailHandler;
 import ezenweb.web.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private AuthSuccessFailHandler authSuccessFailHandler;
 
     // 인증[로그인] 관련 보안 담당 메소드
     @Override
@@ -47,8 +50,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .formLogin()
                         .loginPage("/member/login") // 로그인 으로 사용될 페이지의 매핑 URL
                         .loginProcessingUrl("/member/login") // 로그인을 처리할 매핑 URL
-                        .defaultSuccessUrl("/") // 로그인 성공했을때 이동할 매핑 URL
-                        .failureUrl("/member/login")// 로그인 실패했을때 이동할 매핑 URL
+                        //.defaultSuccessUrl("/") // 로그인 성공했을때 이동할 매핑 URL
+                        .successHandler( authSuccessFailHandler )
+                        //.failureUrl("/member/login")// 로그인 실패했을때 이동할 매핑 URL
+                        .failureHandler( authSuccessFailHandler )
                         .usernameParameter("memail") // 로그인시 사용될 계정 아이디 의 필드명
                         .passwordParameter("mpassword")// 로그인시 사용될 계정 패스워드 의 필드명
                 .and()
