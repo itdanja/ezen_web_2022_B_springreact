@@ -1,6 +1,7 @@
 package ezenweb.web.domain.member;
 
 import ezenweb.web.domain.BaseTime;
+import ezenweb.web.domain.board.BoardEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,7 +22,7 @@ public class MemberEntity extends BaseTime {
 
     @OneToMany(mappedBy = "memberEntity")
     @Builder.Default
-    private List<MemberEntity> memberEntityList = new ArrayList<>();
+    private List<BoardEntity> memberEntityList = new ArrayList<>();
 
     // toDto 출력용
     public MemberDto todto(){
