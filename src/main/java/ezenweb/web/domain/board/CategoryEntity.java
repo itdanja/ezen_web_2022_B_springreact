@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity@Table(name = "bcategory")
 @Data@NoArgsConstructor@AllArgsConstructor@Builder
@@ -16,6 +18,13 @@ public class CategoryEntity {
     private int cno;
     @Column
     private String cname;
+    // 양방향
+    // 카테고리[pk] <----> 게시물[fk]
+    // pk테이블에는 fk 흔적 남긴적이 없다.[필드 존재x 객체 존재o ]
+    @OneToMany( mappedBy =  "memberEntity") // 하나 가 다수에게 [ pk --> fk ]
+    @Builder.Default // .builder 사용시 현재 필드 기본값으로 설정
+    private List<BoardEntity> boardEntityList = new ArrayList<>();
+
 }
 
 

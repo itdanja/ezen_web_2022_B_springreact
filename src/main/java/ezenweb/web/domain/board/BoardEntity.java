@@ -1,9 +1,7 @@
 package ezenweb.web.domain.board;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import ezenweb.web.domain.member.MemberEntity;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -21,6 +19,12 @@ public class BoardEntity {
     // 카테고리번호
     @ManyToOne // 다수가 하나 에게 [ fk --> pk ]
     @JoinColumn(name="cno") // fk필드명
+    @ToString.Exclude // 해당 필드는 @ToString 제외 필드 [ * 양방향 필수 ]
     private CategoryEntity categoryEntity;
+    // 회원번호 [ 작성자 ]
+    @ManyToOne
+    @JoinColumn(name="mno")
+    @ToString.Exclude
+    private MemberEntity memberEntity;
 
 }

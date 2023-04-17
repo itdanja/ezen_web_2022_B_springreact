@@ -30,6 +30,7 @@ public class 실행 {
             // 2. 유재석객체에 게시물2 대입
         유재석.게시물.add( board2 );
 
+        System.out.println( 유재석 );
 
     }
 }

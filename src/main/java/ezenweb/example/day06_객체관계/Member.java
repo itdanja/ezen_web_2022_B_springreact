@@ -1,6 +1,9 @@
 package ezenweb.example.day06_객체관계;
 
+import lombok.ToString;
+
 import java.util.ArrayList;
+
 
 public class Member {
     public int 번호;
