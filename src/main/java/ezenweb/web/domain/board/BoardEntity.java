@@ -33,5 +33,16 @@ public class BoardEntity {
     @Builder.Default
     private List<ReplyEntity> replyEntityList = new ArrayList<>();
 
+    public BoardDto toDto(){
+        // * 빌더 패턴을 이용한 객체생성 [ *생성자 비교 ]
+        return BoardDto.builder()
+                .bno( this.bno )
+                .btitle( this.btitle )
+                .bcontent( this.bcontent )
+                .cno( this.categoryEntity.getCno() )
+                .cname( this.categoryEntity.getCname() )
+                .build();
+        // [ 삼항연산자 ] 조건 ? 참 : 거짓
+    }
 
 }

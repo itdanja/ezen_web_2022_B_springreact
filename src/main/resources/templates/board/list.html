@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a href="/board/write">글쓰기</a>
+
+    <div>
+        <div>
+            <h6>카테고리</h6>
+            <input type="text" class="cname">
+            <button onclick="setCategory()" type="button">카테고리등록</button>
+        </div>
+
+        <div>
+            <h6>카테고리목록</h6>
+            <div class="clistbox"></div>
+        </div>
+
+        <div>
+            <h6>게시물 목록</h6>
+            <table class="blistbox"> </table>
+        </div>
+
+        <div>
+            <h6>내가 쓴 게시물 목록</h6>
+
+        </div>
+
+    </div>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/board.js"  type="text/javascript"></script>
+
+
+</body>
+</html>
