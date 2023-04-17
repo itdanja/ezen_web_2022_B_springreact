@@ -50,9 +50,6 @@ public class BoardService {
         boardEntity.setMemberEntity( memberEntity ); // 1. 생성된 게시물 엔티티에 로그인된 회원 등록
         memberEntity.getBoardEntityList().add(boardEntity);  // 2. 로그인된 회원 엔티티에 생성된 게시물 엔티티 등록
 
-        // 확인
-        log.info( boardEntity.toString() );
-
         return true;
     }
     // 3. 내가 쓴 게시물 출력
