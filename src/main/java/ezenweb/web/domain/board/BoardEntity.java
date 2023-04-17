@@ -28,10 +28,10 @@ public class BoardEntity {
     @JoinColumn(name="mno")
     @ToString.Exclude
     private MemberEntity memberEntity;
-
     // 댓글목록
     @OneToMany(mappedBy = "boardEntity")
     @Builder.Default
     private List<ReplyEntity> replyEntityList = new ArrayList<>();
+
 
 }

@@ -37,8 +37,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .hasRole("user") // 위 URL 패턴을 요청할수 있는 권한명
                 .antMatchers("/admin/**") // localhost:8080/admin/ ~~ 이하 페이지는 모두 제한
                     .hasRole("admin")
-                .antMatchers("/board/write")// 글쓰기 페이지는 회원만 가능
-                    .hasRole("user")
+                //.antMatchers("/board/write")// 글쓰기 페이지는 회원만 가능
+                //    .hasRole("user")
                 .antMatchers("/**") // localhost:8080 ~ 이하 페이지는 권한 해제
                     .permitAll() // 권한 해제
                     // 토큰 ( ROLE_user ) :  ROLE_ 제외한 권한명 작성 // 인증 자체가 없을경우 로그인페이지 자동 이동
@@ -49,7 +49,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                             .ignoringAntMatchers("/member/info") // 특정 매핑URL csrf 무시
                             .ignoringAntMatchers("/member/login")
                             .ignoringAntMatchers("/board/category/write")
-                            .ignoringAntMatchers("/board/set")
+                            .ignoringAntMatchers("/board/write")
                 .and()//  기능 추가/구분 할때 사용되는 메소드
                     .formLogin()
                         .loginPage("/member/login") // 로그인 으로 사용될 페이지의 매핑 URL
