@@ -54,15 +54,9 @@ public class BoardController {
         List<BoardDto> result = boardService.list( cno );
         return result;
     }
-
-
-
-
-
-    // *. 내가 쓴 게시물 출력
+    // 5. 내가 쓴 게시물 출력
     @GetMapping("/myboards")
-    public List<BoardDto> myboards( ){
-        log.info("c myboards : " );
+    public List<BoardDto> myboards( ){ log.info("c myboards : " );
         List<BoardDto> result = boardService.myboards();
         return result;
     }
