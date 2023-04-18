@@ -13,10 +13,9 @@ import java.util.List;
 @Entity@Table(name = "category")
 @Data@NoArgsConstructor@AllArgsConstructor@Builder
 public class CategoryEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cno;
-    @Column
+    @Column( name = "cname" , nullable = true )
     private String cname;
     // 양방향
     // 카테고리[pk] <----> 게시물[fk]

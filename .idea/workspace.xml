@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day73 게시물Dto , Controller 매핑 구현">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,7 +80,7 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.실행">
+  <component name="RunManager" selected="Application.AppStart">
     <configuration name="실행" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.example.day06_객체관계.실행" />
       <module name="ezenweb.main" />
@@ -95,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ezenweb.example.day02.SpringStart" />
+    <configuration name="AppStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ezenweb.web.AppStart" />
       <module name="ezenweb.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ezenweb.example.day02.*" />
+          <option name="PATTERN" value="ezenweb.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ezenweb.example.day03.AppStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ezenweb.example.day03.AppStart" />
+    <configuration name="SpringStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ezenweb.example.day02.SpringStart" />
       <module name="ezenweb.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ezenweb.example.day03.*" />
+          <option name="PATTERN" value="ezenweb.example.day02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppStart" />
         <item itemvalue="Application.실행" />
         <item itemvalue="Application.SpringStart" />
         <item itemvalue="Application.ezenweb.example.day05.AppStart" />
         <item itemvalue="Application.ezenweb.example.day04.AppStart" />
-        <item itemvalue="Application.ezenweb.example.day03.AppStart" />
       </list>
     </recent_temporary>
   </component>
@@ -425,11 +424,24 @@
       <option name="project" value="LOCAL" />
       <updated>1681718378761</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]">
+      <created>1681721509676</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681721509676</updated>
+    </task>
+    <task id="LOCAL-00039" summary="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]">
+      <created>1681721566093</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1681721566093</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day66 MVC 레이어드 구조 / 패키지 구조 / 엔티티 날짜 주입" />
     <MESSAGE value="day67 회원 컨트롤러 구현중" />
     <MESSAGE value="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트" />
     <MESSAGE value="day70 index,signup,login 페이지 매핑" />
@@ -454,7 +466,8 @@
     <MESSAGE value="day73 JPA 조인테이블 (댓글)양방향 구현" />
     <MESSAGE value="day73 각 리포지토리 생성" />
     <MESSAGE value="day73 게시물Dto , Controller 매핑 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="day73 게시물Dto , Controller 매핑 구현" />
+    <MESSAGE value="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
