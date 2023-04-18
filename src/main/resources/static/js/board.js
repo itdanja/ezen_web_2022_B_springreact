@@ -9,7 +9,10 @@ function setCategory(){  console.log("setCategory()")
         contentType : "application/json" ,
         success : (r)=>{
             console.log(r)
-            if( r == true ) getCategory();
+            if( r == true ) {
+                document.querySelector(".cname").value = ''
+                getCategory();
+            }
         } // success end
     }) // ajax end
 } // setCategory end
@@ -26,16 +29,44 @@ function getCategory(){
             for( let cno in r  ){
                 console.log(" 키/필드 : " + cno);
                 console.log(" 키/필드 에 저장된 값  : " + r[cno] );
-                html += `<button onclick="selectCno(${cno})" type="button">${ r[cno] }</button>`;
+                html += `<button onclick="selectorCno(${cno})" type="button">${ r[cno] }</button>`;
             } //for end
             document.querySelector('.categorylistbox').innerHTML = html;
         }
     })
 }
 // 3. 카테고리 선택
-function selectCno( cno ){
+let selectCno = 0 ; // 선택된 카테고리 번호 [ 기본값 = 0 (전체보기 ) ]
+function selectorCno( cno ){
     console.log( cno +" 의 카테고리 선택");
+    selectCno = cno; // 이벤트로 선택한 카테고리번호를 전역변수에 대입
 }
+// 4. 게시물 쓰기
+function setBoard(){
+    if( selectCno == 0 ){  alert('작성할 게시물의 카테고리 선택해주세요'); return; }
+    let info = { // @RequestBody 이용한 json 요청값을 자동으로 DTO 매핑 하기 위해서 조건[ 필드명 동일 ]
+        btitle : document.querySelector(".btitle").value,
+        bcontent : document.querySelector(".bcontent").value,
+        cno : selectCno
+    }
+    $.ajax({
+        url : "/board/write", method : "post",
+        data : JSON.stringify( info ) ,  contentType : "application/json",
+        success : (r)=>{
+            console.log(r);
+            if( r == 4 ){  alert('글쓰기성공');
+                document.querySelector(".btitle").value = '';
+                document.querySelector(".bcontent").value = '';
+                getBoard( selectCno ) // 현재 선택된 카테고리 기준으로 게시물들을 재출력
+            }
+        }
+    })
+}
+// 5. 게시물 출력
+function getBoard( cno ){
+
+}
+
 
 
 /*

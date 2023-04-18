@@ -31,14 +31,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //super.configure(http); // super : 부모 클래스 호출
         http
-                // 권한에 따른 HTTP GET 요청 제한
+                // 권한에 따른 HTTP 요청 제한
                 .authorizeHttpRequests() // HTTP 인증 요청
                     .antMatchers("/member/info/mypage")// 인증시에만 사용할 URL
                     .hasRole("user") // 위 URL 패턴을 요청할수 있는 권한명
                 .antMatchers("/admin/**") // localhost:8080/admin/ ~~ 이하 페이지는 모두 제한
                     .hasRole("admin")
-                //.antMatchers("/board/write")// 글쓰기 페이지는 회원만 가능
-                //    .hasRole("user")
+                .antMatchers("/board/**")// 게시판 페이지는 회원만 가능
+                    .hasRole("user")
                 .antMatchers("/**") // localhost:8080 ~ 이하 페이지는 권한 해제
                     .permitAll() // 권한 해제
                     // 토큰 ( ROLE_user ) :  ROLE_ 제외한 권한명 작성 // 인증 자체가 없을경우 로그인페이지 자동 이동
