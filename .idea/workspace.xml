@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day74 카테고리 등록/출력 [html ,js ]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -438,11 +438,17 @@
       <option name="project" value="LOCAL" />
       <updated>1681721566093</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="day74 카테고리 등록/출력 [html ,js ]">
+      <created>1681782777340</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1681782777340</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day67 회원 컨트롤러 구현중" />
     <MESSAGE value="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트" />
     <MESSAGE value="day70 index,signup,login 페이지 매핑" />
     <MESSAGE value="day70 login controller, service , repository" />
@@ -467,7 +473,8 @@
     <MESSAGE value="day73 각 리포지토리 생성" />
     <MESSAGE value="day73 게시물Dto , Controller 매핑 구현" />
     <MESSAGE value="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]" />
+    <MESSAGE value="day74 카테고리 등록/출력 [html ,js ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="day74 카테고리 등록/출력 [html ,js ]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

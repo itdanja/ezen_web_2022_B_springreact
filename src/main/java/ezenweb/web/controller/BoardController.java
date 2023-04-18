@@ -9,6 +9,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @Slf4j
@@ -31,6 +32,30 @@ public class BoardController {
         boolean result = boardService.categoryWrite( boardDto );
         return result;
     }
+    // 2. 카테고리 출력 [ 반환타입 :   { 1 : 공지사항 , 2 : 자유게시판 }
+        // List : { 값 , 값 , 값 , 값 }     --> JSON[ array ]
+        // Map : { 키 : 값 , 키 : 값 , 키 : 값 } ---> JSON [ object ]
+    @GetMapping("/category/list")
+    public Map< Integer , String > categoryList(  ){
+        log.info("c categoryList : " );
+        Map< Integer , String > result = boardService.categoryList(  );
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // 2. 게시물 쓰기
     @PostMapping("/write")
     public boolean write( @RequestBody BoardDto boardDto ){

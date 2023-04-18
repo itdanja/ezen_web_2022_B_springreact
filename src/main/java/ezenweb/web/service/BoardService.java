@@ -8,10 +8,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.transaction.Transactional;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service @Slf4j
@@ -28,6 +31,18 @@ public class BoardService {
         if( entity.getCno() >= 1 ){ return true; }  // 2. 만약에 생성된 엔티티의 pk가 1보다 크면 save 성공
         return false;
     }
+    // 2. 모든 카테고리 출력
+    @Transactional
+    public Map< Integer , String > categoryList(  ){    log.info("s categoryList : " );
+        List<CategoryEntity> categoryEntityList = categoryRepository.findAll();
+        // 형변환 List<엔티티> ---> MAP
+        Map< Integer , String > map = new HashMap<>();
+        categoryEntityList.forEach( (e)->{
+            map.put( e.getCno() , e.getCname() );
+        });
+        return map;
+    }
+
     // 2. 게시물 쓰기
     @Transactional
     public boolean write( BoardDto boardDto ){ log.info("s board dto : " + boardDto );
