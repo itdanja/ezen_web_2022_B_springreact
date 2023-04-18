@@ -70,23 +70,26 @@ public class BoardService {
         */
         return 4;
     }
-
     // 4. 카테고리별 게시물 출력
+    @Transactional
     public List<BoardDto> list(  int cno ){ log.info("s list cno : " + cno );
-        Optional<CategoryEntity> categoryEntityOptional ;
-        if( cno == 0){// 전체 보기
-
-            List<BoardDto> list = new ArrayList<>();
+        List<BoardDto> list = new ArrayList<>();
+        // 전체 보기
+        if( cno == 0){
             List<BoardEntity> boardEntityList = boardEntityRepository.findAll();
             boardEntityList.forEach( (e)->{  // 엔티티[레코드] 하나씩 반복문
                 list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
             });
-            return list; // 리스트 반환
-
+        // 카테고리별 보기
         }else{
-            categoryEntityOptional = categoryRepository.findById( cno ); // 해당 cno의 카테고리 정보 전체 출력
+            Optional<CategoryEntity> categoryEntityOptional = categoryRepository.findById( cno ); // 해당 cno의 카테고리 정보 전체 출력
+            if( categoryEntityOptional.isPresent() ){
+                categoryEntityOptional.get().getBoardEntityList().forEach( (e)->{
+                    list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
+                });
+            }
         }
-        return null;
+        return list;  // 리스트 반환
     }
 
     // *. 내가 쓴 게시물 출력

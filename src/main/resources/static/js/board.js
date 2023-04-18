@@ -63,13 +63,25 @@ function setBoard(){
         }
     })
 }
-// 5. 게시물 출력 [ 선택된 카테고리의 게시물 출력 ]
+// 5. 게시물들 출력 [ 선택된 카테고리의 게시물 출력 ]
 getBoard( 0 )
 function getBoard( cno ){
     selectCno = cno;
     $.ajax({
         url : "/board/list", method:"get", data : { "cno" : selectCno } ,
-        success : (r)=>{  console.log(r); }
+        success : (r)=>{  console.log(r);
+            let html = ` <tr> <th> 번호 </th><th> 제목 </th><th> 작성자 </th>
+                            <th> 작성일 </th> <th> 조회수 </th>
+                        </tr>`;
+            r.forEach( ( o ) => {
+                html += ` <tr> <td> ${ o.bno } </td> <td> ${ o.btitle } </td>
+                            <td> ${ o.mname } </td>  <td> ${ o.bdate } </td>
+                            <td> ${ o.bview } </td>
+                        </tr>
+                `
+            })
+            document.querySelector('.boardlistbox').innerHTML = html;
+        }
     })
 }
 

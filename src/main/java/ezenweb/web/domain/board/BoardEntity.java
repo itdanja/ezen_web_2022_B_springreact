@@ -54,13 +54,16 @@ public class BoardEntity extends BaseTime {
                         //          만약에 작성 날짜/시간중 날짜가  현재 날짜와 동일하면  시간 아니면 날짜
                         this.cdate.toLocalDate().toString().equals(LocalDateTime.now().toLocalDate().toString() ) ?
                         this.cdate.toLocalTime().format( DateTimeFormatter.ofPattern( "HH:mm:ss") ) :
-                        this.cdate.toLocalDate().format( DateTimeFormatter.ofPattern( "yy-MM-DD") )
+                        this.cdate.toLocalDate().format( DateTimeFormatter.ofPattern( "yy-MM-dd") )
                     )
                 .build();
     }
 }
     /*
         cdate [ LocalDateTime ]
+            LocalDateTime : 날짜/시간 클래스
+            LocalDateTime.now() : 현재[시스템] 날짜/시간 추출
             1. toLocalDate() : 날짜만 추출
             2. toLocalTime() : 시간만 추출
+            3. .format( DateTimeFormatter.ofPattern("날짜/시간형식") )
      */
