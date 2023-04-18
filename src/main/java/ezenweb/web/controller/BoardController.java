@@ -48,13 +48,18 @@ public class BoardController {
         byte result = boardService.write( boardDto );
         return result;
     }
+    // 4. 카테고리별 게시물 출력
+    @GetMapping("/list")
+    public List<BoardDto> list( @RequestParam int cno ){ log.info("c list cno : " + cno );
+        List<BoardDto> result = boardService.list( cno );
+        return result;
+    }
 
 
 
 
 
-
-    // 3. 내가 쓴 게시물 출력
+    // *. 내가 쓴 게시물 출력
     @GetMapping("/myboards")
     public List<BoardDto> myboards( ){
         log.info("c myboards : " );

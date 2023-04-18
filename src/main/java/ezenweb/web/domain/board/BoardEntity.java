@@ -1,11 +1,14 @@
 package ezenweb.web.domain.board;
 
+import ezenweb.example.day06_객체관계.Board;
 import ezenweb.web.domain.BaseTime;
 import ezenweb.web.domain.member.MemberEntity;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,4 +42,25 @@ public class BoardEntity extends BaseTime {
     @OneToMany(mappedBy = "boardEntity")
     @Builder.Default
     private List<ReplyEntity> replyEntityList = new ArrayList<>();
+
+    // 출력용 Entity --> Dto
+    public BoardDto toDto(){
+        return BoardDto.builder()
+                .bno( this.bno ).btitle( this.btitle ) .bcontent( this.bcontent )
+                .cno( this.getCategoryEntity().getCno() ).cname( this.getCategoryEntity().getCname() )
+                .mno( this.getMemberEntity().getMno() ) .mname( this.getMemberEntity().getMname() )
+                .bview( this.bview )
+                .bdate(  // 날짜형변환  //  삼항 연산자  [    조건 ? 참 : 거짓 ]
+                        //          만약에 작성 날짜/시간중 날짜가  현재 날짜와 동일하면  시간 아니면 날짜
+                        this.cdate.toLocalDate().toString().equals(LocalDateTime.now().toLocalDate().toString() ) ?
+                        this.cdate.toLocalTime().format( DateTimeFormatter.ofPattern( "HH:mm:ss") ) :
+                        this.cdate.toLocalDate().format( DateTimeFormatter.ofPattern( "yy-MM-DD") )
+                    )
+                .build();
+    }
 }
+    /*
+        cdate [ LocalDateTime ]
+            1. toLocalDate() : 날짜만 추출
+            2. toLocalTime() : 시간만 추출
+     */

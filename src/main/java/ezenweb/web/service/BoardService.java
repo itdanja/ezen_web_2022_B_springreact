@@ -10,12 +10,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.transaction.Transactional;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service @Slf4j
 public class BoardService {
@@ -65,12 +63,33 @@ public class BoardService {
         memberEntity.getBoardEntityList().add(boardEntity);  // 2. 로그인된 회원 엔티티에 생성된 게시물 엔티티 등록
 
         // 공지사항 게시물 정보 확인
-        Optional<CategoryEntity> optionalCategory =  categoryRepository.findById( 1 );
-        log.info( "공지사항 엔티티 확인 :" + optionalCategory.get() );
-
+        /*
+            Optional<CategoryEntity> optionalCategory =  categoryRepository.findById( 1 );
+            log.info( "공지사항 카테고리 엔티티 확인 :" + optionalCategory.get() );
+            log.info( "공지사항 카테고리 엔티티 확인 :" + optionalCategory.get().getBoardEntityList().get(1).getMemberEntity().getMemail() );
+        */
         return 4;
     }
-    // 3. 내가 쓴 게시물 출력
+
+    // 4. 카테고리별 게시물 출력
+    public List<BoardDto> list(  int cno ){ log.info("s list cno : " + cno );
+        Optional<CategoryEntity> categoryEntityOptional ;
+        if( cno == 0){// 전체 보기
+
+            List<BoardDto> list = new ArrayList<>();
+            List<BoardEntity> boardEntityList = boardEntityRepository.findAll();
+            boardEntityList.forEach( (e)->{  // 엔티티[레코드] 하나씩 반복문
+                list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
+            });
+            return list; // 리스트 반환
+
+        }else{
+            categoryEntityOptional = categoryRepository.findById( cno ); // 해당 cno의 카테고리 정보 전체 출력
+        }
+        return null;
+    }
+
+    // *. 내가 쓴 게시물 출력
     public List<BoardDto> myboards( ){
         log.info("s myboards : " );
         return null;

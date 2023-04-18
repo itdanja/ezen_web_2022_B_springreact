@@ -25,7 +25,7 @@ function getCategory(){
         method : "get",
         success : (r)=>{
             console.log(r);
-            let html = `<button onclick="selectCno(0)" type="button">전체보기</button>`;
+            let html = `<button onclick="selectorCno(0)" type="button">전체보기</button>`;
             for( let cno in r  ){
                 console.log(" 키/필드 : " + cno);
                 console.log(" 키/필드 에 저장된 값  : " + r[cno] );
@@ -40,6 +40,7 @@ let selectCno = 0 ; // 선택된 카테고리 번호 [ 기본값 = 0 (전체보�
 function selectorCno( cno ){
     console.log( cno +" 의 카테고리 선택");
     selectCno = cno; // 이벤트로 선택한 카테고리번호를 전역변수에 대입
+    getBoard( cno ); // 선택된 카테고리 기준으로 게시물 출력
 }
 // 4. 게시물 쓰기
 function setBoard(){
@@ -62,9 +63,14 @@ function setBoard(){
         }
     })
 }
-// 5. 게시물 출력
+// 5. 게시물 출력 [ 선택된 카테고리의 게시물 출력 ]
+getBoard( 0 )
 function getBoard( cno ){
-
+    selectCno = cno;
+    $.ajax({
+        url : "/board/list", method:"get", data : { "cno" : selectCno } ,
+        success : (r)=>{  console.log(r); }
+    })
 }
 
 
