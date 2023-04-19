@@ -6,24 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="0418">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
