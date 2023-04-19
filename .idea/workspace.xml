@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day74 내가 쓴글 게시물 출력 [ 로그인 인증세션 이용 ]">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="0418">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +64,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="test0417" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +82,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/504t/Desktop/ezen_web_2022_B_springreact&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/504t/Desktop/ezen_web_2022_B_springreact/src/main/frontend/src&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -73,6 +90,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\frontend\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\static" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\templates\error" />
@@ -149,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppStart" />
         <item itemvalue="Application.실행" />
         <item itemvalue="Application.SpringStart" />
         <item itemvalue="Application.ezenweb.example.day05.AppStart" />
         <item itemvalue="Application.ezenweb.example.day04.AppStart" />
+        <item itemvalue="Application.AppStart" />
       </list>
     </recent_temporary>
   </component>
@@ -425,66 +445,34 @@
       <option name="project" value="LOCAL" />
       <updated>1681718378761</updated>
     </task>
-    <task id="LOCAL-00038" summary="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]">
-      <created>1681721509676</created>
+    <task id="LOCAL-00038" summary="0418">
+      <created>1681744169117</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1681721509676</updated>
+      <updated>1681744169117</updated>
     </task>
-    <task id="LOCAL-00039" summary="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]">
-      <created>1681721566093</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1681721566093</updated>
-    </task>
-    <task id="LOCAL-00040" summary="day74 카테고리 등록/출력 [html ,js ]">
-      <created>1681782777340</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1681782777340</updated>
-    </task>
-    <task id="LOCAL-00041" summary="day74 카테고리 출력 [html ,js , controller , service ]">
-      <created>1681784352140</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1681784352140</updated>
-    </task>
-    <task id="LOCAL-00042" summary="day74 게시물쓰기[ html , js , controller , service ]">
-      <created>1681788290425</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1681788290425</updated>
-    </task>
-    <task id="LOCAL-00043" summary="day74 게시물리스트 출력 [ 전체보기 ]">
-      <created>1681793779189</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1681793779189</updated>
-    </task>
-    <task id="LOCAL-00044" summary="day74 게시물리스트 출력 [ 카테고리별 출력 ]">
-      <created>1681795290786</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1681795290786</updated>
-    </task>
-    <task id="LOCAL-00045" summary="day74 내가 쓴글 게시물 출력 [ 로그인 인증세션 이용 ]">
-      <created>1681796838051</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1681796838051</updated>
-    </task>
-    <option name="localTasksCounter" value="46" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="day67 회원 컨트롤러 구현중" />
+    <MESSAGE value="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트" />
+    <MESSAGE value="day70 index,signup,login 페이지 매핑" />
+    <MESSAGE value="day70 login controller, service , repository" />
+    <MESSAGE value="day70 login info , logout" />
+    <MESSAGE value="day70 스프링 시큐리티 적용해보기, CSRF , 비크립트암호화" />
     <MESSAGE value="day70 스프링 시큐리티 비크립트암호화" />
     <MESSAGE value="day70 스프링 시큐리티 로그인기능 커스터마이징 하기" />
     <MESSAGE value="day70 스프링 시큐리티 로그인 세션 관리 [ getPrincipal ]" />
@@ -503,14 +491,8 @@
     <MESSAGE value="day73 JPA 조인테이블 (댓글)양방향 구현" />
     <MESSAGE value="day73 각 리포지토리 생성" />
     <MESSAGE value="day73 게시물Dto , Controller 매핑 구현" />
-    <MESSAGE value="day73 카테고리등록 , 게시물쓰기[로그인했을경우만 가능-Talend Api 에서 테스트 불가능 ]" />
-    <MESSAGE value="day74 카테고리 등록/출력 [html ,js ]" />
-    <MESSAGE value="day74 카테고리 출력 [html ,js , controller , service ]" />
-    <MESSAGE value="day74 게시물쓰기[ html , js , controller , service ]" />
-    <MESSAGE value="day74 게시물리스트 출력 [ 전체보기 ]" />
-    <MESSAGE value="day74 게시물리스트 출력 [ 카테고리별 출력 ]" />
-    <MESSAGE value="day74 내가 쓴글 게시물 출력 [ 로그인 인증세션 이용 ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="day74 내가 쓴글 게시물 출력 [ 로그인 인증세션 이용 ]" />
+    <MESSAGE value="0418" />
+    <option name="LAST_COMMIT_MESSAGE" value="0418" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
