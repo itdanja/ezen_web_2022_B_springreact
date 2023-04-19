@@ -1,17 +1,29 @@
 // p. 183 컴포넌트 만들기
-import React from 'react';
+import React , { useState } from 'react';
+/*
+    npm install @mui/material @emotion/react @emotion/styled
+    npm install @mui/material @mui/styled-engine-sc styled-components
+*/
+import { ListItem , ListItemText , InputBase , Checkbox } from '@mui/material';
 
 export default function Todo(props) {
-    return ( <>
-        <div className="Todo">
-            <input
-                type="checkbox"
-                id="todo0"
-                name="todo0"
-                value="todo0"
-            />
-            <label for="todo0"> Toto 컴포넌트 만들기 <label>
-        </div>
-    </>);
+    console.log( props )
+    // 1. Hook 상태관리 useState 함수
+    const [ item , setItem ] = useState( props.item );
 
+    return ( <>
+        <ListItem>
+            <Checkbox checked={item.done} />
+            <ListItemText>
+                <InputBase
+                    type="text"
+                    id={ item.id }
+                    name={ item.id }
+                    value={ item.title }
+                    multiline={true}
+                    fullWidth={true}
+                />
+            </ListItemText>
+        </ListItem>
+    </>);
 }

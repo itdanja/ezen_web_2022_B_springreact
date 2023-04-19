@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 컴포넌트 예제">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 컴포넌트에 css 적용하는방법">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -449,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681874041727</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="day75 컴포넌트에 css 적용하는방법">
+      <created>1681880445819</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1681880445819</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +475,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day70 index,signup,login 페이지 매핑" />
     <MESSAGE value="day70 login controller, service , repository" />
     <MESSAGE value="day70 login info , logout" />
     <MESSAGE value="day70 스프링 시큐리티 적용해보기, CSRF , 비크립트암호화" />
@@ -489,7 +499,8 @@
     <MESSAGE value="0418" />
     <MESSAGE value="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기" />
     <MESSAGE value="day75 컴포넌트 예제" />
-    <option name="LAST_COMMIT_MESSAGE" value="day75 컴포넌트 예제" />
+    <MESSAGE value="day75 컴포넌트에 css 적용하는방법" />
+    <option name="LAST_COMMIT_MESSAGE" value="day75 컴포넌트에 css 적용하는방법" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
