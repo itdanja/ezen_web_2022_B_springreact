@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 AddTodo 컴포넌트 추가 p.194">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -463,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681884800293</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="day75 AddTodo 컴포넌트 추가 p.194">
+      <created>1681886638883</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1681886638883</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day70 login info , logout" />
     <MESSAGE value="day70 스프링 시큐리티 적용해보기, CSRF , 비크립트암호화" />
     <MESSAGE value="day70 스프링 시큐리티 비크립트암호화" />
     <MESSAGE value="day70 스프링 시큐리티 로그인기능 커스터마이징 하기" />
@@ -503,7 +509,8 @@
     <MESSAGE value="day75 컴포넌트 예제" />
     <MESSAGE value="day75 컴포넌트에 css 적용하는방법" />
     <MESSAGE value="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기" />
-    <option name="LAST_COMMIT_MESSAGE" value="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기" />
+    <MESSAGE value="day75 AddTodo 컴포넌트 추가 p.194" />
+    <option name="LAST_COMMIT_MESSAGE" value="day75 AddTodo 컴포넌트 추가 p.194" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
