@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 입력받은 값을 상태변수에 저장하기">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="0419">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/TodoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/todo/TodoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +45,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test0417" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Ntj54jd0tKKNzSjJHxxzhIHton" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -67,7 +69,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/504t/Desktop/ezen_web_2022_B_springreact/src/main/frontend/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/504t/Desktop/ezen_web_2022_B_springreact&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -75,9 +77,6 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\frontend\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\static" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\templates\error" />
@@ -86,7 +85,7 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStart">
+  <component name="RunManager" selected="애플리케이션.AppStart">
     <configuration name="실행" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.example.day06_객체관계.실행" />
       <module name="ezenweb.main" />
@@ -154,11 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.실행" />
-        <item itemvalue="Application.SpringStart" />
-        <item itemvalue="Application.ezenweb.example.day05.AppStart" />
-        <item itemvalue="Application.ezenweb.example.day04.AppStart" />
-        <item itemvalue="Application.AppStart" />
+        <item itemvalue="애플리케이션.AppStart" />
       </list>
     </recent_temporary>
   </component>
@@ -430,56 +425,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681718378761</updated>
     </task>
-    <task id="LOCAL-00038" summary="0418">
-      <created>1681744169117</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1681744169117</updated>
-    </task>
-    <task id="LOCAL-00039" summary="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기">
-      <created>1681871467811</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1681871467811</updated>
-    </task>
-    <task id="LOCAL-00040" summary="day75 컴포넌트 예제">
-      <created>1681874041727</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1681874041727</updated>
-    </task>
-    <task id="LOCAL-00041" summary="day75 컴포넌트에 css 적용하는방법">
-      <created>1681880445819</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1681880445819</updated>
-    </task>
-    <task id="LOCAL-00042" summary="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기">
-      <created>1681884800293</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1681884800293</updated>
-    </task>
-    <task id="LOCAL-00043" summary="day75 AddTodo 컴포넌트 추가 p.194">
-      <created>1681886638883</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1681886638883</updated>
-    </task>
-    <task id="LOCAL-00044" summary="day75 입력받은 값을 상태변수에 저장하기">
-      <created>1681888209077</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1681888209077</updated>
-    </task>
-    <option name="localTasksCounter" value="45" />
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -494,6 +440,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="day67 회원 컨트롤러 구현중" />
+    <MESSAGE value="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트" />
+    <MESSAGE value="day70 index,signup,login 페이지 매핑" />
+    <MESSAGE value="day70 login controller, service , repository" />
+    <MESSAGE value="day70 login info , logout" />
+    <MESSAGE value="day70 스프링 시큐리티 적용해보기, CSRF , 비크립트암호화" />
     <MESSAGE value="day70 스프링 시큐리티 비크립트암호화" />
     <MESSAGE value="day70 스프링 시큐리티 로그인기능 커스터마이징 하기" />
     <MESSAGE value="day70 스프링 시큐리티 로그인 세션 관리 [ getPrincipal ]" />
@@ -512,14 +464,8 @@
     <MESSAGE value="day73 JPA 조인테이블 (댓글)양방향 구현" />
     <MESSAGE value="day73 각 리포지토리 생성" />
     <MESSAGE value="day73 게시물Dto , Controller 매핑 구현" />
-    <MESSAGE value="0418" />
-    <MESSAGE value="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기" />
-    <MESSAGE value="day75 컴포넌트 예제" />
-    <MESSAGE value="day75 컴포넌트에 css 적용하는방법" />
-    <MESSAGE value="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기" />
-    <MESSAGE value="day75 AddTodo 컴포넌트 추가 p.194" />
-    <MESSAGE value="day75 입력받은 값을 상태변수에 저장하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="day75 입력받은 값을 상태변수에 저장하기" />
+    <MESSAGE value="0419" />
+    <option name="LAST_COMMIT_MESSAGE" value="0419" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
