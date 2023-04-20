@@ -19,22 +19,22 @@ import AppTodo from './example/exbook/AppTodo';
 //2. ReactDOM.createRoot( 해당 div ) : 해당 div를 리액트 root 로 사용하여 root 객체 생성
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-/*
 // ----- . 교재 Todo 컴포넌트 적용
 root.render(
     <React.StrictMode>
         <AppTodo />
     </React.StrictMode>
 )
-*/
 
 
+/*
 // ----- . 훅 예제
 root.render(
-    <React.StrictMode>
+    //<React.StrictMode> //  예외처리 경고/검사
         <Hook2 />
-    </React.StrictMode>
+    //</React.StrictMode>
 )
+*/
 
 
 

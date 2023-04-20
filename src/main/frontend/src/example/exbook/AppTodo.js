@@ -1,8 +1,9 @@
 // 교재 App컴포넌트 --> AppTodo 컴포넌트
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
 import Todo from './Todo';
 import { List , Paper , Container } from '@mui/material';
 import AddTodo from './AddTodo';
+import axios from 'axios'; // npm install axios [ install -> i ]
 
 export default function AppTodo( props ){
     // 1.  // item  = { id : "0",title : "Hello World 1 ",done : true  }
@@ -10,6 +11,17 @@ export default function AppTodo( props ){
         [ // array s
         ] // array end
     ) // useState 함수 end
+    // 컴포넌트가 실행될때 한번 이벤트 발생
+    useEffect( () => {
+        // ajax : jquery 설치 가 필요
+        // fetch : 리액트 전송 비동기 통신 함수 [ 내장함수 - 설치 X ]
+        // axios : 리액트 외부 라이브러리 [ 설치 필요 ] JSON통신 기본값
+        axios.get( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
+        // 해당 주소의 매핑되는 컨트롤/메소드 에 @CrossOrigin(origins = "http://localhost:3000") 추가
+        axios.post( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
+        axios.put( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
+        axios.delete( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
+     } , [] )
 
     // 2. items에 새로운 item 등록하는 함수
     const addItem = ( item ) =>{ // 함수로부터 매개변로 전달은 item
