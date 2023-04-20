@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="폴더정리">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day76 삭제기능">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/ex1component/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/ex1component/Book.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" afterDir="false" />
     </list>
@@ -503,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681950930767</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="day76 삭제기능">
+      <created>1681957619710</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1681957619710</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,7 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day70 스프링 시큐리티 로그인 세션 관리 [ getPrincipal ]" />
     <MESSAGE value="day71 회원가입 일반유저 user 권한 부여 , 로그인시 인증 권한 UserDetails 포함" />
     <MESSAGE value="day71 인증[권한] 결과를 이용한 HTTP 요청 제한" />
     <MESSAGE value="day71 HTTP 오류 코드에 따른 HTML 반환" />
@@ -543,7 +545,8 @@
     <MESSAGE value="day75 입력받은 값을 상태변수에 저장하기" />
     <MESSAGE value="day75 엔터 혹은 버튼 클릭시 상위 컴포넌트 함수에 접근하기" />
     <MESSAGE value="폴더정리" />
-    <option name="LAST_COMMIT_MESSAGE" value="폴더정리" />
+    <MESSAGE value="day76 삭제기능" />
+    <option name="LAST_COMMIT_MESSAGE" value="day76 삭제기능" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

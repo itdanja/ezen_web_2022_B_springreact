@@ -26,6 +26,12 @@ export default function AppTodo( props ){
             // * 삭제할 id를 제외한 새로운 newItems 배열이 선언
         setItems( [...newItems ] );
     }
+
+    // 4. 수정함수
+    const editItem = ()=>{
+        setItems([...items]) // 재 렌더링
+    }
+
     // 반복문 이용한 Todo 컴포넌트 생성
     let TodoItems =
         /*<Paper style="margin : 16px;"> // HTML의 style 속성 방법 */
@@ -33,7 +39,11 @@ export default function AppTodo( props ){
             <List>
                 {
                     items.map( (i)=>
-                        <Todo item ={ i } key = { i.id } 삭제함수 = { deleteItem }/>
+                        <Todo
+                            item ={ i }
+                            key = { i.id }
+                            삭제함수 = { deleteItem }
+                            수정함수 = { editItem } />
                     )
                 }
             </List>
