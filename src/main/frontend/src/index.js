@@ -21,9 +21,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // ----- . 교재 Todo 컴포넌트 적용
 root.render(
-    <React.StrictMode>
+    //<React.StrictMode>
         <AppTodo />
-    </React.StrictMode>
+    //</React.StrictMode>
 )
 
 

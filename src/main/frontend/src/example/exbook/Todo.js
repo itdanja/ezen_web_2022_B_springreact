@@ -35,6 +35,7 @@ export default function Todo(props) {
     const turnOnReadOnly = (e) => {  console.log("turnOnReadOnly")
         if( e.key == "Enter"){
             setReadOnly(true);
+            //axios.put( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
         }
     }
     // 7. 입력받은 값을 변경

@@ -16,12 +16,16 @@ export default function AppTodo( props ){
         // ajax : jquery 설치 가 필요
         // fetch : 리액트 전송 비동기 통신 함수 [ 내장함수 - 설치 X ]
         // axios : 리액트 외부 라이브러리 [ 설치 필요 ] JSON통신 기본값
-        axios.get( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
+        axios.get( "http://localhost:8080/todo" )
+            .then( r => {
+                console.log( r );
+                setItems( r.data ); // 서버에게 응답받은 리스트를 재렌더링
+            })
         // 해당 주소의 매핑되는 컨트롤/메소드 에 @CrossOrigin(origins = "http://localhost:3000") 추가
-        axios.post( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
-        axios.put( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
-        axios.delete( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
-     } , [] )
+            //axios.post( "http://localhost:8080/todo" , { mname :  "유재석" } ).then( r => { console.log( r ); })
+            //axios.put( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
+            //axios.delete( "http://localhost:8080/todo" , { params : { id : 1 } }  ).then( r => { console.log( r ); })
+     } ,[] )
 
     // 2. items에 새로운 item 등록하는 함수
     const addItem = ( item ) =>{ // 함수로부터 매개변로 전달은 item
@@ -30,6 +34,7 @@ export default function AppTodo( props ){
         setItems( [...items , item ] ); // 기존 상태 items 에 item 추가
         // item = { title : "입력받은값" , id = "id-배열길이" , done = "기본값false" }
         // setItems( [ ...상태명 , 추가할 데이터 ] );
+        //axios.post( "http://localhost:8080/todo" , { mname :  "유재석" } ).then( r => { console.log( r ); })
     }
     // 3. items에 item 삭제
     const deleteItem = (item)=>{
@@ -37,6 +42,7 @@ export default function AppTodo( props ){
         const newItems = items.filter( i =>  i.id !== item.id );
             // * 삭제할 id를 제외한 새로운 newItems 배열이 선언
         setItems( [...newItems ] );
+       //axios.delete( "http://localhost:8080/todo" , { params : { id : 1 } }  ).then( r => { console.log( r ); })
     }
 
     // 4. 수정함수
