@@ -11,7 +11,6 @@ export default function Todo(props) {
     // 1. Hook 상태관리 useState 함수
     const [ item , setItem ] = useState( props.item );
 
-
     return ( <>
         <ListItem>
             <Checkbox checked={item.done} />
