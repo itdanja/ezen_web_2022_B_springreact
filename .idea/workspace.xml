@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 입력받은 값을 상태변수에 저장하기">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day75 AddTodo 컴포넌트 추가 p.194">
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/example/ex3hook/Hook1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AddTodo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\504t\Desktop\team\ezen_web_2022_B_springreact\src\main\frontend\src\example\exbook" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\frontend\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -472,12 +473,12 @@
       <option name="project" value="LOCAL" />
       <updated>1681886638883</updated>
     </task>
-    <task id="LOCAL-00044" summary="day75 입력받은 값을 상태변수에 저장하기">
-      <created>1681888209077</created>
+    <task id="LOCAL-00044" summary="day76 git commit 정리">
+      <created>1681963104442</created>
       <option name="number" value="00044" />
       <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
-      <updated>1681888209077</updated>
+      <updated>1681963104442</updated>
     </task>
     <option name="localTasksCounter" value="45" />
     <servers />
@@ -518,8 +519,8 @@
     <MESSAGE value="day75 컴포넌트에 css 적용하는방법" />
     <MESSAGE value="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기" />
     <MESSAGE value="day75 AddTodo 컴포넌트 추가 p.194" />
-    <MESSAGE value="day75 입력받은 값을 상태변수에 저장하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="day75 입력받은 값을 상태변수에 저장하기" />
+    <MESSAGE value="day76 git commit 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="day76 git commit 정리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
