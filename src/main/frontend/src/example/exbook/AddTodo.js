@@ -4,7 +4,6 @@ import { Button , Grid , TextField } from '@mui/material'
 export default function AddTodo( props ){
     // 사용자가 입력한 데이터를 저장할 상태변수
     const [item , setItem ] = useState( {title : "" } )
-
     //1. 사용자가 입력한 데이터를 가져오는 함수
     // onChange={ onInputChange }
     // onChange 이벤트속성 : 해당 요소가 해당 이벤트를 발생했을때 이벤트 정보를 반환[ e ]
@@ -15,12 +14,10 @@ export default function AddTodo( props ){
         setItem( { title : e.target.value } );  // 상태변경 : set~~~  : 입력받은 값을 가져와서 상태변수를 수정
             console.log( item );
     }
-
      // 2. AppTodo로 부터 전달 받은 addItem 함수
-    const addItem = props.addItem
     // 3. + 버튼을 클릭했을때
     const onButtonClick = () =>{
-        addItem(item);
+        props.저장함수(item);
         // 입력받은 데이터를 AppTodo컴포넌트 한테
         // 전달받은 addItem함수의 매개변수 넣고 함수 실행
         setItem( {title : "" }); // 상태변수 초기화
