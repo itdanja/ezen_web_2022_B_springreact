@@ -13,7 +13,7 @@
                     export default 컴포넌트명
 */
 import React from 'react'
-function Book( ){ return ( <> 처음 만든 리액트 컴포넌트 </> ) }
-export default Book
+export default function Book( ){ return ( <> 처음 만든 리액트 컴포넌트 </> ) }
+
 
 
