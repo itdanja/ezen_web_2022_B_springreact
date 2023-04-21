@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 signup -&gt; Signup 오타">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 Signup 리액트 컴포넌트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/AuthSuccessFailHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/AuthSuccessFailHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/member.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00002" summary="day64 restful api">
-      <created>1680578934481</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680578934481</updated>
     </task>
     <task id="LOCAL-00003" summary="day64 restful api">
       <created>1680584720730</created>
@@ -515,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682047393187</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="day77 Signup 리액트 컴포넌트">
+      <created>1682051616666</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1682051616666</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day71 HTTP 오류 코드에 따른 HTML 반환" />
     <MESSAGE value="day71 로그아웃 함수에서 a 태그로 변경" />
     <MESSAGE value="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입" />
     <MESSAGE value="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기" />
@@ -555,7 +558,8 @@
     <MESSAGE value="day77 라우터를 이용한 페이지 전환" />
     <MESSAGE value="day77 라우터를 이용한 페이지[컴포넌트] 전환" />
     <MESSAGE value="day77 signup -&gt; Signup 오타" />
-    <option name="LAST_COMMIT_MESSAGE" value="day77 signup -&gt; Signup 오타" />
+    <MESSAGE value="day77 Signup 리액트 컴포넌트" />
+    <option name="LAST_COMMIT_MESSAGE" value="day77 Signup 리액트 컴포넌트" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

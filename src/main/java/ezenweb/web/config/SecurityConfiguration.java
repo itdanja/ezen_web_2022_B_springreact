@@ -3,12 +3,18 @@ package ezenweb.web.config;
 import ezenweb.web.controller.AuthSuccessFailHandler;
 import ezenweb.web.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.Arrays;
 
 @Configuration // 스프링 빈에 등록 [ MVC 컴포넌트 ]
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -72,8 +78,27 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .successHandler( authSuccessFailHandler )
                     .userInfoEndpoint()
                     .userService( memberService ); //  oauth2 서비스를 처리할 서비스 구현
+
+        http.cors(); // CORS 정책 사용
+    } // configure end
+
+    // import org.springframework.web.cors.CorsConfigurationSource;
+    // 스프링 시큐리티에 CORS 정책 설정 [ 리액트[3000]의 요청 받기 위해서  ]
+    @Bean // 빈 등록
+    CorsConfigurationSource corsConfigurationSource(){
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));    // 주소
+        corsConfiguration.setAllowedMethods( Arrays.asList("HEAD","GET","POST","PUT","DELETE")); // http메소드
+        corsConfiguration.setAllowedHeaders( Arrays.asList("Content-Type" , "Cache-Control" , "Authorization" )); // http 설정
+        corsConfiguration.setAllowCredentials(true);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**" , corsConfiguration);
+        return  source;
     }
-}
+
+
+} // SecurityConfiguration class end
+
 
 
 /*

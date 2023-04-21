@@ -32,7 +32,6 @@ function onLogin(){
             console.log(r);
         }
     })
-
 }
 /*
     // 시큐리티 사용하므로 폼 전송으로 로그인 요청

@@ -1,8 +1,6 @@
 import React , { useState , useEffect } from 'react'
 import axios from 'axios'
 export default function Signup( props ) {
-
-    // 1. 회원가입
     //function onSignup(){} --> 변수형 익명함수 변환
     //unction onSignup(){} --> const 변수 = () => {}
     const onSignup = () =>{ console.log( 'onSignup open' )
@@ -16,11 +14,11 @@ export default function Signup( props ) {
     // ajax ---> axios 변환
     axios
         .post("http://localhost:8080/member/info" , info )
-        .then( r => {
-            console.log( r );
+        .then( r => {  console.log( r );
             if( r.data == true  ){
-                alert('가입이 되셨습니다.');
-                window.location.href="/login"; // window.location.href="이동할 경로";
+                alert('회원가입 성공');window.location.href="/login"; // window.location.href="이동할 경로";
+            }else{
+                alert('회원가입 실패 [ 관리자에게 문의 ]');
             }
         })
         .catch( err => { console.log( err ) });
