@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 login 시 로컬 스토리지 생성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" afterDir="false" />
     </list>
@@ -170,13 +171,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00005" summary="day65 MVC패턴">
-      <created>1680657847564</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1680657847564</updated>
     </task>
     <task id="LOCAL-00006" summary="day65 MVC패턴">
       <created>1680661533128</created>
@@ -514,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682053858703</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="day77 login 시 로컬 스토리지 생성">
+      <created>1682056859605</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1682056859605</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입" />
     <MESSAGE value="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기" />
     <MESSAGE value="day71 oauth2 구글 DB처리" />
     <MESSAGE value="day71 oauth2 카카오로그인 서비스 구현" />
@@ -554,7 +554,8 @@
     <MESSAGE value="day77 signup -&gt; Signup 오타" />
     <MESSAGE value="day77 Signup 리액트 컴포넌트" />
     <MESSAGE value="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]" />
+    <MESSAGE value="day77 login 시 로컬 스토리지 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="day77 login 시 로컬 스토리지 생성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
