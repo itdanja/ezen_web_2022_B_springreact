@@ -1,7 +1,7 @@
 import React , { useState , useEffect } from 'react'
 import axios from 'axios'
 export default function Signup( props ) {
-    return(<>
+    return(<div>
                 <h3> 회원가입 페이지 </h3>
                 <form>
                     아이디[이메일] : <input type="text" className="memail" /> <br/>
@@ -10,5 +10,5 @@ export default function Signup( props ) {
                     이메일 :  <input type="text" className="mphone" />  <br/>
                     <button onclick="onSignup()" type="button"> 가입 </button>
                 </form>
-    </>)
+    </div>)
 }

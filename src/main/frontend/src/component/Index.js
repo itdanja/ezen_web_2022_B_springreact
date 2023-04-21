@@ -6,9 +6,6 @@ import Footer from "./Footer"
 import Main from "./Main"
 import Login from "./member/Login"
 import Signup from "./member/Signup"
-
-
-
 export default function Index( props ) {
     return ( <>
         <BrowserRouter>
@@ -16,7 +13,7 @@ export default function Index( props ) {
             <Routes>
                 <Route path="/" element = { <Main/> } />
                 <Route path="/login" element = { <Login/> } />
-                <Route path="/signup" element = { <signup/> } />
+                <Route path="/signup" element = { <Signup/> } />
             </Routes>
             <Footer />
         </BrowserRouter>
