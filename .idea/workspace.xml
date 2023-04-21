@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/AuthSuccessFailHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/AuthSuccessFailHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/member/MemberEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/member.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,13 +170,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00004" summary="day64 restful api">
-      <created>1680587061811</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680587061811</updated>
     </task>
     <task id="LOCAL-00005" summary="day65 MVC패턴">
       <created>1680657847564</created>
@@ -519,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682053849080</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
+      <created>1682053858702</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1682053858703</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
