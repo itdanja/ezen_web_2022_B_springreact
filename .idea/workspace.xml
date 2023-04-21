@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day76 axios 이용한 String controller 와 통신">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/AppTodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/example/exbook/Todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681970984527</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="day76 axios 이용한 String controller 와 통신">
+      <created>1681973575197</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1681973575197</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

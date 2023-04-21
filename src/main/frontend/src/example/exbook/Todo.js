@@ -38,10 +38,13 @@ export default function Todo(props) {
             //axios.put( "http://localhost:8080/todo" ).then( r => { console.log( r ); })
         }
     }
+
     // 7. 입력받은 값을 변경
     let editItem = props.수정함수
     const editEventHandler = (e)=>{  console.log("editEventHandler")
         item.title = e.target.value; // InputBase 에 값이 변경될때마다 상태변수에 입력된 값 저장
+        //editItem(); // 상위 컴포넌트 렌더링
+        //let newitem = { title : item.title  }
         editItem(); // 상위 컴포넌트 렌더링
     }
     // 8. 체크박스 업데이트

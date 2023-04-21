@@ -47,7 +47,8 @@ export default function AppTodo( props ){
 
     // 4. 수정함수
     const editItem = ()=>{
-        setItems([...items]) // 재 렌더링
+        let newItems = items.map( (i)=>{  return i;  } )
+        setItems( newItems ) // 재 렌더링
     }
 
     // 반복문 이용한 Todo 컴포넌트 생성

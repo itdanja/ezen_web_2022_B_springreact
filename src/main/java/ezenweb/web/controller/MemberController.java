@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/member")
 public class MemberController {
 
-    @GetMapping("/signup") // localhost:8080/member/signup 요청시 아래 템플릿[html] 반환
+    // 서버 사이드 라이팅 : 클라이언트가 서버에게 html 요청하는 방식 [ 리액트 통합 개발일경우 사용안함 ]
+    /*@GetMapping("/signup") // localhost:8080/member/signup 요청시 아래 템플릿[html] 반환
     public Resource getSignup(){ return new ClassPathResource("templates/member/signup.html");}
     @GetMapping("/login")
-    public Resource getLogin(){ return new ClassPathResource("templates/member/login.html");}
+    public Resource getLogin(){ return new ClassPathResource("templates/member/login.html");}*/
 
     // 1. @Autowired 없을때 객체[빈] 생성
         // MemberService service = new MemberService();
