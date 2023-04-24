@@ -14,6 +14,7 @@ import java.util.Map;
 @RestController
 @Slf4j
 @RequestMapping("/board")
+@CrossOrigin( origins = "http://localhost:3000")
 public class BoardController {
     // 서비스 객체들
     @Autowired private BoardService boardService;

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day78 아이디 중복검사">
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day78 게시판 라우터 적용">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,13 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00009" summary="day65 MVC패턴">
-      <created>1680672480218</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1680672480218</updated>
     </task>
     <task id="LOCAL-00010" summary="day66 MVC 레이어드 구조 / 패키지 구조 / 엔티티 날짜 주입">
       <created>1680757454752</created>
@@ -513,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682306059027</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="day78 게시판 라우터 적용">
+      <created>1682306367281</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1682306367281</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day73 시큐리티 인증성공/실패 핸들러" />
     <MESSAGE value="day73 시큐리티 성공/실패 핸들러 ( oauth 포함 )" />
     <MESSAGE value="day73 JPA 조인테이블 단방향 구현" />
     <MESSAGE value="day73 JPA 조인테이블 양방향 구현" />
@@ -553,7 +555,8 @@
     <MESSAGE value="day77 logout 세션 스토리지 사용" />
     <MESSAGE value="day78 라우터 , JS스토리지" />
     <MESSAGE value="day78 아이디 중복검사" />
-    <option name="LAST_COMMIT_MESSAGE" value="day78 아이디 중복검사" />
+    <MESSAGE value="day78 게시판 라우터 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="day78 게시판 라우터 적용" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
