@@ -14,8 +14,13 @@ export default function Header( props ) {
             <a href="/"> Home </a>
             {
                 login == null
-                ? ( <> <a href="/login"> 로그인 </a> <a href="/signup"> 회원가입 </a> </> )
-                : ( <> <button onClick={ logOut }>로그아웃</button> </> )
+                ? ( <>
+                        <a href="/member/login"> 로그인 </a>
+                        <a href="/member/signup"> 회원가입 </a>
+                    </> )
+                : ( <>
+                        <button onClick={ logOut }>로그아웃</button>
+                    </> )
             }
         </div>
     )

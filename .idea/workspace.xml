@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 login 시 로컬 스토리지 생성">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day77 logout 세션 스토리지 사용">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +81,7 @@
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\frontend\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\504t\Desktop\team\ezen_web_2022_B_springreact\src\main\frontend\src\component\member" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\static" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\templates\error" />
     </key>
@@ -171,13 +173,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00006" summary="day65 MVC패턴">
-      <created>1680661533128</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680661533128</updated>
     </task>
     <task id="LOCAL-00007" summary="day65 MVC패턴">
       <created>1680664988996</created>
@@ -515,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682056859605</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="day77 logout 세션 스토리지 사용">
+      <created>1682058812443</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1682058812443</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기" />
     <MESSAGE value="day71 oauth2 구글 DB처리" />
     <MESSAGE value="day71 oauth2 카카오로그인 서비스 구현" />
     <MESSAGE value="day73 시큐리티 인증성공/실패 핸들러" />
@@ -555,7 +556,8 @@
     <MESSAGE value="day77 Signup 리액트 컴포넌트" />
     <MESSAGE value="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]" />
     <MESSAGE value="day77 login 시 로컬 스토리지 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="day77 login 시 로컬 스토리지 생성" />
+    <MESSAGE value="day77 logout 세션 스토리지 사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="day77 logout 세션 스토리지 사용" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
