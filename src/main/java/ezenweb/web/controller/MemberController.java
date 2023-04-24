@@ -48,6 +48,13 @@ public class MemberController {
         return result;
     }
 
+
+    // 5. [G] 아이디 중복체크
+    @GetMapping("/idcheck")
+    public boolean idcheck( @RequestParam String memail ){log.info(" idcheck memail : " + memail );
+        return memberService.idcheck( memail );
+    }
+
     // -------------- 스프링 시큐리티 적용될 경우 아래코드 사용 안함 --------------- //
     /*
     // 1. 로그인

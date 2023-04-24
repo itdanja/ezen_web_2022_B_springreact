@@ -21,6 +21,7 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -171,6 +172,13 @@ public class MemberService implements UserDetailsService , OAuth2UserService<OAu
         }
         return false;
     }
+
+    // 5. 아이디 중복 확인
+    public boolean idcheck( String memail ){
+        return memberEntityRepository.existsByMemail( memail  );
+    }
+
+
     /*
     // 2. [ 세션에 존재하는 정보 제거 ] 로그아웃
     @Transactional
