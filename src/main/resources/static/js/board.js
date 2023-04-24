@@ -11,7 +11,7 @@ function setCategory(){  console.log("setCategory()")
             console.log(r)
             if( r == true ) {
                 document.querySelector(".cname").value = ''
-                `getCategory();`
+                getCategory();`
             }
         } // success end
     }) // ajax end

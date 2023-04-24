@@ -36,9 +36,8 @@ public class BoardService {
 
         List<CategoryDto> list = new ArrayList<>();
         categoryEntityList.forEach( (e)->{
-            list.add( new CategoryDto( e.getCno() , e.getCname()) );
-        });
-        return list;
+            list.add( new CategoryDto( e.getCno() , e.getCname() ) );
+        }); return list;
     }
 
     // 3. 게시물 쓰기

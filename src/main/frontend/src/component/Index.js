@@ -8,6 +8,9 @@ import Login from "./member/Login"
 import Signup from "./member/Signup"
 import Find from "./member/Find"
 import List from "./board/List"
+import DashBoard from "./admin/DashBoard"
+import Write from "./board/Write"
+
 export default function Index( props ) {
     return ( <>
         <BrowserRouter>
@@ -18,6 +21,8 @@ export default function Index( props ) {
                 <Route path="/member/signup" element = { <Signup/> } />
                 <Route path="/member/find" element = { <Find/> } />
                 <Route path="/board/list" element = { <List/> } />
+                <Route path="/admin/dashboard" element = { <DashBoard/> } />
+                <Route path="/board/write" element = { <Write/> } />
             </Routes>
             <Footer />
         </BrowserRouter>

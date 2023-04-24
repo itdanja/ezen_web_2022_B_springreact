@@ -10,7 +10,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 /* ---------------------------*/
 import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+
 import CategoryList from './CategoryList';
+
+
 
 export default function List( props ) {
     // 1. 요청한 게시물 정보를 가지고 있는 리스트 변수[ 상태 관리변수 ]
@@ -32,12 +36,15 @@ export default function List( props ) {
 
     return (
     <Container>
-        <CategoryList categoryChange = { categoryChange } />
+        <div style={{ display:'flex' , justifyContent : 'space-between' , alignItems : 'center' }}>
+            <CategoryList categoryChange = { categoryChange } />
+            <a href="/board/write"><Button variant="outlined"> 게시물 작성 </Button></a>
+        </div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell align="center" style={{ width:'10%' }}>번호</TableCell>
+                <TableCell align="center" style={{ width:'8%' }}>번호</TableCell>
                 <TableCell align="center" style={{ width:'60%' }}>제목</TableCell>
                 <TableCell align="center" style={{ width:'10%' }}>작성자</TableCell>
                 <TableCell align="center" style={{ width:'10%' }}>작성일</TableCell>
@@ -47,7 +54,7 @@ export default function List( props ) {
             <TableBody>
               {rows.map((row) => (
                 <TableRow  key={row.name}   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}  >
-                  <TableCell component="th" scope="row"> {row.bno} </TableCell>
+                  <TableCell align="center" component="th" scope="row"> {row.bno} </TableCell>
                   <TableCell align="left">{row.btitle}</TableCell>
                   <TableCell align="center">{row.mname}</TableCell>
                   <TableCell align="center">{row.bdate}</TableCell>
