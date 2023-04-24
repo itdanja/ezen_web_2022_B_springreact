@@ -31,13 +31,14 @@ public class BoardService {
     }
     // 2. 모든 카테고리 출력
     @Transactional
-    public Map< Integer , String > categoryList(  ){    log.info("s categoryList : " );
+    public List<CategoryDto> categoryList(  ){    log.info("s categoryList : " );
         List<CategoryEntity> categoryEntityList = categoryRepository.findAll();
-        // 형변환 List<엔티티> ---> MAP
-        Map< Integer , String > map = new HashMap<>();
+
+        List<CategoryDto> list = new ArrayList<>();
         categoryEntityList.forEach( (e)->{
-            map.put( e.getCno() , e.getCname() );
-        }); return map;
+            list.add( new CategoryDto( e.getCno() , e.getCname()) );
+        });
+        return list;
     }
 
     // 3. 게시물 쓰기

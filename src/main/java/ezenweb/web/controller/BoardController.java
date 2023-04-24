@@ -1,6 +1,7 @@
 package ezenweb.web.controller;
 
 import ezenweb.web.domain.board.BoardDto;
+import ezenweb.web.domain.board.CategoryDto;
 import ezenweb.web.service.BoardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,8 +38,8 @@ public class BoardController {
         // List : { 값 , 값 , 값 , 값 }     --> JSON[ array ]
         // Map : { 키 : 값 , 키 : 값 , 키 : 값 } ---> JSON [ object ]
     @GetMapping("/category/list")
-    public Map< Integer , String > categoryList(  ){  log.info("c categoryList : " );
-        Map< Integer , String > result = boardService.categoryList(  );
+    public List<CategoryDto> categoryList(  ){  log.info("c categoryList : " );
+        List<CategoryDto> result = boardService.categoryList(  );
         return result;
     }
 
