@@ -10,22 +10,12 @@ export default function Login( props ) {
         let loginFormData = new FormData(loginForm);
 
         axios
-            .post("http://localhost:8080/member/login" , loginFormData )
+            .post("/member/login" , loginFormData )
             .then( r => {
                 if( r.data == false ){
                     alert("동일한 회원정보가 없습니다. ");
                 }else{
                     alert("로그인성공");
-                    // JS 로컬 스토리지[브라우저 모두 닫혀도 사라지지 않는다. 도메인마다 따로 저장된다. ] 에 로그인 성공한 흔적 남기기
-                    // localStorage.setItem("key",value); //  key·value : String 타입
-                    // value 에 객체 대입시 [Object] ?????? 객체처럼 사용불가
-                    // JSON.stringify( 객체 ) : 해당 객체를 String 타입의 json형식
-                        // JSON.stringify( )    : Object --> String
-                        // JSON.parse ( )       : String --> Object
-                    //localStorage.setItem("login_token" , JSON.stringify( r.data ) );
-                    // JS 세션 스토리지[ 브라우저 모두 닫히면 사라진다. ]
-                    sessionStorage.setItem("login_token" , JSON.stringify( r.data ) );
-
                     window.location.href="/";
                 }
             })

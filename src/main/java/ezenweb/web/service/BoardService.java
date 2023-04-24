@@ -6,6 +6,10 @@ import ezenweb.web.domain.member.MemberEntity;
 import ezenweb.web.domain.member.MemberEntityRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,25 +76,34 @@ public class BoardService {
     }
     // 4. 카테고리별 게시물 출력
     @Transactional
-    public List<BoardDto> list(  int cno ){ log.info("s list cno : " + cno );
-        List<BoardDto> list = new ArrayList<>();
-        // 전체 보기
-        if( cno == 0){
-            List<BoardEntity> boardEntityList = boardEntityRepository.findAll();
-            boardEntityList.forEach( (e)->{  // 엔티티[레코드] 하나씩 반복문
-                list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
-            });
-        // 카테고리별 보기
-        }else{
-            Optional<CategoryEntity> categoryEntityOptional = categoryRepository.findById( cno ); // 해당 cno의 카테고리 정보 전체 출력
-            if( categoryEntityOptional.isPresent() ){
-                categoryEntityOptional.get().getBoardEntityList().forEach( (e)->{
-                    list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
-                });
-            }
+    public PageDto list( PageDto pageDto  ){ log.info("s list  : " + pageDto );
+
+        Pageable pageable = PageRequest.of(  pageDto.getPage()-1 , 10 , Sort.by( Sort.Direction.DESC , "bno") );
+
+        Page<BoardEntity>  elist = boardEntityRepository.findBySearch( pageDto.getCno() , pageDto.getKey() , pageDto.getKeyword() , pageable );
+
+        List<BoardDto> dlist = new ArrayList<>(); // 2. 컨트롤에게 전달할때 형변환[ entity->dto ] : 역할이 달라서
+        for( BoardEntity entity : elist ){ // 3. 변환
+            dlist.add( entity.toDto() );
         }
-        return list;  // 리스트 반환
+
+        pageDto.setBoards( dlist  );  // 결과 리스트 담기
+        pageDto.setTotalpages( elist.getTotalPages() );
+        pageDto.setTotalRows( elist.getTotalElements() );
+
+        return pageDto;  // 리스트 반환
     }
+
+    @Transactional
+    public BoardDto getBoard( int bno  ){
+
+        BoardEntity boardEntity = boardEntityRepository.findById( bno ).get();
+
+        boardEntity.setBview( boardEntity.getBview()+1 );
+
+        return boardEntity.toDto();
+    }
+
 
     // 5. 내가 쓴 게시물 출력
     public List<BoardDto> myboards( ){log.info("s myboards : " );

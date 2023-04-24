@@ -4,19 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day78 mui 카테고리 출력/선택 이벤트">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day76 axios 이용한 String controller 와 통신">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/CategoryList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -52,7 +70,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test0417" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,7 +101,6 @@
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\frontend\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\504t\Desktop\team\ezen_web_2022_B_springreact\src\main\frontend\src\component\member" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\static" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\templates\error" />
     </key>
@@ -91,7 +108,7 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStart">
+  <component name="RunManager" selected="애플리케이션.AppStart">
     <configuration name="실행" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.example.day06_객체관계.실행" />
       <module name="ezenweb.main" />
@@ -157,15 +174,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.실행" />
-        <item itemvalue="Application.SpringStart" />
-        <item itemvalue="Application.ezenweb.example.day05.AppStart" />
-        <item itemvalue="Application.ezenweb.example.day04.AppStart" />
-        <item itemvalue="Application.AppStart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -175,6 +183,83 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
+    </task>
+    <task id="LOCAL-00001" summary="day64 restful api">
+      <created>1680574924136</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680574924136</updated>
+    </task>
+    <task id="LOCAL-00002" summary="day64 restful api">
+      <created>1680578934481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680578934481</updated>
+    </task>
+    <task id="LOCAL-00003" summary="day64 restful api">
+      <created>1680584720730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680584720730</updated>
+    </task>
+    <task id="LOCAL-00004" summary="day64 restful api">
+      <created>1680587061811</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680587061811</updated>
+    </task>
+    <task id="LOCAL-00005" summary="day65 MVC패턴">
+      <created>1680657847564</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680657847564</updated>
+    </task>
+    <task id="LOCAL-00006" summary="day65 MVC패턴">
+      <created>1680661533128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680661533128</updated>
+    </task>
+    <task id="LOCAL-00007" summary="day65 MVC패턴">
+      <created>1680664988996</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680664988996</updated>
+    </task>
+    <task id="LOCAL-00008" summary="day65 MVC패턴">
+      <created>1680670360027</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680670360027</updated>
+    </task>
+    <task id="LOCAL-00009" summary="day65 MVC패턴">
+      <created>1680672480218</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680672480218</updated>
+    </task>
+    <task id="LOCAL-00010" summary="day66 MVC 레이어드 구조 / 패키지 구조 / 엔티티 날짜 주입">
+      <created>1680757454752</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680757454752</updated>
+    </task>
+    <task id="LOCAL-00011" summary="day67 회원 컨트롤러 구현중">
+      <created>1681089669329</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681089669330</updated>
     </task>
     <task id="LOCAL-00012" summary="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트">
       <created>1681096784727</created>
@@ -421,105 +506,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681970984527</updated>
     </task>
-    <task id="LOCAL-00047" summary="day76 axios 이용한 String controller 와 통신">
-      <created>1681973575197</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1681973575197</updated>
-    </task>
-    <task id="LOCAL-00048" summary="day77 라우터를 이용한 페이지[컴포넌트] 전환">
-      <created>1682044200728</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1682044200728</updated>
-    </task>
-    <task id="LOCAL-00049" summary="day77 라우터를 이용한 페이지[컴포넌트] 전환">
-      <created>1682047307798</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1682047307798</updated>
-    </task>
-    <task id="LOCAL-00050" summary="day77 signup -&gt; Signup 오타">
-      <created>1682047393187</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1682047393187</updated>
-    </task>
-    <task id="LOCAL-00051" summary="day77 Signup 리액트 컴포넌트">
-      <created>1682051616666</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1682051616666</updated>
-    </task>
-    <task id="LOCAL-00052" summary="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
-      <created>1682053849080</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1682053849080</updated>
-    </task>
-    <task id="LOCAL-00053" summary="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
-      <created>1682053858702</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1682053858703</updated>
-    </task>
-    <task id="LOCAL-00054" summary="day77 login 시 로컬 스토리지 생성">
-      <created>1682056859605</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1682056859605</updated>
-    </task>
-    <task id="LOCAL-00055" summary="day77 logout 세션 스토리지 사용">
-      <created>1682058812443</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1682058812443</updated>
-    </task>
-    <task id="LOCAL-00056" summary="day78 라우터 , JS스토리지">
-      <created>1682302814675</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1682302814675</updated>
-    </task>
-    <task id="LOCAL-00057" summary="day78 아이디 중복검사">
-      <created>1682306059027</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1682306059027</updated>
-    </task>
-    <task id="LOCAL-00058" summary="day78 게시판 라우터 적용">
-      <created>1682306367281</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1682306367281</updated>
-    </task>
-    <task id="LOCAL-00059" summary="day78 mui 게시물 출력">
-      <created>1682311727714</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1682311727715</updated>
-    </task>
-    <task id="LOCAL-00060" summary="day78 mui 카테고리 출력/선택 이벤트">
-      <created>1682316289560</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1682316289560</updated>
-    </task>
-    <option name="localTasksCounter" value="61" />
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,6 +521,18 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="day70 스프링 시큐리티 로그인 세션 관리 [ getPrincipal ]" />
+    <MESSAGE value="day71 회원가입 일반유저 user 권한 부여 , 로그인시 인증 권한 UserDetails 포함" />
+    <MESSAGE value="day71 인증[권한] 결과를 이용한 HTTP 요청 제한" />
+    <MESSAGE value="day71 HTTP 오류 코드에 따른 HTML 반환" />
+    <MESSAGE value="day71 로그아웃 함수에서 a 태그로 변경" />
+    <MESSAGE value="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입" />
+    <MESSAGE value="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기" />
+    <MESSAGE value="day71 oauth2 구글 DB처리" />
+    <MESSAGE value="day71 oauth2 카카오로그인 서비스 구현" />
+    <MESSAGE value="day73 시큐리티 인증성공/실패 핸들러" />
+    <MESSAGE value="day73 시큐리티 성공/실패 핸들러 ( oauth 포함 )" />
+    <MESSAGE value="day73 JPA 조인테이블 단방향 구현" />
     <MESSAGE value="day73 JPA 조인테이블 양방향 구현" />
     <MESSAGE value="day73 JPA 조인테이블 (댓글)양방향 구현" />
     <MESSAGE value="day73 각 리포지토리 생성" />
@@ -547,19 +546,7 @@
     <MESSAGE value="day76 git commit 정리" />
     <MESSAGE value="day76 Hook useState , useEffect" />
     <MESSAGE value="day76 axios 이용한 String controller 와 통신" />
-    <MESSAGE value="day77 라우터를 이용한 페이지 전환" />
-    <MESSAGE value="day77 라우터를 이용한 페이지[컴포넌트] 전환" />
-    <MESSAGE value="day77 signup -&gt; Signup 오타" />
-    <MESSAGE value="day77 Signup 리액트 컴포넌트" />
-    <MESSAGE value="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]" />
-    <MESSAGE value="day77 login 시 로컬 스토리지 생성" />
-    <MESSAGE value="day77 logout 세션 스토리지 사용" />
-    <MESSAGE value="day78 라우터 , JS스토리지" />
-    <MESSAGE value="day78 아이디 중복검사" />
-    <MESSAGE value="day78 게시판 라우터 적용" />
-    <MESSAGE value="day78 mui 게시물 출력" />
-    <MESSAGE value="day78 mui 카테고리 출력/선택 이벤트" />
-    <option name="LAST_COMMIT_MESSAGE" value="day78 mui 카테고리 출력/선택 이벤트" />
+    <option name="LAST_COMMIT_MESSAGE" value="day76 axios 이용한 String controller 와 통신" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

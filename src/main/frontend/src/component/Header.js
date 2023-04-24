@@ -1,14 +1,28 @@
-import React, { useState }  from 'react';
+import React, { useState , useEffect }  from 'react';
 import axios from 'axios'
 export default function Header( props ) {
     // let [ login , setLogin] = useState( JSON.parse( localStorage.getItem("login_token") ) );
-    let [ login , setLogin] = useState( JSON.parse( sessionStorage.getItem("login_token") ) );
+    let [ login , setLogin] = useState( null );
     // 로그아웃
     const logOut = ()=>{
         sessionStorage.setItem("login_token" , null );
-        axios.get("http://localhost:8080/member/logout").then( r=>{ console.log(r); });  // 백엔드의 인증세션 지우기
-        window.location.href="/login";
+        setLogin( null );
+        axios.get("/member/logout").then( r=>{ console.log(r); });  // 백엔드의 인증세션 지우기
     }
+
+    useEffect( ()=>{
+            axios
+                .get("/member/info"  )
+                .then( r => {
+                    console.log( r.data )
+                    if( r.data != '' ){
+                       sessionStorage.setItem("login_token" , JSON.stringify( r.data ) );
+                       setLogin( JSON.parse( sessionStorage.getItem("login_token") )  );
+                    }
+                })
+    },[])
+
+
     return (
         <div>
             <a href="/"> Home </a>

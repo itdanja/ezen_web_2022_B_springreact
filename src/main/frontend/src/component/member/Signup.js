@@ -13,10 +13,10 @@ export default function Signup( props ) {
         console.log( info )
     // ajax ---> axios 변환
         axios
-        .post("http://localhost:8080/member/info" , info )
+        .post("/member/info" , info )
         .then( r => {  console.log( r );
             if( r.data == true  ){
-                alert('회원가입 성공');window.location.href="/login"; // window.location.href="이동할 경로";
+                alert('회원가입 성공');window.location.href="/member/login"; // window.location.href="이동할 경로";
             }else{
                 alert('회원가입 실패 [ 관리자에게 문의 ]');
             }
@@ -27,7 +27,7 @@ export default function Signup( props ) {
     // 2. 아이디 중복체크
     let [ memailMsg , setMemailMsg ] = useState('');
     const idCheck = (e) => {  // 1. console.log( document.querySelector('.memail').value ) ;  // 2. console.log( e.target.value ) ;
-        axios.get( "http://localhost:8080/member/idcheck" , { params : { memail : e.target.value } } )
+        axios.get( "/member/idcheck" , { params : { memail : e.target.value } } )
             .then( res => {
                 if( res.data == true ){ setMemailMsg('사용중인 이메일 입니다.')}
                 else{ setMemailMsg('사용 가능 한 이메일 입니다. ')}

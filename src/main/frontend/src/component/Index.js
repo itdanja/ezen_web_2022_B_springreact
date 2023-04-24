@@ -10,8 +10,13 @@ import Find from "./member/Find"
 import List from "./board/List"
 import DashBoard from "./admin/DashBoard"
 import Write from "./board/Write"
+import View from './board/View';
 
 export default function Index( props ) {
+
+
+
+
     return ( <>
         <BrowserRouter>
             <Header />
@@ -23,6 +28,7 @@ export default function Index( props ) {
                 <Route path="/board/list" element = { <List/> } />
                 <Route path="/admin/dashboard" element = { <DashBoard/> } />
                 <Route path="/board/write" element = { <Write/> } />
+                <Route path="/board/view/:bno" element={ <View/> } />
             </Routes>
             <Footer />
         </BrowserRouter>
