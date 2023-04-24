@@ -7,6 +7,7 @@ import Main from "./Main"
 import Login from "./member/Login"
 import Signup from "./member/Signup"
 import Find from "./member/Find"
+import List from "./board/List"
 export default function Index( props ) {
     return ( <>
         <BrowserRouter>
@@ -16,6 +17,7 @@ export default function Index( props ) {
                 <Route path="/member/login" element = { <Login/> } />
                 <Route path="/member/signup" element = { <Signup/> } />
                 <Route path="/member/find" element = { <Find/> } />
+                <Route path="/board/list" element = { <List/> } />
             </Routes>
             <Footer />
         </BrowserRouter>

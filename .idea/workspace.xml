@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day78 라우터 , JS스토리지">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/MemberService.java" afterDir="false" />
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day78 아이디 중복검사">
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,13 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00008" summary="day65 MVC패턴">
-      <created>1680670360027</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680670360027</updated>
     </task>
     <task id="LOCAL-00009" summary="day65 MVC패턴">
       <created>1680672480218</created>
@@ -516,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682302814675</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="day78 아이디 중복검사">
+      <created>1682306059027</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1682306059027</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -531,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day71 oauth2 카카오로그인 서비스 구현" />
     <MESSAGE value="day73 시큐리티 인증성공/실패 핸들러" />
     <MESSAGE value="day73 시큐리티 성공/실패 핸들러 ( oauth 포함 )" />
     <MESSAGE value="day73 JPA 조인테이블 단방향 구현" />
@@ -556,7 +552,8 @@
     <MESSAGE value="day77 login 시 로컬 스토리지 생성" />
     <MESSAGE value="day77 logout 세션 스토리지 사용" />
     <MESSAGE value="day78 라우터 , JS스토리지" />
-    <option name="LAST_COMMIT_MESSAGE" value="day78 라우터 , JS스토리지" />
+    <MESSAGE value="day78 아이디 중복검사" />
+    <option name="LAST_COMMIT_MESSAGE" value="day78 아이디 중복검사" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

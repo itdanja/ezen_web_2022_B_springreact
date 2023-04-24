@@ -12,6 +12,7 @@ export default function Header( props ) {
     return (
         <div>
             <a href="/"> Home </a>
+            <a href="/board/list"> 게시판 </a>
             {
                 login == null
                 ? ( <>
