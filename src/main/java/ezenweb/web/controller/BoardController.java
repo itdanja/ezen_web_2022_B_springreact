@@ -2,6 +2,7 @@ package ezenweb.web.controller;
 
 import ezenweb.web.domain.board.BoardDto;
 import ezenweb.web.domain.board.CategoryDto;
+import ezenweb.web.domain.board.PageDto;
 import ezenweb.web.service.BoardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +52,9 @@ public class BoardController {
     }
     // 4. 카테고리별 게시물 전체 출력
     @GetMapping("")
-    public List<BoardDto> get( @RequestParam int cno ){ log.info("c list cno : " + cno );
-        List<BoardDto> result = boardService.list( cno );
+    public PageDto get(@RequestParam int cno , @RequestParam int page  ){
+        log.info("c list cno : " + cno + "   " + page );
+        PageDto result = boardService.list( cno , page );
         return result;
     }
     // 수정

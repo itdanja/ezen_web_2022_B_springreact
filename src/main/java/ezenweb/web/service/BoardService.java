@@ -6,6 +6,10 @@ import ezenweb.web.domain.member.MemberEntity;
 import ezenweb.web.domain.member.MemberEntityRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -70,26 +74,25 @@ public class BoardService {
         */
         return 4;
     }
-    // 4. 카테고리별 게시물 출력
+    // 4.게시물 출력
     @Transactional
-    public List<BoardDto> list(  int cno ){ log.info("s list cno : " + cno );
-        List<BoardDto> list = new ArrayList<>();
-        // 전체 보기
-        if( cno == 0){
-            List<BoardEntity> boardEntityList = boardEntityRepository.findAll();
-            boardEntityList.forEach( (e)->{  // 엔티티[레코드] 하나씩 반복문
-                list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
-            });
-        // 카테고리별 보기
-        }else{
-            Optional<CategoryEntity> categoryEntityOptional = categoryRepository.findById( cno ); // 해당 cno의 카테고리 정보 전체 출력
-            if( categoryEntityOptional.isPresent() ){
-                categoryEntityOptional.get().getBoardEntityList().forEach( (e)->{
-                    list.add( e.toDto() ) ; // 엔티티[레코드] 하나씩 dto 변환후 리스트 담기
-                });
-            }
-        }
-        return list;  // 리스트 반환
+    public PageDto list(  int cno , int page  ){
+        // 1. pageable 인터페이스 [ 페이징처리 관련 api ]
+            // import org.springframework.data.domain.Pageable;
+        Pageable pageable = PageRequest.of( page-1 , 5 , Sort.by( Sort.Direction.DESC , "bno") );
+        // PageRequest.of( 현재 페이지번호[0시작] , 페이지당 표시할 게시물수  , Sort.by( Sort.Direction.ASC/DESC , '정렬기준필드명'  ) );
+        Page<BoardEntity> entityPage = boardEntityRepository.findAll( pageable );
+        //
+        List<BoardDto> boardDtoList = new ArrayList<>();
+        entityPage.forEach( (b)->{   boardDtoList.add( b.toDto() );  });
+
+        log.info("총 게시물수 : " + entityPage.getTotalElements() );  log.info("총 페이지수 : " + entityPage.getTotalPages() );
+        return PageDto.builder()
+                .boardDtoList( boardDtoList )
+                .totalCount( entityPage.getTotalElements() )
+                .totalPage( entityPage.getTotalPages() )
+                .cno( cno ).page( page )
+                .build();
     }
 
     // 5. 내가 쓴 게시물 출력

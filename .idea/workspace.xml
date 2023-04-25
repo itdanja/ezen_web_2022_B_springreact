@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 라우터 와 restful api 경로 중복제거">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -177,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00022" summary="day71 인증[권한] 결과를 이용한 HTTP 요청 제한">
-      <created>1681354784749</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1681354784749</updated>
     </task>
     <task id="LOCAL-00023" summary="day71 HTTP 오류 코드에 따른 HTML 반환">
       <created>1681355483685</created>
@@ -521,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682393206921</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트">
+      <created>1682398956302</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1682398956302</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -536,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0418" />
     <MESSAGE value="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기" />
     <MESSAGE value="day75 컴포넌트 예제" />
     <MESSAGE value="day75 컴포넌트에 css 적용하는방법" />
@@ -561,7 +562,8 @@
     <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
     <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
     <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
-    <option name="LAST_COMMIT_MESSAGE" value="day79 라우터 와 restful api 경로 중복제거" />
+    <MESSAGE value="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트" />
+    <option name="LAST_COMMIT_MESSAGE" value="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
