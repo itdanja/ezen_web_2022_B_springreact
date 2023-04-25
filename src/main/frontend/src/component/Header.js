@@ -6,7 +6,7 @@ export default function Header( props ) {
     // 로그아웃
     const logOut = ()=>{
         sessionStorage.setItem("login_token" , null );
-        axios.get("http://localhost:8080/member/logout").then( r=>{ console.log(r); });  // 백엔드의 인증세션 지우기
+        axios.get("/member/logout").then( r=>{ console.log(r); });  // 백엔드의 인증세션 지우기
         window.location.href="/login";
     }
     return (

@@ -10,7 +10,7 @@ export default function Login( props ) {
         let loginFormData = new FormData(loginForm);
 
         axios
-            .post("http://localhost:8080/member/login" , loginFormData )
+            .post("/member/login" , loginFormData )
             .then( r => {
                 if( r.data == false ){
                     alert("동일한 회원정보가 없습니다. ");

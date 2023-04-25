@@ -12,21 +12,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+// @CrossOrigin( origins = "http://localhost:3000")
 @RestController
 @Slf4j
 @RequestMapping("/board")
-@CrossOrigin( origins = "http://localhost:3000")
 public class BoardController {
     // 서비스 객체들
     @Autowired private BoardService boardService;
 
     // ---------------------- view 반환 ------------------------ //
-    @GetMapping("")
+/*    @GetMapping("")
     public Resource index(){
         return new ClassPathResource("templates/board/list.html");
-    }
+    }*/
     // ----------------------- model 반환 ------------------------//
-
     // 1. 카테고리 등록
     @PostMapping("/category/write") // body { cname : '공지사항'  }
     public boolean categoryWrite( @RequestBody BoardDto boardDto ){
