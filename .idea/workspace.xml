@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day78 mui 카테고리 출력/선택 이벤트">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 resources/static/static 파일들 git commit 제외하기">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/CategoryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -175,55 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00012" summary="day67 회원 서비스,엔티티,리포지토리 생성후 회원Restful API 테스트">
-      <created>1681096784727</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1681096784727</updated>
-    </task>
-    <task id="LOCAL-00013" summary="day70 index,signup,login 페이지 매핑">
-      <created>1681266059185</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1681266059185</updated>
-    </task>
-    <task id="LOCAL-00014" summary="day70 login controller, service , repository">
-      <created>1681269474774</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1681269474774</updated>
-    </task>
-    <task id="LOCAL-00015" summary="day70 login info , logout">
-      <created>1681274636249</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1681274636249</updated>
-    </task>
-    <task id="LOCAL-00016" summary="day70 login info , logout">
-      <created>1681275932053</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1681275932053</updated>
-    </task>
-    <task id="LOCAL-00017" summary="day70 스프링 시큐리티 적용해보기, CSRF , 비크립트암호화">
-      <created>1681279636484</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1681279636484</updated>
-    </task>
-    <task id="LOCAL-00018" summary="day70 스프링 시큐리티 비크립트암호화">
-      <created>1681280881916</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1681280881916</updated>
     </task>
     <task id="LOCAL-00019" summary="day70 스프링 시큐리티 로그인기능 커스터마이징 하기">
       <created>1681283297509</created>
@@ -519,7 +469,56 @@
       <option name="project" value="LOCAL" />
       <updated>1682316289560</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="day78 게시물쓰기 컴포넌트 [ 쓰기 오류 있음 ]">
+      <created>1682320429123</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1682320429123</updated>
+    </task>
+    <task id="LOCAL-00062" summary="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]">
+      <created>1682390007561</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390007561</updated>
+    </task>
+    <task id="LOCAL-00063" summary="day79 resources/static/static 파일들 git commit 제외하기">
+      <created>1682390158713</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390158713</updated>
+    </task>
+    <task id="LOCAL-00064" summary="day79 resources/static/static 파일들 git commit 제외하기">
+      <created>1682390182432</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390182432</updated>
+    </task>
+    <task id="LOCAL-00065" summary="day79 resources/static/static 파일들 git commit 제외하기">
+      <created>1682390235604</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390235604</updated>
+    </task>
+    <task id="LOCAL-00066" summary="day79 resources/static/static 파일들 git commit 제외하기">
+      <created>1682390291096</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390291096</updated>
+    </task>
+    <task id="LOCAL-00067" summary="day79 resources/static/static 파일들 git commit 제외하기">
+      <created>1682390941780</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390941780</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,9 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day73 JPA 조인테이블 양방향 구현" />
-    <MESSAGE value="day73 JPA 조인테이블 (댓글)양방향 구현" />
-    <MESSAGE value="day73 각 리포지토리 생성" />
     <MESSAGE value="day73 게시물Dto , Controller 매핑 구현" />
     <MESSAGE value="0418" />
     <MESSAGE value="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기" />
@@ -559,7 +555,10 @@
     <MESSAGE value="day78 게시판 라우터 적용" />
     <MESSAGE value="day78 mui 게시물 출력" />
     <MESSAGE value="day78 mui 카테고리 출력/선택 이벤트" />
-    <option name="LAST_COMMIT_MESSAGE" value="day78 mui 카테고리 출력/선택 이벤트" />
+    <MESSAGE value="day78 게시물쓰기 컴포넌트 [ 쓰기 오류 있음 ]" />
+    <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
+    <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="day79 resources/static/static 파일들 git commit 제외하기" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
