@@ -12,9 +12,9 @@ import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
+import Pagination from '@mui/material/Pagination';
+
 import CategoryList from './CategoryList';
-
-
 
 export default function List( props ) {
     // 1. 요청한 게시물 정보를 가지고 있는 리스트 변수[ 상태 관리변수 ]
@@ -34,8 +34,20 @@ export default function List( props ) {
     // 3. 카테고리 변경
     const categoryChange = ( cno ) => { setCno( cno ); }
 
+    // 4. 페이징에서 선택된 번호
+    let [ page , setPage ] = useState( 1 );
+    const selectPage = (e) =>{
+        //console.log(e);
+        //console.log(e.target);              // button
+        //console.log(e.target.value);        // button 이라서 value 속성 없음 x
+        //console.log(e.target.innerHTML ); // 해당 button 에서 안에 작성된 html 호출
+        //console.log(e.target.outerText ); // 해당 button 에서 밖으로 출력되는 text 호출
+        setPage( e.target.outerText )
+    }
+
     return (
     <Container>
+        <div> 현재 페이지 : { page } </div>
         <div style={{ display:'flex' , justifyContent : 'space-between' , alignItems : 'center' }}>
             <CategoryList categoryChange = { categoryChange } />
             <a href="/board/write"><Button variant="outlined"> 게시물 작성 </Button></a>
@@ -64,6 +76,10 @@ export default function List( props ) {
             </TableBody>
           </Table>
         </TableContainer>
+        <div style={{ display:'flex' , justifyContent : 'center' , margin : '40px 0px' }}>
+            { /* count = 전체 페이지수 */}
+            <Pagination count={10} color="primary" onClick={ selectPage } />
+        </div>
     </Container>
     );
 }

@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 resources/static/static 파일들 git commit 제외하기">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 라우터 와 restful api 경로 중복제거">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -180,13 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00021" summary="day71 회원가입 일반유저 user 권한 부여 , 로그인시 인증 권한 UserDetails 포함">
-      <created>1681352461786</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1681352461786</updated>
     </task>
     <task id="LOCAL-00022" summary="day71 인증[권한] 결과를 이용한 HTTP 요청 제한">
       <created>1681354784749</created>
@@ -524,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682391126953</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="day79 라우터 와 restful api 경로 중복제거">
+      <created>1682393206921</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1682393206921</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day73 게시물Dto , Controller 매핑 구현" />
     <MESSAGE value="0418" />
     <MESSAGE value="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기" />
     <MESSAGE value="day75 컴포넌트 예제" />
@@ -564,7 +560,8 @@
     <MESSAGE value="day78 게시물쓰기 컴포넌트 [ 쓰기 오류 있음 ]" />
     <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
     <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="day79 resources/static/static 파일들 git commit 제외하기" />
+    <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="day79 라우터 와 restful api 경로 중복제거" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
