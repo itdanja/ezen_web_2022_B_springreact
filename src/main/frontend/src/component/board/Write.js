@@ -18,7 +18,7 @@ export default function Write( props ) {
         }
         console.log( info );
 
-        axios.post( '/board/write' , info )
+        axios.post( '/board' , info )
             .then( r => { console.log(r); })
     }
 

@@ -44,17 +44,30 @@ public class BoardController {
 
 
     // 3. 게시물 쓰기  // body { "btitle" : "입력한제목" , "bcontent" : "입력한내용" , "cno" : "선택받은번호" }
-    @PostMapping("/write")  // 요청받은 JSON 필드명과 dto 필드명 일치할 경우 자동 매핑
+    @PostMapping("")  // 요청받은 JSON 필드명과 dto 필드명 일치할 경우 자동 매핑
     public byte write( @RequestBody BoardDto boardDto ){ log.info("c board dto : " + boardDto );
         byte result = boardService.write( boardDto );
         return result;
     }
-    // 4. 카테고리별 게시물 출력
-    @GetMapping("/list")
-    public List<BoardDto> list( @RequestParam int cno ){ log.info("c list cno : " + cno );
+    // 4. 카테고리별 게시물 전체 출력
+    @GetMapping("")
+    public List<BoardDto> get( @RequestParam int cno ){ log.info("c list cno : " + cno );
         List<BoardDto> result = boardService.list( cno );
         return result;
     }
+    // 수정
+    @PutMapping("")
+    public boolean put(  ){  return true;  }
+    // 삭제
+    @DeleteMapping("")
+    public boolean delete(  ){  return true;  }
+
+    // 개별 출력
+    @GetMapping("/getboard")
+    public BoardDto getboard(  int bno ){  return null;  }
+
+
+
     // 5. 내가 쓴 게시물 출력
     @GetMapping("/myboards")
     public List<BoardDto> myboards( ){ log.info("c myboards : " );
