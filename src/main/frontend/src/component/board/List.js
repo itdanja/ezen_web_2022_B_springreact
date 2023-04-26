@@ -73,7 +73,7 @@ export default function List( props ) {
               {rows.map((row) => (
                 <TableRow  key={row.name}   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}  >
                   <TableCell align="center" component="th" scope="row"> {row.bno} </TableCell>
-                  <TableCell align="left">{row.btitle}</TableCell>
+                  <TableCell align="left"> <a href={'/board/view/'+row.bno }> {row.btitle} </a></TableCell>
                   <TableCell align="center">{row.mname}</TableCell>
                   <TableCell align="center">{row.bdate}</TableCell>
                   <TableCell align="center">{row.bview}</TableCell>
