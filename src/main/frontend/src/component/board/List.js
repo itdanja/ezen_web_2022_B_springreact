@@ -19,7 +19,7 @@ import CategoryList from './CategoryList';
 export default function List( props ) {
     // 1. 요청한 게시물 정보를 가지고 있는 리스트 변수[ 상태 관리변수 ]
     let [ rows , setRows ] = useState( [] )
-    let [ pageInfo , setPageInfo ] = useState( { 'cno' : 0 , 'page' : 1 } )
+    let [ pageInfo , setPageInfo ] = useState( { 'cno' : 0 , 'page' : 1 , 'key' : '' , 'keyword' :''  } )
     let [ totalPage , setTotalPage ] = useState( 1 );
     let [ totalCount , setTotalCount ] = useState( 1 );
     // 2. 서버에게 요청하기 [ 컴포넌트가 처음 생성 되었을때 ]
@@ -39,9 +39,15 @@ export default function List( props ) {
     } // [ ...배열명 ] , { ...객체명 } : 기존 배열/객체의 새로운 메모리 할당
 
     // 4. 페이징 변경
-    const selectPage = (e) =>{
-        console.log( e.target.outerText ); // 해당 button 에서 밖으로 출력되는 text 호출
-        pageInfo.page = e.target.outerText;
+    const selectPage = ( e , value ) =>{ console.log( value );
+        pageInfo.page = value;  //  버튼이 교체 되었을때 페이지번호 가져와서 상태변수에 대입
+        setPageInfo( {...pageInfo } ) // 버튼이 교체 되었을때 페이지번호를 상태변수에 새로고침[ 렌더링 ]
+    }
+    // 5. 검색 했을때  // const 상수 vs let 변수
+    const onSearch = () => {
+        pageInfo.key = document.querySelector('.key').value
+        pageInfo.keyword = document.querySelector('.keyword').value
+        pageInfo.page = 1 // 검색했을때 첫페이지 이동
         setPageInfo( {...pageInfo } )
     }
 
@@ -77,9 +83,18 @@ export default function List( props ) {
           </Table>
         </TableContainer>
         <div style={{ display:'flex' , justifyContent : 'center' , margin : '40px 0px' }}>
-            { /* count = 전체 페이지수 */}
-            <Pagination count={ totalPage } color="primary" onClick={ selectPage } />
+            { /* count = 전체 페이지수  */}
+            <Pagination count={ totalPage } color="primary" onChange={ selectPage } />
         </div>
+        <div class="searchBox">
+            <select className="key">
+                <option value="btitle"> 제목 </option>
+                <option value="bcontent"> 내용 </option>
+            </select>
+            <input type="text" className="keyword" />
+            <button type="button" onClick={ onSearch } > 검색 </button>
+        </div>
+
     </Container>
     );
 }
@@ -87,10 +102,18 @@ export default function List( props ) {
 
     // useEffect( ()=>{}  )             : 생성 , 업데이트
     // useEffect( ()=>{} , [] )         : 생성될때 1번
-    // useEffect( ()=>{} , [변수] )     : 생성 , 해당 변수가 업데이트 될때마다 새 렌더링
+    // useEffect( ()=>{} , [의존성배열] )     : 생성 , 해당 변수가 업데이트 될때마다 새 렌더링
 
 
             //console.log(e);
             //console.log(e.target);              // button
             //console.log(e.target.value);        // button 이라서 value 속성 없음 x
             //console.log(e.target.innerHTML ); // 해당 button 에서 안에 작성된 html 호출
+/*
+        // const 상수 vs let 변수
+    const onSearch = () => {}
+    onSearch = () => {}  // x
+
+    let onSearch2 = () => {}
+    onSearch2 = () =>{ } // o
+*/

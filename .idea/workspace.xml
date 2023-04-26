@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 Pageable 인터페이스를 이용한 페이징처리">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/BoardEntityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/PageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/PageDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -163,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppStart" />
         <item itemvalue="Application.실행" />
         <item itemvalue="Application.SpringStart" />
         <item itemvalue="Application.ezenweb.example.day05.AppStart" />
         <item itemvalue="Application.ezenweb.example.day04.AppStart" />
-        <item itemvalue="Application.AppStart" />
       </list>
     </recent_temporary>
   </component>
@@ -179,20 +181,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00024" summary="day71 로그아웃 함수에서 a 태그로 변경">
-      <created>1681355886117</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1681355886117</updated>
-    </task>
-    <task id="LOCAL-00025" summary="day71 oauth2 통합회원 구현 [ 1.구글 클라우드 플랫폼 에서 oauth2 신청 ] , application.properties 발급된 정보 대입">
-      <created>1681362300460</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1681362300460</updated>
     </task>
     <task id="LOCAL-00026" summary="day71 oauth2 구글 인증토큰 결과를 이용한 memberDto 와 통하하기">
       <created>1681366250144</created>
@@ -523,7 +511,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682402550873</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="day79 카테고리별 페이징 처리">
+      <created>1682405494247</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1682405494247</updated>
+    </task>
+    <task id="LOCAL-00074" summary="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가">
+      <created>1682405734602</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1682405734602</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,8 +540,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day75 컴포넌트 예제" />
-    <MESSAGE value="day75 컴포넌트에 css 적용하는방법" />
     <MESSAGE value="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기" />
     <MESSAGE value="day75 AddTodo 컴포넌트 추가 p.194" />
     <MESSAGE value="day76 git commit 정리" />
@@ -563,7 +563,9 @@
     <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
     <MESSAGE value="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트" />
     <MESSAGE value="day79 Pageable 인터페이스를 이용한 페이징처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="day79 Pageable 인터페이스를 이용한 페이징처리" />
+    <MESSAGE value="day79 카테고리별 페이징 처리" />
+    <MESSAGE value="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
