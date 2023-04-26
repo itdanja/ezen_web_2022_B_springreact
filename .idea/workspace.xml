@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day80 페이징처리 + 검색처리">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day80 URL경로상의 매개변수 호출[ useParams() ]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -178,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00027" summary="day71 oauth2 구글 DB처리">
-      <created>1681368579077</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1681368579077</updated>
     </task>
     <task id="LOCAL-00028" summary="day71 oauth2 카카오로그인 서비스 구현">
       <created>1681439159763</created>
@@ -522,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682475496889</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="day80 URL경로상의 매개변수 호출[ useParams() ]">
+      <created>1682477621457</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1682477621457</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day75 AddTodo 컴포넌트 추가 p.194" />
     <MESSAGE value="day76 git commit 정리" />
     <MESSAGE value="day76 Hook useState , useEffect" />
     <MESSAGE value="day76 axios 이용한 String controller 와 통신" />
@@ -562,7 +562,8 @@
     <MESSAGE value="day79 카테고리별 페이징 처리" />
     <MESSAGE value="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가" />
     <MESSAGE value="day80 페이징처리 + 검색처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="day80 페이징처리 + 검색처리" />
+    <MESSAGE value="day80 URL경로상의 매개변수 호출[ useParams() ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="day80 URL경로상의 매개변수 호출[ useParams() ]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -65,7 +65,10 @@ public class BoardController {
 
     // 개별 출력
     @GetMapping("/getboard")
-    public BoardDto getboard(  int bno ){  return null;  }
+    public BoardDto getboard( @RequestParam int bno ){
+        BoardDto result = boardService.getboard( bno) ;
+        return result;
+    }
 
 
 

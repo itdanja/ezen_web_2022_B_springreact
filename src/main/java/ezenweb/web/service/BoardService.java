@@ -74,7 +74,7 @@ public class BoardService {
         */
         return 4;
     }
-    // 4.게시물 출력
+    // 4.게시물 전체 출력
     @Transactional
     public PageDto list(  PageDto pageDto ) { log.info( "pageDto : " + pageDto);
         // 1. pageable 인터페이스 [ 페이징처리 관련 api ] // import org.springframework.data.domain.Pageable;
@@ -92,7 +92,13 @@ public class BoardService {
         return pageDto;
     }
 
-    // 5. 내가 쓴 게시물 출력
+    // 4.
+    public BoardDto getboard( int bno ){
+        Optional<BoardEntity> optionalBoardEntity = boardEntityRepository.findById( bno );
+        if( optionalBoardEntity.isPresent() ){  return optionalBoardEntity.get().toDto();    }
+        return null;
+    }
+    // 6. 내가 쓴 게시물 출력
     public List<BoardDto> myboards( ){log.info("s myboards : " );
         // 1. 로그인 인증 세션[object] --> dto 강제형변환
         MemberDto memberDto = (MemberDto)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
