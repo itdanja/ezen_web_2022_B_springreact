@@ -11,6 +11,7 @@ import List from "./board/List"
 import DashBoard from "./admin/DashBoard"
 import Write from "./board/Write"
 import View from "./board/View"
+import Update from "./board/Update"
 
 export default function Index( props ) {
     return ( <>
@@ -25,6 +26,7 @@ export default function Index( props ) {
                 <Route path="/board/list" element = { <List/> } />
                 <Route path="/board/write" element = { <Write/> } />
                 <Route path="/board/view/:bno" element = { <View/> } />
+                <Route path="/board/update" element = { <Update/> } />
 
                 <Route path="/admin/dashboard" element = { <DashBoard/> } />
 

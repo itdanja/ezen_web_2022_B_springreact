@@ -24,13 +24,15 @@ export default function View( props ) {
                    }else{ alert('삭제 실패')}
                })
       }
-   const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
+   // 수정 페이지 이동 함수
+   const onUpdate = () => { window.location.href="/board/update?bno="+board.bno }
 
+   const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
    // 1. 현재 로그인된 회원이 들어왔으면
    const btnBox =
                 login != null && login.mno == board.mno
                 ? <div> <button onClick={ onDelete }>삭제</button>
-                        <button>수정</button> </div>
+                        <button onClick={ onUpdate }>수정</button> </div>
                 : <div> </div>
 
    return ( <>
