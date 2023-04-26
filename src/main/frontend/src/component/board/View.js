@@ -13,25 +13,29 @@ export default function View( props ) {
             })
    } , [ ] )
 
+    // 삭제 함수
+     const onDelete = () =>{
+           axios.delete("/board" , { params : { bno : params.bno }})
+               .then( r => {
+                   console.log( r.data );
+                   if( r.data == true ){
+                       alert('삭제 성공 ');
+                       window.location.href="/board/list";
+                   }else{ alert('삭제 실패')}
+               })
+      }
+   const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
+
    // 1. 현재 로그인된 회원이 들어왔으면
-   const btnBox = () => {
-        // 1.세션스토리지 확인해서 로그인 정보 보자
-        let login = JSON.parse( sessionStorage.getItem("login_token") )
-        console.log( login )
-        console.log( login.mno )
-        // 2. 현재 게시물의 작성자 회원번호 확인
-        console.log( board.mno )
-        {<div>
-                  <button>삭제</button>
-                  <button>수정</button>
-        </div> }
-   }
+   const btnBox =
+                login != null && login.mno == board.mno
+                ? <div> <button onClick={ onDelete }>삭제</button>
+                        <button>수정</button> </div>
+                : <div> </div>
 
    return ( <>
         <div>
-            <h3> 제목 </h3>
-            <h3> 내용 </h3>
-            { btnBox }
+            <h3> 제목 </h3> <h3> 내용 </h3>  { btnBox }
         </div>
    </>)
 }

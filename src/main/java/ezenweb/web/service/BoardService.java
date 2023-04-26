@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -92,7 +93,7 @@ public class BoardService {
         return pageDto;
     }
 
-    // 4.
+    // 5.
     public BoardDto getboard( int bno ){
         Optional<BoardEntity> optionalBoardEntity = boardEntityRepository.findById( bno );
         if( optionalBoardEntity.isPresent() ){  return optionalBoardEntity.get().toDto();    }
@@ -111,5 +112,14 @@ public class BoardService {
             list.add( e.toDto() );
         });
         return list;
+    }
+    // 7.
+    public boolean delete( int bno  ){
+        Optional<BoardEntity> optionalBoardEntity = boardEntityRepository.findById( bno );
+        if( optionalBoardEntity.isPresent() ){
+            boardEntityRepository.delete( optionalBoardEntity.get() );
+            return true;
+        }
+        return false;
     }
 }

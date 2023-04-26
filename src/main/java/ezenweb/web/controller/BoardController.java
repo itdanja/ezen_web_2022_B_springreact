@@ -61,7 +61,10 @@ public class BoardController {
     public boolean put(  ){  return true;  }
     // 삭제
     @DeleteMapping("")
-    public boolean delete(  ){  return true;  }
+    public boolean delete( @RequestParam int bno  ){
+        boolean result = boardService.delete( bno );
+        return result;
+    }
 
     // 개별 출력
     @GetMapping("/getboard")
@@ -69,8 +72,6 @@ public class BoardController {
         BoardDto result = boardService.getboard( bno) ;
         return result;
     }
-
-
 
     // 5. 내가 쓴 게시물 출력
     @GetMapping("/myboards")
