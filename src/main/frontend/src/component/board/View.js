@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom'; // HTTP 경로 상의 매개변수 호출 해주는 함수
 export default function View( props ) {
    const params = useParams();
-
    const [ board , setBoard ] = useState( {} );
    useEffect( ()=>{
         axios.get("/board/getboard" , { params : { bno : params.bno }})
@@ -34,7 +33,6 @@ export default function View( props ) {
                 ? <div> <button onClick={ onDelete }>삭제</button>
                         <button onClick={ onUpdate }>수정</button> </div>
                 : <div> </div>
-
    return ( <>
         <div>
             <h3> 제목 </h3> <h3> 내용 </h3>  { btnBox }

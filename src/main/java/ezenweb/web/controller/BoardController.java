@@ -3,6 +3,7 @@ package ezenweb.web.controller;
 import ezenweb.web.domain.board.BoardDto;
 import ezenweb.web.domain.board.CategoryDto;
 import ezenweb.web.domain.board.PageDto;
+import ezenweb.web.domain.board.ReplyDto;
 import ezenweb.web.service.BoardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,28 +57,70 @@ public class BoardController {
         PageDto result = boardService.list( pageDto );
         return result;
     }
-    // 수정
+    // 5.수정
     @PutMapping("")
     public boolean put(  ){  return true;  }
-    // 삭제
+    // 6.삭제
     @DeleteMapping("")
     public boolean delete( @RequestParam int bno  ){
         boolean result = boardService.delete( bno );
         return result;
     }
 
-    // 개별 출력
+    // 7.개별 출력
     @GetMapping("/getboard")
     public BoardDto getboard( @RequestParam int bno ){
         BoardDto result = boardService.getboard( bno) ;
         return result;
     }
 
-    // 5. 내가 쓴 게시물 출력
+    // 8. 내가 쓴 게시물 출력
     @GetMapping("/myboards")
     public List<BoardDto> myboards( ){ log.info("c myboards : " );
         List<BoardDto> result = boardService.myboards();
         return result;
     }
 
+    // 9. 댓글 작성  [ c ]
+    @PostMapping("/reply")
+    public boolean postReply( @RequestBody ReplyDto replyDto ) {
+        log.info("postReply : " + replyDto );
+        return true;
+    }
+    // 10. 댓글 출력 [ r x ]
+    @GetMapping("/reply")
+    public boolean getReply( ) {
+        log.info("getReply : " );
+        return true;
+    }
+    // 11. 댓글 수정  [ u ]
+    @PutMapping("/reply")
+    public boolean putReply( @RequestBody ReplyDto replyDto ) {
+        log.info("putReply : " + replyDto );
+        return true;
+    }
+    // 12 댓글 삭제  [ d ]
+    @DeleteMapping("/reply")
+    public boolean deleteReply(@RequestParam int rno ) {
+        log.info("deleteReply : " + rno );
+        return true;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
