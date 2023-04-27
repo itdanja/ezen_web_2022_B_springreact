@@ -58,6 +58,7 @@ public class BoardEntity extends BaseTime {
                     )
                 .build();
     }
+
 }
     /*
         cdate [ LocalDateTime ]

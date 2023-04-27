@@ -21,7 +21,7 @@ public class ReplyEntity extends BaseTime {
     @ManyToOne@JoinColumn(name="mno")@ToString.Exclude
     private MemberEntity memberEntity;
     // 출력용
-    private ReplyDto toDto(){
+    public ReplyDto toDto(){
         return ReplyDto.builder()
                 .rno( this.rno ).rcontent( this.rcontent )
                 .rdate( this.cdate.toLocalDate().toString() )
