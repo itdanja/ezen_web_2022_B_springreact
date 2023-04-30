@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom'; // HTTP 경로 상의 매개변수 호출 해주는 함수
 
 import ReplyList from './ReplyList';
+import Container from '@mui/material/Container';
 
 export default function View( props ) {
 
@@ -35,8 +36,8 @@ export default function View( props ) {
    // 3. 게시물 수정 페이지 이동 함수
    const onUpdate = () => { window.location.href="/board/update?bno="+board.bno }
    //4. 댓글 작성시 랜더링
-   const onReplyWrite = ( rcontent ) =>{
-           let info = {  rcontent : rcontent,  bno : board.bno }; console.log( info );
+   const onReplyWrite = ( rcontent ,rindex ) =>{
+           let info = {  rcontent : rcontent,  bno : board.bno , rindex : rindex  }; console.log( info );
             axios.post("/board/reply" , info )
                     .then( (r)=>{
                        if( r.data == true ){
@@ -54,6 +55,16 @@ export default function View( props ) {
                 }else{   alert("본인 댓글만 삭제할수 있습니다. ");  }
             })
     }
+    // 5. 수정 렌더링
+    const onReplyUpdate = ( rno , rcontent ) =>{
+        let info = { rno : rno , rcontent : rcontent }
+        axios.put( "/board/reply" , info )
+            .then( r =>{
+                if( r.data == true ){
+                    alert("수정 완료"); getBoard();
+                }else{   alert("본인 댓글만 수정 할수 있습니다. ");  }
+            })
+    }
 
    // 1. 현재 로그인된 회원이 들어왔으면
    const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
@@ -63,6 +74,7 @@ export default function View( props ) {
                         <button onClick={ onUpdate }>수정</button> </div>
                 : <div> </div>
    return ( <>
+        <Container>
         <div>
             <h3> 제목 </h3> <h3> 내용 </h3>  { btnBox }
         </div>
@@ -70,9 +82,10 @@ export default function View( props ) {
         <ReplyList
             onReplyDelete={ onReplyDelete  }
             onReplyWrite={ onReplyWrite }
+            onReplyUpdate={ onReplyUpdate }
             replyList = { board.replyDtoList }
         />
-
+        </Container>
    </>)
 }
 /*

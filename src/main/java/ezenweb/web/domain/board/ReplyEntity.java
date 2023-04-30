@@ -14,6 +14,8 @@ public class ReplyEntity extends BaseTime {
     private int rno;
     @Column
     private String rcontent;
+    @Column
+    private int rindex;
     // 게시물fk
     @ManyToOne@JoinColumn(name = "bno")@ToString.Exclude
     private BoardEntity boardEntity;
@@ -25,6 +27,9 @@ public class ReplyEntity extends BaseTime {
         return ReplyDto.builder()
                 .rno( this.rno ).rcontent( this.rcontent )
                 .rdate( this.cdate.toLocalDate().toString() )
+                .mname( this.memberEntity.getMname())
+                .mno(this.memberEntity.getMno())
+                .rindex( this.rindex )
                 // cdate[ LocalDateTime ] <--> rdate[ String ]
                 .build();
     }

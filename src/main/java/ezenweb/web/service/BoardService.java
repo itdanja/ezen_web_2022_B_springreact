@@ -95,9 +95,19 @@ public class BoardService {
         if( optionalBoardEntity.isPresent() ){  // 게시물 출력시 현재 게시물의 댓글도 같이~~ 출력
             BoardEntity boardEntity = optionalBoardEntity.get();
             List<ReplyDto> list = new ArrayList<>();
-            boardEntity.getReplyEntityList().forEach( ( r)->{  // 댓글 같이~~ 형변환 [ toDto vs 서비스 ]
-                list.add( r.toDto() );
+            // 상위 댓글
+            boardEntity.getReplyEntityList().forEach( ( r )->{  // 댓글 같이~~ 형변환 [ toDto vs 서비스 ]
+                if( r.getRindex() == 0 ){
+                    list.add( r.toDto() );
+                    // 하위 댓글
+                    boardEntity.getReplyEntityList().forEach( ( r2 )->{
+                        if( r.getRno() == r2.getRindex() ){
+                            list.get( list.size()-1).getRereReplyDtoList().add( r2.toDto() );
+                        }
+                    });
+                }
             });
+
             BoardDto boardDto = boardEntity.toDto();
             boardDto.setReplyDtoList( list );
             return boardDto;

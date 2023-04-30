@@ -94,7 +94,6 @@ export default function List( props ) {
             <input type="text" className="keyword" />
             <button type="button" onClick={ onSearch } > 검색 </button>
         </div>
-
     </Container>
     );
 }
