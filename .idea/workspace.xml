@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day81 댓글 서비스 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyInput.js" afterDir="false" />
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day84 댓글/답글 작성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/ReplyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/ReplyDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/ReplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/board/ReplyEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00033" summary="day73 JPA 조인테이블 양방향 구현">
-      <created>1681714209672</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1681714209672</updated>
     </task>
     <task id="LOCAL-00034" summary="day73 JPA 조인테이블 양방향 구현">
       <created>1681714284131</created>
@@ -524,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682562096897</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="day84 댓글/답글 작성">
+      <created>1682991008851</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1682991008851</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day77 signup -&gt; Signup 오타" />
     <MESSAGE value="day77 Signup 리액트 컴포넌트" />
     <MESSAGE value="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]" />
     <MESSAGE value="day77 login 시 로컬 스토리지 생성" />
@@ -564,7 +561,8 @@
     <MESSAGE value="day80 수정 페이지 이동" />
     <MESSAGE value="day81 댓글 도메인 , 컨트롤 매핑 구현" />
     <MESSAGE value="day81 댓글 서비스 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="day81 댓글 서비스 구현" />
+    <MESSAGE value="day84 댓글/답글 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="day84 댓글/답글 작성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

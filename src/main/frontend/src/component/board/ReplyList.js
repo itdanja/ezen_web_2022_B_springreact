@@ -29,11 +29,19 @@ export default function ReplyList( props ) {
                     if( r.cusHTML == '' || r.cusHTML == undefined ){
                         // 새로운 필드에 새로운 html[JSX] 구성
                         replyList[i].cusHTML = <div>
-                             <ReplyInput
-                                 onReplyWrite = { props.onReplyWrite }
-                                 rindex = { rno }
-                             />
-                             { /* 답글 댓글[ rindex= 본인 선택한 댓글 = 답글을 작성할 [부모]댓글번호 ] 작성하는 input */ }
+                              { /* 답글 댓글[ rindex= 본인 선택한 댓글 = 답글을 작성할 [부모]댓글번호 ] 작성하는 input */ }
+                             <ReplyInput onReplyWrite = { props.onReplyWrite }  rindex = { rno } />
+                                { /* 답글 출력 */ }
+                                {
+                                    r.rereplyDtoList.map( (rr)=> {
+                                        return( <>
+                                                <span> { rr.rcontent } </span>
+                                                <span> { rr.rdate } </span>
+                                                <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >수정</button>
+                                                <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >삭제</button>
+                                        </> )
+                                    })
+                                }
                         </div>
                     }else{ // 해당 답글 구역 숨기기
                          replyList[i].cusHTML = ''
@@ -49,14 +57,12 @@ export default function ReplyList( props ) {
             onReplyWrite = { props.onReplyWrite }
             rindex = {0}
         />
-
-        <h6> 댓글 목록 </h6>
+        <div> 전체 댓글 : { replyList.length } 개 </div>
         {
              replyList.map( (r)=>{
                 return(<div>
                         <span> { r.rcontent } </span>
                         <span> { r.rdate } </span>
-
                         <button onClick={ (e)=>onRereplyHandler( e , r.rno ) } >답글</button>
                         <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >수정</button>
                         <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >삭제</button>
