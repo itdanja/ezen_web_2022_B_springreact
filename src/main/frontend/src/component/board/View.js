@@ -6,12 +6,14 @@ import ReplyList from './ReplyList';
 
 export default function View( props ) {
 
-   const params = useParams();
-   const [ board , setBoard ] = useState( {
+   const params = useParams(); // URL 쿼리스트링 변수요청
+
+   // 게시물 : 게시물정보+댓글+대댓글
+   const [ board , setBoard ] = useState( { // Restful api 으로 응답받은 게시물정보
         replyDtoList : []
    } );
 
-    // 1. 현재 게시물 가져오는 ajax 함수
+    // 1. 현재 게시물 가져오는 axios 함수
     const getBoard = () => {
         axios.get("/board/getboard" , { params : { bno : params.bno }})
                 .then( (r) => {
@@ -19,8 +21,9 @@ export default function View( props ) {
                     setBoard( r.data );
                 })
     }
-    // 2. 컴포넌트 처음 열렸을때
+    // 2. 컴포넌트 처음 열렸을때 getBoard 실행
     useEffect( ()=>{ getBoard(); } , [] );
+
     // 3. 게시물 삭제 함수
      const onDelete = () =>{
            axios.delete("/board" , { params : { bno : params.bno }})
@@ -32,11 +35,12 @@ export default function View( props ) {
                    }else{ alert('삭제 실패')}
                })
       }
-   // 3. 게시물 수정 페이지 이동 함수
+   // 4. 게시물 수정 페이지 이동 함수
    const onUpdate = () => { window.location.href="/board/update?bno="+board.bno }
-   //4. 댓글 작성시 랜더링
-   const onReplyWrite = ( rcontent ) =>{
-           let info = {  rcontent : rcontent,  bno : board.bno }; console.log( info );
+
+   // 5. 댓글 작성시 랜더링
+   const onReplyWrite = ( rcontent , rindex  ) =>{
+           let info = {  rcontent : rcontent,  bno : board.bno , rindex : rindex }; console.log( info );
             axios.post("/board/reply" , info )
                     .then( (r)=>{
                        if( r.data == true ){
@@ -44,7 +48,8 @@ export default function View( props ) {
                        }else{   alert("로그인 후 가능 합니다. ");  }
                      });
     }
-    // 5. 댓글 삭제  렌더링
+
+    // 6. 댓글 삭제  렌더링
     const onReplyDelete = ( rno ) =>{
         console.log( rno );
         axios.delete( "/board/reply" , { params: { "rno" : rno }})
@@ -55,24 +60,23 @@ export default function View( props ) {
             })
     }
 
-   // 1. 현재 로그인된 회원이 들어왔으면
+   // *. 현재 로그인된 회원이 들어왔으면
    const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
    const btnBox =
                 login != null && login.mno == board.mno
                 ? <div> <button onClick={ onDelete }>삭제</button>
                         <button onClick={ onUpdate }>수정</button> </div>
-                : <div> </div>
+                : <div> </div>;
+
    return ( <>
         <div>
             <h3> 제목 </h3> <h3> 내용 </h3>  { btnBox }
         </div>
-
         <ReplyList
             onReplyDelete={ onReplyDelete  }
             onReplyWrite={ onReplyWrite }
             replyList = { board.replyDtoList }
         />
-
    </>)
 }
 /*
