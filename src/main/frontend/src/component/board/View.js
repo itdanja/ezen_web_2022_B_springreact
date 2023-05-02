@@ -61,6 +61,16 @@ export default function View( props ) {
                 }else{   alert("본인 댓글만 삭제할수 있습니다. ");  }
             })
     }
+    // 7. 수정 렌더링
+    const onReplyUpdate = ( rno , rcontent ) => {
+        let info = { rno : rno , rcontent : rcontent  }
+        axios.put( '/board/reply' , info )
+            .then( r => {
+                if( r.data == true ){
+                    alert("댓글 수정 완료"); getBoard();
+                }else{   alert("본인 댓글만 삭제할수 있습니다. ");  }
+            })
+    }
 
    // *. 현재 로그인된 회원이 들어왔으면
    const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
@@ -76,6 +86,7 @@ export default function View( props ) {
             <h3> 제목 </h3> <h3> 내용 </h3>  { btnBox }
         </div>
         <ReplyList
+            onReplyUpdate={ onReplyUpdate  }
             onReplyDelete={ onReplyDelete  }
             onReplyWrite={ onReplyWrite }
             replyList = { board.replyDtoList }

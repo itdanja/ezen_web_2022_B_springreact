@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day84 댓글/답글 출력">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day84 오타수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/css/board/board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/css/board/board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -179,20 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00035" summary="day73 JPA 조인테이블 (댓글)양방향 구현">
-      <created>1681716215081</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1681716215081</updated>
-    </task>
-    <task id="LOCAL-00036" summary="day73 각 리포지토리 생성">
-      <created>1681716676313</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1681716676313</updated>
     </task>
     <task id="LOCAL-00037" summary="day73 게시물Dto , Controller 매핑 구현">
       <created>1681718378761</created>
@@ -523,7 +509,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682993657995</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="day84 댓글/답글 기본 css 적용하기">
+      <created>1682995041669</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1682995041669</updated>
+    </task>
+    <task id="LOCAL-00085" summary="day84 오타수정">
+      <created>1682995120839</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1682995120839</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,8 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]" />
-    <MESSAGE value="day77 login 시 로컬 스토리지 생성" />
     <MESSAGE value="day77 logout 세션 스토리지 사용" />
     <MESSAGE value="day78 라우터 , JS스토리지" />
     <MESSAGE value="day78 아이디 중복검사" />
@@ -563,7 +561,9 @@
     <MESSAGE value="day81 댓글 서비스 구현" />
     <MESSAGE value="day84 댓글/답글 작성" />
     <MESSAGE value="day84 댓글/답글 출력" />
-    <option name="LAST_COMMIT_MESSAGE" value="day84 댓글/답글 출력" />
+    <MESSAGE value="day84 댓글/답글 기본 css 적용하기" />
+    <MESSAGE value="day84 오타수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="day84 오타수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
