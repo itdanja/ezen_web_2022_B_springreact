@@ -4,6 +4,8 @@ import ReplyInput from './ReplyInput';
 
 export default function ReplyList( props ) {
 
+    const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
+
     // props 으로 부터전달 받은 댓글 리스트 관리하는 상태변수
     let [ replyList , setReplyList ] = useState( [] );
     // props 변경 되었을때 [  view.js axios 실행 ]
@@ -34,12 +36,12 @@ export default function ReplyList( props ) {
                                 { /* 답글 출력 */ }
                                 {
                                     r.rereplyDtoList.map( (rr)=> {
-                                        return( <>
+                                        return( <div>
                                                 <span> { rr.rcontent } </span>
                                                 <span> { rr.rdate } </span>
                                                 <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >수정</button>
                                                 <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >삭제</button>
-                                        </> )
+                                        </div> )
                                     })
                                 }
                         </div>
@@ -60,12 +62,28 @@ export default function ReplyList( props ) {
         <div> 전체 댓글 : { replyList.length } 개 </div>
         {
              replyList.map( (r)=>{
-                return(<div>
-                        <span> { r.rcontent } </span>
-                        <span> { r.rdate } </span>
-                        <button onClick={ (e)=>onRereplyHandler( e , r.rno ) } >답글</button>
-                        <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >수정</button>
-                        <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >삭제</button>
+                return(
+                    <div className="replyBox">
+                        <span className="replyMname"> { r.mname } </span>
+                        <span className="replyRdate"> { r.rdate } </span>
+                        <input
+                            value={ r.rcontent }
+                            className="replyRcontent"
+                            readOnly = {  true }
+                        />
+                        <div class="replyBtn">
+                            <button onClick={ (e)=>onRereplyHandler( e , r.rno ) } >답글</button>
+                            {
+                                login != null && login.mno = r.mno
+                                ?
+                                    <>
+                                        <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >수정</button>
+                                        <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >삭제</button>
+                                    </>
+                                :
+                                <></>
+                            }
+                        </div>
                         { r.cusHTML } { /* API 없던 필드 */}
                     </div>)
             })

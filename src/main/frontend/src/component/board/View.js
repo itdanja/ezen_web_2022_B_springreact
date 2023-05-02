@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'; // HTTP 경로 상의 매개변수
 
 import ReplyList from './ReplyList';
 
+import Container from '@mui/material/Container';
+
 export default function View( props ) {
 
    const params = useParams(); // URL 쿼리스트링 변수요청
@@ -68,7 +70,8 @@ export default function View( props ) {
                         <button onClick={ onUpdate }>수정</button> </div>
                 : <div> </div>;
 
-   return ( <>
+   return (
+   <Container>
         <div>
             <h3> 제목 </h3> <h3> 내용 </h3>  { btnBox }
         </div>
@@ -77,7 +80,7 @@ export default function View( props ) {
             onReplyWrite={ onReplyWrite }
             replyList = { board.replyDtoList }
         />
-   </>)
+   </Container>)
 }
 /*
    // useParams() 훅 : 경로[URL]상의 매개변수[객체] 반환

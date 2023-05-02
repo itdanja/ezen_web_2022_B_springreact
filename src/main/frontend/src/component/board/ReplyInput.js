@@ -1,5 +1,7 @@
 import React,{ useState , useEffect } from 'react';
 import axios from 'axios';
+import styles from '../../css/board/board.css'
+
 export default function ReplyInput( props ) {
     // 1. 입력받은 댓글 내용 저장하는 변수
     const [ rcontent , setContent ] = useState( '');
@@ -11,12 +13,12 @@ export default function ReplyInput( props ) {
         props.onReplyWrite( rcontent , props.rindex );
         setContent( ''); // 댓글 작성시 공백 초기화
     }
-    return (<>
+    return (<div className="replyInputBox">
         <textarea
                 value={ rcontent }
                 onChange = { rcontentHandler }
                 className="rcontent" type="text" />
-        <button onClick={ replywirteHandler }> 댓글작성 </button>
-    </>)
+        <button className="replywirtebtn" onClick={ replywirteHandler }> 댓글작성 </button>
+    </div>)
 
 }
