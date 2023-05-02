@@ -30,6 +30,7 @@ export default function Header( props ) {
             <a href="/"> Home </a>
             <a href="/board/list"> 게시판 </a>
             <a href="/admin/dashboard"> 관리자 </a>
+            <a href="/chat/home"> 실시간채팅 </a>
             <a href="/"> Doto </a>
             {
                 login == null
