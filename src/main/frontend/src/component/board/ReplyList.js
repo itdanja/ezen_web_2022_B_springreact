@@ -74,9 +74,8 @@ export default function ReplyList( props ) {
                         <div class="replyBtn">
                             <button onClick={ (e)=>onRereplyHandler( e , r.rno ) } >답글</button>
                             {
-                                login != null && login.mno = r.mno
-                                ?
-                                    <>
+                                login != null && login.mno == r.mno
+                                ?<>
                                         <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >수정</button>
                                         <button onClick={ (e)=>onDeleteHandler( e , r.rno ) } >삭제</button>
                                     </>
