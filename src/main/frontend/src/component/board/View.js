@@ -8,18 +8,20 @@ import Container from '@mui/material/Container';
 
 export default function View( props ) {
    const params = useParams(); // URL 쿼리스트링 변수요청
-  // *. 현재 로그인된 회원이 들어왔으면
-  const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
-  const btnBox =
-               login != null && login.mno == board.mno
-               ? <div> <button onClick={ onDelete }>삭제</button>
-                       <button onClick={ onUpdate }>수정</button> </div>
-               : <div> </div>;
 
    // 게시물 : 게시물정보+댓글+대댓글
    const [ board , setBoard ] = useState( { // Restful api 으로 응답받은 게시물정보
         replyDtoList : []
    } );
+
+ // *. 현재 로그인된 회원이 들어왔으면
+ const [ login , setLogin ] = useState( JSON.parse( sessionStorage.getItem('login_token') ) )
+ const btnBox =
+              login != null && login.mno == board.mno
+              ? <div> <button onClick={ onDelete }>삭제</button>
+                      <button onClick={ onUpdate }>수정</button> </div>
+              : <div> </div>;
+
 
     // 1. 현재 게시물 가져오는 axios 함수
     const getBoard = () => {

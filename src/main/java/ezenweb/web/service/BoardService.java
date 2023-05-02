@@ -188,6 +188,9 @@ public class BoardService {
         Optional< ReplyEntity > optionalReplyEntity = replyEntityRepository.findById( rno);
         if( optionalReplyEntity.isPresent() ){
             replyEntityRepository.delete( optionalReplyEntity.get() );
+
+            // [ 과제 : 만일 상위댓글이 삭제이면 답글도 같이 삭제 ]
+
             return true;
         }
         return false;

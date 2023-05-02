@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day84 상위 댓글 수정">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day84 코드 위치정리">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/ReplyList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00038" summary="0418">
-      <created>1681744169117</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1681744169117</updated>
     </task>
     <task id="LOCAL-00039" summary="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기">
       <created>1681871467811</created>
@@ -518,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682997940855</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="day84 코드 위치정리">
+      <created>1682998707521</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1682998707521</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -533,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day78 라우터 , JS스토리지" />
     <MESSAGE value="day78 아이디 중복검사" />
     <MESSAGE value="day78 게시판 라우터 적용" />
     <MESSAGE value="day78 mui 게시물 출력" />
@@ -558,7 +562,8 @@
     <MESSAGE value="day84 댓글/답글 기본 css 적용하기" />
     <MESSAGE value="day84 오타수정" />
     <MESSAGE value="day84 상위 댓글 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="day84 상위 댓글 수정" />
+    <MESSAGE value="day84 코드 위치정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="day84 코드 위치정리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

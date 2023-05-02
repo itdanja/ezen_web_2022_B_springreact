@@ -35,13 +35,28 @@ export default function ReplyList( props ) {
                              <ReplyInput onReplyWrite = { props.onReplyWrite }  rindex = { rno } />
                                 { /* 답글 출력 */ }
                                 {
-                                    r.rereplyDtoList.map( (rr)=> {
-                                        return( <div>
-                                                <span> { rr.rcontent } </span>
-                                                <span> { rr.rdate } </span>
-                                                <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >수정</button>
-                                                <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >삭제</button>
-                                        </div> )
+                                    r.rereplyDtoList.map( ( rr , j )=> {
+                                       if( rr.readOnly == undefined ){ rr.readOnly = true ; }
+                                       return(
+                                           <div className="replyBox">
+                                               <span className="replyMname"> { rr.mname } </span>
+                                               <span className="replyRdate"> { rr.rdate } </span>
+                                               { /* [과제] 답글 수정 오류 */}
+                                               <input  value={ rr.rcontent }  className="replyRcontent" onChange={ (e)=> onRcontentChange( e , rr.rno , i , j ) }  readOnly = { rr.readOnly }   />
+                                               <div class="replyBtn">
+
+                                                   {  login != null && login.mno == rr.mno
+                                                       ?<>
+                                                               <button onClick={ (e)=>onUpdateHandler( e , rr.rno , i , j ) } >
+                                                                   { rr.readOnly == true ? '수정' : '수정완료'}
+                                                               </button>
+                                                               <button onClick={ (e)=>onDeleteHandler( e , rr.rno ) } >삭제</button>
+                                                           </>
+                                                       :
+                                                       <></>
+                                                   }
+                                               </div>
+                                           </div>)
                                     })
                                 }
                         </div>
@@ -54,7 +69,8 @@ export default function ReplyList( props ) {
     }
 
     // 4. 수정 핸들러
-    const onUpdateHandler = ( e , rno , i ) => {
+    const onUpdateHandler = ( e , rno , i , j  ) => {
+        console.log( i +"    " + j );
         // Rcontent 읽기모드 해제
         if( replyList[i].readOnly == true){
             replyList[i].readOnly = false;  alert('수정후 완료 버튼을 눌러주세요');
@@ -67,7 +83,8 @@ export default function ReplyList( props ) {
     }
 
     // 5. 댓글 내용 수정
-    const onRcontentChange = ( e , rno , i ) => {
+    const onRcontentChange = ( e , rno , i , j  ) => {
+        console.log( i +"    " + j );
         replyList[i].rcontent = e.target.value;
         setReplyList([...replyList])
     }
