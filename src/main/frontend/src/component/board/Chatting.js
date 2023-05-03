@@ -1,6 +1,7 @@
 import React,{ useEffect , useState , useRef } from 'react';
 import Container from '@mui/material/Container';
 import styles from '../../css/board/chatting.css'
+import axios from 'axios'
 
 export default function Chatting(props){
 
@@ -40,7 +41,8 @@ export default function Chatting(props){
         let msgBox ={
             id : id, // 보낸 사람
             msg : msgInput.current.value, // 보낸 내용
-            time : new Date().toLocaleTimeString() // 현재 시간만
+            time : new Date().toLocaleTimeString(), // 현재 시간만
+            type : 'msg'
         }
         ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
         msgInput.current.value = '';
@@ -50,6 +52,29 @@ export default function Chatting(props){
     useEffect ( () => {
         document.querySelector('.chatContentBox').scrollTop = document.querySelector('.chatContentBox').scrollHeight;
     },[msgContent])
+
+
+
+    const setboard = () => {
+        let boardform = document.querySelector('.boardform');
+        let formdata = new FormData( boardform );
+
+        axios.post("/chat/fileupload" , formdata , { headers: { 'Content-Type': 'multipart/form-data'  } }  )
+            .then( res => {
+                    console.log( res.data )
+                         alert('첨부파일 전송 성공');
+
+                         let msgBox ={
+                                    id : id, // 보낸 사람
+                                    msg : msgInput.current.value, // 보낸 내용
+                                    time : new Date().toLocaleTimeString() ,  // 현재 시간만
+                                    fileName : res.data ,
+                                    type : 'file'
+                                }
+                         ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
+                })
+            .catch( err => { console.log( err ); } )
+    }
 
     return (<>
         <Container>
@@ -61,17 +86,29 @@ export default function Chatting(props){
                         <div className="chatContent" style={ m.id == id ? { backgroundColor: '#d46e6e' } : { } }  >
                             <span> { m.id } </span>
                             <span> { m.time } </span>
-                            <span> { m.msg } </span>
+
+                            { m.type == 'msg' ?
+                                <span> { m.msg } </span> :  ( <>
+                                <span> { m.fileName } </span>
+                                <span> <img style={{ width : '100%' }} src={ 'http://localhost:8080/static/media/'+m.fileName } /></span>
+                                <span> <a href={'/chat/filedownload?filename='+ m.fileName }> 다운로드 </a> </span>
+
+                                </>)
+                            }
                         </div>
                     </>)
                 })
            }
            </div>
-           <div className="chatInputBox">
-                <span> { id }  </span>
-                <input className="msgInput" ref={ msgInput } type="text" />
-                <button onClick={ onSend }>전송</button>
-           </div>
+             <div className="chatInputBox">
+               <span>{id}</span>
+               <input className="msgInput" ref={msgInput} type="text" />
+               <button onClick={onSend}>전송</button>
+               <form className="boardform">
+                 첨부파일 : <input type="file" name="attachFile" />
+                 <button type="button" onClick={setboard}>등록</button>
+               </form>
+             </div>
         </Container>
     </>)
 }
