@@ -1,0 +1,59 @@
+.chatContentBox{ /* 채팅 전체 내용출력 구역 */
+    width: 50%;
+    margin: 20px auto;
+    height: 600px;
+    overflow-y: scroll;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+}
+.chatContent{ /* 채팅 내용 1개 */
+    display: flex;
+    background-color: #f3e4e4;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    color: white;
+}
+.chatContent span{
+    font-size : 13px;
+    margin : 5px 15px 5px 5px;
+}
+/* 특정 요소의 안에 [ 자식 요소 ]가 여러개 일때 */
+/* 부모요소 자식요소:nth-child(인덱스=1) */
+.chatContent span:nth-child(1){
+    width : 10%; font-weight : bold;
+}
+.chatContent span:nth-child(2){
+    width : 20%;
+}
+.chatContent span:nth-child(3){
+    width : 70%;
+    word-break : break-all; /* 내용이 크기보다 커졌을때 자동 줄바꿈 */
+}
+
+.chatInputBox{ /* 채팅 입력 구역 */
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.msgInput{
+    width: 80%;
+    margin: 0 10px;
+    height: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 15px;
+    padding: 10px;
+}
+.chatInputBox span {
+    width: 10%;
+    font-size: 13px;
+}
+.chatInputBox button {
+    background-color: white;
+    border: 1px solid #cccccc;
+    width: 15%;
+    padding: 10px;
+    border-radius: 10px;
+}

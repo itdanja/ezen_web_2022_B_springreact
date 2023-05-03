@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 기본 메시지채팅">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 익명난수 생성 , JSON 전송">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
@@ -177,13 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00042" summary="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기">
-      <created>1681884800293</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1681884800293</updated>
     </task>
     <task id="LOCAL-00043" summary="day75 AddTodo 컴포넌트 추가 p.194">
       <created>1681886638883</created>
@@ -521,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683084226694</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="day85 익명난수 생성 , JSON 전송">
+      <created>1683090218408</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1683090218408</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -536,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day78 mui 카테고리 출력/선택 이벤트" />
     <MESSAGE value="day78 게시물쓰기 컴포넌트 [ 쓰기 오류 있음 ]" />
     <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
     <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
@@ -561,7 +560,8 @@
     <MESSAGE value="day85 서버소켓 , 클라이언트소켓 설정" />
     <MESSAGE value="day85 useRef() 훅 사용" />
     <MESSAGE value="day85 기본 메시지채팅" />
-    <option name="LAST_COMMIT_MESSAGE" value="day85 기본 메시지채팅" />
+    <MESSAGE value="day85 익명난수 생성 , JSON 전송" />
+    <option name="LAST_COMMIT_MESSAGE" value="day85 익명난수 생성 , JSON 전송" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
