@@ -8,6 +8,9 @@ export default function Chatting(props){
     let [ id , setId ] = useState(''); // 익명채팅에서 사용할 id [ 난수 저장 ]
     let [ msgContent , setMsgContent ] = useState([]); // 현재 채팅중인 메시지 를 저장하는 변수
     let msgInput = useRef(null); // 채팅입력창[input] DOM객체 제어 변수
+    let fileForm = useRef(null); // 채팅입력창[input] DOM객체 제어 변수
+    let fileInput = useRef(null); // 채팅입력창[input] DOM객체 제어 변수
+    let chatContentBox = useRef(null); //
 
     // 1. 재렌더링 될때마다 새로운 접속
     // let 클라이언트소켓 = new WebSocket("ws/localhost:8080/chat")  ;
@@ -44,8 +47,28 @@ export default function Chatting(props){
             time : new Date().toLocaleTimeString(), // 현재 시간만
             type : 'msg'
         }
-        ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
-        msgInput.current.value = '';
+        if( msgBox.msg != ''){
+            ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
+            msgInput.current.value = '';
+        }
+
+        if( fileInput.current.value != '' ){
+                let formdata = new FormData( fileForm.current );
+                axios.post("/chat/fileupload" , formdata   )
+                    .then( res => {
+                            console.log( res.data )
+                                 let msgBox ={
+                                            id : id, // 보낸 사람
+                                            msg : msgInput.current.value, // 보낸 내용
+                                            time : new Date().toLocaleTimeString() ,  // 현재 시간만
+                                            fileInfo : res.data ,
+                                            type : 'file'
+                                        }
+                                 ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
+                                 fileInput.current.value = "";
+                        })
+                    .catch( err => { console.log( err ); } )
+        }
     }
 
     // 5. 메시지 받기 렌더링 할때마다 스크롤 가장 하단으로 내리기
@@ -54,31 +77,65 @@ export default function Chatting(props){
     },[msgContent])
 
 
+    const onDragHandler = (e) => {
+    	// 문제점 : 브라우저 영역 에 드랍했을때 해당 페이지 열림 [ 브라우저 이벤트가 먼저 실행 ]
+    	e.preventDefault(); // 고유/기존[브라우저내 ] 이벤트 제거
+    	// 1.  드랍된 파일[dataTransfer]을 호출
+    	console.log('ddddd')
+    	let files = e.dataTransfer.files  // forEach 사용불가
+    	for( let i = 0 ; i<files.length ; i++ ){
+    		if( files[i] != null && files[i] != undefined ){ // 파일이 존재하면 // 비어있지 않고 정의되어 있으면
 
-    const setboard = () => {
-        let boardform = document.querySelector('.boardform');
-        let formdata = new FormData( boardform );
-
-        axios.post("/chat/fileupload" , formdata , { headers: { 'Content-Type': 'multipart/form-data'  } }  )
-            .then( res => {
-                    console.log( res.data )
-                         alert('첨부파일 전송 성공');
-
-                         let msgBox ={
-                                    id : id, // 보낸 사람
-                                    msg : msgInput.current.value, // 보낸 내용
-                                    time : new Date().toLocaleTimeString() ,  // 현재 시간만
-                                    fileName : res.data ,
-                                    type : 'file'
-                                }
-                         ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
-                })
-            .catch( err => { console.log( err ); } )
+    			 console.log( "dfdd" )
+    		}
+    	}// for end
+    	 e.target.style.backgroundColor = "#ffffff"; // 배경색 되돌리기
     }
 
     return (<>
         <Container>
-           <div className="chatContentBox">
+           <div
+                ref={chatContentBox}
+                className="chatContentBox"
+                onDragEnter = { (e)=> {e.preventDefault();}  }
+                onDragOver = { (e)=> {
+                    e.preventDefault();
+                    e.target.style.backgroundColor = "#e8e8e8";
+                 } }
+                 onDragLeave = { (e) => {
+                    e.preventDefault(); // 고유/기존[브라우저내 ] 이벤트 제거
+                     e.target.style.backgroundColor = "#ffffff"; // 배경색 되돌리기
+                 }}
+                 onDrop = { (e)=>{
+                        e.preventDefault(); // 고유/기존[브라우저내 ] 이벤트 제거
+                        let files = e.dataTransfer.files  // forEach 사용불가
+                        for( let i = 0 ; i<files.length ; i++ ){
+                            if( files[i] != null && files[i] != undefined ){ // 파일이 존재하면 // 비어있지 않고 정의되어 있으면
+
+                                 let formdata = new FormData( fileForm.current );
+                                 formdata.set( "attachFile" , files[0]  );
+                                                 axios.post("/chat/fileupload" , formdata   )
+                                                     .then( res => {
+                                                             console.log( res.data )
+                                                                  let msgBox ={
+                                                                             id : id, // 보낸 사람
+                                                                             msg : msgInput.current.value, // 보낸 내용
+                                                                             time : new Date().toLocaleTimeString() ,  // 현재 시간만
+                                                                             fileInfo : res.data ,
+                                                                             type : 'file'
+                                                                         }
+                                                                  ws.current.send( JSON.stringify( msgBox ) ); // 클라이언트가 서버에게 메시지 전송 [ .send( ) ]
+                                                                  fileInput.current.value = "";
+                                                         })
+                                                     .catch( err => { console.log( err ); } )
+
+
+                            }
+                        }// for end
+                         e.target.style.backgroundColor = "#ffffff"; // 배경색 되돌리기
+                 } }
+
+                >
            {
                 msgContent.map( (m)=>{
                     return(<>
@@ -89,9 +146,11 @@ export default function Chatting(props){
 
                             { m.type == 'msg' ?
                                 <span> { m.msg } </span> :  ( <>
-                                <span> { m.fileName } </span>
-                                <span> <img style={{ width : '100%' }} src={ 'http://localhost:8080/static/media/'+m.fileName } /></span>
-                                <span> <a href={'/chat/filedownload?filename='+ m.fileName }> 다운로드 </a> </span>
+                                <span>
+                                        <span style={{ marginRight: "15px" }} > { m.fileInfo.fileName } </span>
+                                        <span style={{ marginRight: "15px" }} > { m.fileInfo.size } </span>
+                                        <span> <a href={'/chat/filedownload?filename='+ m.fileInfo.fileName }> 저장 </a> </span>
+                                </span>
 
                                 </>)
                             }
@@ -104,11 +163,10 @@ export default function Chatting(props){
                <span>{id}</span>
                <input className="msgInput" ref={msgInput} type="text" />
                <button onClick={onSend}>전송</button>
-               <form className="boardform">
-                 첨부파일 : <input type="file" name="attachFile" />
-                 <button type="button" onClick={setboard}>등록</button>
-               </form>
              </div>
+             <form ref={fileForm} className="boardform">
+              <input ref={fileInput} type="file" name="attachFile" />
+            </form>
         </Container>
     </>)
 }

@@ -11,9 +11,14 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 public class WebSocketConfiguration implements WebSocketConfigurer {
     @Autowired // 컴포넌트에 등록한 클래스 이므로 @Autowired 가능 [ DI ]
     private ChattingHandler chattingHandler;
+    @Autowired // 컴포넌트에 등록한 클래스 이므로 @Autowired 가능 [ DI ]
+    private MessageHandler messageHandler;
+
     @Override // 서버소켓 으로 사용되고 있는 클래스 들 등록
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler( chattingHandler , "/chat").setAllowedOrigins("*");
+        registry.addHandler( messageHandler , "/eventmsg").setAllowedOrigins("*");
+
     }
 }
 

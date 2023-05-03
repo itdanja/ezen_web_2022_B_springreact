@@ -18,15 +18,26 @@ import java.net.URLEncoder;
 @RestController
 public class FileController {
 
-    String path ="C:\\Users\\504t\\Desktop\\ezen_web_2022_B_springreact\\src\\main\\resources\\static\\static\\media\\";
+    String path ="C:\\java\\";
 
     @PostMapping("/chat/fileupload")
-    public String file( @RequestParam("attachFile")  MultipartFile multipartFile ){
+    public FileDto file( @RequestParam("attachFile")  MultipartFile multipartFile ){
+        System.out.println( multipartFile.getOriginalFilename() );
+        System.out.println( multipartFile.getSize() ); // 바이트
+        System.out.println( multipartFile.getContentType() );
 
         if( !multipartFile.getOriginalFilename().equals("") ){
             File uploadfile = new File(path + multipartFile.getOriginalFilename() );
             try{  multipartFile.transferTo(uploadfile);
-                return multipartFile.getOriginalFilename();
+
+                return FileDto.builder()
+                        .originalFilename( multipartFile.getOriginalFilename() )
+                        .fileName( multipartFile.getOriginalFilename() )
+                        .path( path )
+                        .size( multipartFile.getSize()/1024 +"kb" )
+                        .contentType( multipartFile.getContentType() )
+                        .build();
+
             }catch ( Exception e ){}
         }
         return null;
