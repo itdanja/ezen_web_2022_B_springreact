@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day84 코드 위치정리">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 서버소켓 , 클라이언트소켓 설정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/socket/WebSocketConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/socket/WebSocketConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -179,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00039" summary="day75 컴포넌트 만들어서 싱글페이지에 렌더링 하기">
-      <created>1681871467811</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1681871467811</updated>
     </task>
     <task id="LOCAL-00040" summary="day75 컴포넌트 예제">
       <created>1681874041727</created>
@@ -523,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682998707521</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="day85 서버소켓 , 클라이언트소켓 설정">
+      <created>1683077709053</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1683077709053</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day78 아이디 중복검사" />
     <MESSAGE value="day78 게시판 라우터 적용" />
     <MESSAGE value="day78 mui 게시물 출력" />
     <MESSAGE value="day78 mui 카테고리 출력/선택 이벤트" />
@@ -563,7 +561,8 @@
     <MESSAGE value="day84 오타수정" />
     <MESSAGE value="day84 상위 댓글 수정" />
     <MESSAGE value="day84 코드 위치정리" />
-    <option name="LAST_COMMIT_MESSAGE" value="day84 코드 위치정리" />
+    <MESSAGE value="day85 서버소켓 , 클라이언트소켓 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="day85 서버소켓 , 클라이언트소켓 설정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
