@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 useRef() 훅 사용">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 기본 메시지채팅">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/socket/ChattingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/socket/ChattingHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -178,13 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00041" summary="day75 컴포넌트에 css 적용하는방법">
-      <created>1681880445819</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1681880445819</updated>
     </task>
     <task id="LOCAL-00042" summary="day75 @mui/material 미리 꾸며진 컴포넌트 가져오기">
       <created>1681884800293</created>
@@ -522,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683081285956</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="day85 기본 메시지채팅">
+      <created>1683084226694</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1683084226694</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day78 mui 게시물 출력" />
     <MESSAGE value="day78 mui 카테고리 출력/선택 이벤트" />
     <MESSAGE value="day78 게시물쓰기 컴포넌트 [ 쓰기 오류 있음 ]" />
     <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
@@ -562,7 +560,8 @@
     <MESSAGE value="day84 코드 위치정리" />
     <MESSAGE value="day85 서버소켓 , 클라이언트소켓 설정" />
     <MESSAGE value="day85 useRef() 훅 사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="day85 useRef() 훅 사용" />
+    <MESSAGE value="day85 기본 메시지채팅" />
+    <option name="LAST_COMMIT_MESSAGE" value="day85 기본 메시지채팅" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
