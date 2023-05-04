@@ -10,7 +10,6 @@ export default function Chatting(props){
     let msgInput = useRef(null); // 채팅입력창[input] DOM객체 제어 변수
     let fileForm = useRef(null); //
     let fileInput = useRef(null); //
-    let chatContentBox = useRef(null); //
 
     // 1. 재렌더링 될때마다 새로운 접속
     // let 클라이언트소켓 = new WebSocket("ws/localhost:8080/chat")  ;
@@ -75,9 +74,7 @@ export default function Chatting(props){
 
     return (<>
         <Container>
-
            <div
-                ref={chatContentBox}
                 className="chatContentBox"
                 onDragEnter = { (e)=>{ console.log('onDragEnter');
                     e.preventDefault();  {/* 상위 이벤트 제거  */ }
