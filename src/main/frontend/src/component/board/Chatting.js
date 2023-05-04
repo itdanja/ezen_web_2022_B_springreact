@@ -48,7 +48,16 @@ export default function Chatting(props){
         // 2. 첨부파일 전송 [ axios 이용한 서버에게 첨부파일 업로드 ]
         if( fileInput.current.value != '' ){ // 첨부파일 존재하면
             axios.post( "/chat/fileupload" ,  new FormData( fileForm.current ) )
-                    .then( r => { console.log( r.data) } );
+                    .then( r => {
+                        console.log( r.data)
+                        // 다른 소켓들에게 업로드 결과 전달
+                        let msgBox ={ id : id, msg : msgInput.current.value,
+                            time : new Date().toLocaleTimeString(), type : 'file'  ,
+                            fileInfo : r.data // 업로드 후 응답받은 파일정보
+                        }
+                        ws.current.send( JSON.stringify( msgBox ) );
+                        fileInput.current.value = '';
+                    } );
         }
     }
 
@@ -69,7 +78,17 @@ export default function Chatting(props){
                         <div className="chatContent" style={ m.id == id ? { backgroundColor: '#d46e6e' } : { } }  >
                             <span> { m.id } </span>
                             <span> { m.time } </span>
-                            <span> { m.msg } </span>
+                            {
+                                m.type == 'msg' ? <span> { m.msg } </span>
+                                : (<>
+                                    <span>
+                                        <span> { m.fileInfo.originalFilename } </span>
+                                        <span> { m.fileInfo.sizeKb } </span>
+                                        <span> <a href={"/chat/filedownload?uuidFile=" + m.fileInfo.uuidFile } > 저장 </a> </span>
+                                    </span>
+                                </>)
+                            }
+
                         </div>
                     </>)
                 })

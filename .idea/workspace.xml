@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 익명채팅 CSS">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 파일업로드 후 axios 에게 업로드된 정보 응답">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/css/board/chatting.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/css/board/chatting.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/file/FileDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/file/FileDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -179,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00044" summary="day76 git commit 정리">
-      <created>1681963104442</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1681963104442</updated>
     </task>
     <task id="LOCAL-00045" summary="day76 Hook useState , useEffect">
       <created>1681967236731</created>
@@ -523,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683093468898</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="day86 파일업로드 후 axios 에게 업로드된 정보 응답">
+      <created>1683167221113</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1683167221113</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
     <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
     <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
     <MESSAGE value="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트" />
@@ -563,7 +562,8 @@
     <MESSAGE value="day85 기본 메시지채팅" />
     <MESSAGE value="day85 익명난수 생성 , JSON 전송" />
     <MESSAGE value="day85 익명채팅 CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="day85 익명채팅 CSS" />
+    <MESSAGE value="day86 파일업로드 후 axios 에게 업로드된 정보 응답" />
+    <option name="LAST_COMMIT_MESSAGE" value="day86 파일업로드 후 axios 에게 업로드된 정보 응답" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

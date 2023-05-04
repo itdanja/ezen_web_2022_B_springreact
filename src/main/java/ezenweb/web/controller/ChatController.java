@@ -17,8 +17,8 @@ public class ChatController {
         return result;
     }
     @GetMapping("/filedownload") // char 관련 첨부파일 다운로드
-    public void filedownload( @RequestParam("filepath") String filepath ){
-
+    public void filedownload( @RequestParam("uuidFile") String uuidFile ){
+        fileService.filedownload( uuidFile );
     }
 
 }
