@@ -100,6 +100,7 @@ export default function Chatting(props){
                             fileAxios(  formData )
                         }
                     }
+                    e.target.style.backgroundColor = '#ffffff';
                 } }
            >
 

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 파일다운로드">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 ref 제거">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -178,20 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00046" summary="day76 axios 이용한 String controller 와 통신">
-      <created>1681970984527</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1681970984527</updated>
-    </task>
-    <task id="LOCAL-00047" summary="day76 axios 이용한 String controller 와 통신">
-      <created>1681973575197</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1681973575197</updated>
     </task>
     <task id="LOCAL-00048" summary="day77 라우터를 이용한 페이지[컴포넌트] 전환">
       <created>1682044200728</created>
@@ -522,7 +507,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683170160495</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="day86 드래그앤드랍">
+      <created>1683175363793</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1683175363793</updated>
+    </task>
+    <task id="LOCAL-00096" summary="day86 ref 제거">
+      <created>1683175410833</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1683175410833</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,8 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
-    <MESSAGE value="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트" />
     <MESSAGE value="day79 Pageable 인터페이스를 이용한 페이징처리" />
     <MESSAGE value="day79 카테고리별 페이징 처리" />
     <MESSAGE value="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가" />
@@ -562,7 +559,9 @@
     <MESSAGE value="day85 익명채팅 CSS" />
     <MESSAGE value="day86 파일업로드 후 axios 에게 업로드된 정보 응답" />
     <MESSAGE value="day86 파일다운로드" />
-    <option name="LAST_COMMIT_MESSAGE" value="day86 파일다운로드" />
+    <MESSAGE value="day86 드래그앤드랍" />
+    <MESSAGE value="day86 ref 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="day86 ref 제거" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
