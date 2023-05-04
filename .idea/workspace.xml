@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 파일업로드 후 axios 에게 업로드된 정보 응답">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 파일다운로드">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -179,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00045" summary="day76 Hook useState , useEffect">
-      <created>1681967236731</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1681967236731</updated>
     </task>
     <task id="LOCAL-00046" summary="day76 axios 이용한 String controller 와 통신">
       <created>1681970984527</created>
@@ -523,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683167221113</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="day86 파일다운로드">
+      <created>1683170160495</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1683170160495</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
     <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
     <MESSAGE value="day79 mui 페이징 컴포넌트 , 페이지버튼 클릭이벤트" />
     <MESSAGE value="day79 Pageable 인터페이스를 이용한 페이징처리" />
@@ -563,7 +561,8 @@
     <MESSAGE value="day85 익명난수 생성 , JSON 전송" />
     <MESSAGE value="day85 익명채팅 CSS" />
     <MESSAGE value="day86 파일업로드 후 axios 에게 업로드된 정보 응답" />
-    <option name="LAST_COMMIT_MESSAGE" value="day86 파일업로드 후 axios 에게 업로드된 정보 응답" />
+    <MESSAGE value="day86 파일다운로드" />
+    <option name="LAST_COMMIT_MESSAGE" value="day86 파일다운로드" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
