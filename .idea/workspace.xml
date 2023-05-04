@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 익명난수 생성 , JSON 전송">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day85 익명채팅 CSS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/css/board/chatting.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/css/board/chatting.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/file/FileDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/file/FileDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -54,7 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test0417" />
+        <entry key="$PROJECT_DIR$" value="05030609" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,18 +69,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/504t/Desktop/ezen_web_2022_B_springreact/src/main/frontend/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/504t/Desktop/ezen_web_2022_B_springreact/src/main/frontend/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.obiscr.chatgpt.settings.ChatGPT&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\504t\Desktop\team\ezen_web_2022_B_springreact\src\main\frontend\src\example\exbook" />
@@ -161,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppStart" />
         <item itemvalue="Application.실행" />
         <item itemvalue="Application.SpringStart" />
         <item itemvalue="Application.ezenweb.example.day05.AppStart" />
         <item itemvalue="Application.ezenweb.example.day04.AppStart" />
+        <item itemvalue="Application.AppStart" />
       </list>
     </recent_temporary>
   </component>
@@ -177,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00043" summary="day75 AddTodo 컴포넌트 추가 p.194">
-      <created>1681886638883</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1681886638883</updated>
     </task>
     <task id="LOCAL-00044" summary="day76 git commit 정리">
       <created>1681963104442</created>
@@ -521,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683090218408</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="day85 익명채팅 CSS">
+      <created>1683093468898</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1683093468898</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -536,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day78 게시물쓰기 컴포넌트 [ 쓰기 오류 있음 ]" />
     <MESSAGE value="day79 스프링·리액트 통합 [ 1.grable , 2.MvcConfiguration 3.application.perporties ]" />
     <MESSAGE value="day79 resources/static/static 파일들 git commit 제외하기" />
     <MESSAGE value="day79 라우터 와 restful api 경로 중복제거" />
@@ -561,7 +562,8 @@
     <MESSAGE value="day85 useRef() 훅 사용" />
     <MESSAGE value="day85 기본 메시지채팅" />
     <MESSAGE value="day85 익명난수 생성 , JSON 전송" />
-    <option name="LAST_COMMIT_MESSAGE" value="day85 익명난수 생성 , JSON 전송" />
+    <MESSAGE value="day85 익명채팅 CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="day85 익명채팅 CSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
