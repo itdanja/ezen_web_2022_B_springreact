@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 ref 제거">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/Chatting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -93,7 +95,7 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStart">
+  <component name="RunManager" selected="애플리케이션.AppStart">
     <configuration name="실행" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.example.day06_객체관계.실행" />
       <module name="ezenweb.main" />
@@ -159,15 +161,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.실행" />
-        <item itemvalue="Application.SpringStart" />
-        <item itemvalue="Application.ezenweb.example.day05.AppStart" />
-        <item itemvalue="Application.ezenweb.example.day04.AppStart" />
-        <item itemvalue="Application.AppStart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -570,6 +563,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/ezenweb/example/day03/AppStart.java</url>
           <line>6</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ezenweb/web/AppStart.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
