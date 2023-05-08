@@ -23,7 +23,14 @@ export default function DashBoard( props ) {
         <button onClick={ setCategory } type="button"> 카테고리 등록</button>
 
                 <h6> 제품 카테고리 추가 </h6>
-                <input type="text" className="cname" />
+                <form>
+                    <input type="text" className="pcategory" />
+                    <input type="text" className="pname" />
+                    <input type="text" className="pprice" />
+                    <input type="text" className="pcomment" />
+                    <button> </button>
+                </form>
+
                 <button onClick={ setCategory } type="button"> 카테고리 등록</button>
 
         <DataTable />
