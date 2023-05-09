@@ -3,6 +3,10 @@ import axios from 'axios';
 
 import { DataGrid } from '@mui/x-data-grid'; // npm install 패키지명 vs npm i 패키지명
 
+
+import ProductWrite from './ProductWrite';
+import ProductView from './ProductView';
+
 // DataTable 필드설정
 const columns = [ // rows 객체내 필드명과 동일
   { field: 'id', headerName: '제품 번호', width: 150 },
@@ -19,6 +23,7 @@ const columns = [ // rows 객체내 필드명과 동일
 export default function ProductTable( props ){
     // 1. 상태변수
     const [ rows , setRows ] = useState([]);
+     const [ row , setRow ] = useState([]);
     // 2. 제품호출 axios 함수
     const getProduct = () => {
         axios.get("/product").then( r => { setRows( r.data ) } )
@@ -42,7 +47,15 @@ export default function ProductTable( props ){
         }
     }
 
+
+      const handleRowClick = (params) => {
+        console.log( params.row );
+        setRow( params.row )
+      };
     return(<>
+
+        <ProductView row={ row } />
+
         <button
             type="button"
             onClick={ onDeleteHandler }
@@ -63,7 +76,11 @@ export default function ProductTable( props ){
                 onRowSelectionModelChange={(newRowSelectionModel) => {
                   setRowSelectionModel(newRowSelectionModel);
                 }}
+                onRowClick={handleRowClick}
               />
-            </div>
+        </div>
+
+
+
     </>);
 }

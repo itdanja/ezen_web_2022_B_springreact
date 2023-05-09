@@ -1,10 +1,14 @@
 package ezenweb.web.domain.product;
 
 import ezenweb.web.domain.BaseTime;
+import ezenweb.web.domain.file.FileDto;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor @Builder
 @Entity@Table(name="product")
@@ -18,10 +22,16 @@ public class ProductEntity extends BaseTime {
     @ColumnDefault("0")@Column( nullable = false) private byte pstate; // 제품상태 [ 0 : 판매중 , 1 : 판매중지 , 2 : 재고없음 ]
     @ColumnDefault("0")@Column( nullable = false) private int pstock; // 제품 재고/수량
     // 제품이미지 [ 1 : 다 ] 연관관계 [* 추후 ]
+    @OneToMany( mappedBy = "productEntity")
+    @Builder.Default  @ToString.Exclude
+    private List<ProductImgEntity> productImgEntityList = new ArrayList<>();
     // 구매내역 [ 1 : 다 ] 연관관계 [ *추후 ]
 
     // 1. 출력용 [ 관리자보는 입장 - 관리자 페이지에서 출력용  ]
     public ProductDto toAdminDto(){
+
+        List<FileDto> pfileOuts = productImgEntityList.stream().map( img -> FileDto.builder().id(img.getPimgno() ).originalFilename(img.getOriginalFilename()).uuidFile(img.getUuidFile()).build()  ).collect(Collectors.toList());
+
         return ProductDto.builder()
                 .id( this.id ).pname( this.pname )
                 .pprice( this.pprice).pcategory( this.pcategory)
@@ -29,6 +39,7 @@ public class ProductEntity extends BaseTime {
                 .pstate( this.pstate ).pstock( this.pstock )
                 .cdate( this.cdate.toString() )
                 .udate( this.udate.toString() )
+                .pfileOuts( pfileOuts )
                 .build();
     }
     // 2. 출력용 [ 사용자보는 입장 - 메인 페이지에서 출력용 ]

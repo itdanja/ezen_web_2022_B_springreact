@@ -1,8 +1,7 @@
 package ezenweb.web.service;
 
-import ezenweb.web.domain.product.ProductDto;
-import ezenweb.web.domain.product.ProductEntity;
-import ezenweb.web.domain.product.ProductEntityRepository;
+import ezenweb.web.domain.file.FileDto;
+import ezenweb.web.domain.product.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +23,9 @@ import java.util.stream.Collectors;
 public class ProductService {       /* 주요기능과 DB처리 요청 역찰[ Transactional ] */
 
     @Autowired private ProductEntityRepository productEntityRepository;
+    @Autowired private FileService fileService;
+
+    @Autowired private ProductImgEntityRepository productImgEntityRepository;
 
     // 1.
     @Transactional      public List<ProductDto> get(){ log.info("get : ");
@@ -42,7 +44,24 @@ public class ProductService {       /* 주요기능과 DB처리 요청 역찰[ T
         // 2. dto에 id 넣기
         productDto.setId( pid );
         // 3. db 저장
+        ProductEntity productEntity =
         productEntityRepository.save( productDto.toSaveEntity() );
+
+        if(
+        productDto.getPfiles().size() != 0
+        ) {
+            productDto.getPfiles().forEach((f) -> {
+                FileDto fileDto = fileService.fileupload(f);
+                ProductImgEntity productImgEntity = ProductImgEntity.builder()
+                        .originalFilename(fileDto.getOriginalFilename())
+                        .uuidFile(fileDto.getUuidFile())
+                        .productEntity(productEntity)
+                        .build();
+                productImgEntityRepository.save(productImgEntity);
+                productEntity.getProductImgEntityList().add(productImgEntity);
+
+            });
+        }
         return true;
 
     }

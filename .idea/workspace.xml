@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 ref 제거">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/file/FileDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/file/FileDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/product/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/product/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/product/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/product/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -46,8 +54,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -93,7 +101,7 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStart">
+  <component name="RunManager" selected="애플리케이션.AppStart">
     <configuration name="실행" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.example.day06_객체관계.실행" />
       <module name="ezenweb.main" />
@@ -159,15 +167,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.실행" />
-        <item itemvalue="Application.SpringStart" />
-        <item itemvalue="Application.ezenweb.example.day05.AppStart" />
-        <item itemvalue="Application.ezenweb.example.day04.AppStart" />
-        <item itemvalue="Application.AppStart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -177,6 +176,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
+    </task>
+    <task id="LOCAL-00048" summary="day77 라우터를 이용한 페이지[컴포넌트] 전환">
+      <created>1682044200728</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1682044200728</updated>
+    </task>
+    <task id="LOCAL-00049" summary="day77 라우터를 이용한 페이지[컴포넌트] 전환">
+      <created>1682047307798</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1682047307798</updated>
+    </task>
+    <task id="LOCAL-00050" summary="day77 signup -&gt; Signup 오타">
+      <created>1682047393187</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1682047393187</updated>
+    </task>
+    <task id="LOCAL-00051" summary="day77 Signup 리액트 컴포넌트">
+      <created>1682051616666</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1682051616666</updated>
     </task>
     <task id="LOCAL-00052" summary="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
       <created>1682053849080</created>
@@ -493,35 +520,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683175410833</updated>
     </task>
-    <task id="LOCAL-00097" summary="day86 드랍후 색상변경 추가">
-      <created>1683177227026</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1683177227026</updated>
-    </task>
-    <task id="LOCAL-00098" summary="day88 제품 entity , dto , repository , controller, service 파이프라인">
-      <created>1683595749058</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1683595749058</updated>
-    </task>
-    <task id="LOCAL-00099" summary="day88 제품 service CRUD 기본로직">
-      <created>1683598655388</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1683598655388</updated>
-    </task>
-    <task id="LOCAL-00100" summary="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]">
-      <created>1683601818334</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1683601818334</updated>
-    </task>
-    <option name="localTasksCounter" value="101" />
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -536,6 +535,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="day79 Pageable 인터페이스를 이용한 페이징처리" />
+    <MESSAGE value="day79 카테고리별 페이징 처리" />
+    <MESSAGE value="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가" />
+    <MESSAGE value="day80 페이징처리 + 검색처리" />
     <MESSAGE value="day80 URL경로상의 매개변수 호출[ useParams() ]" />
     <MESSAGE value="day80 개별 게시물 조회 요청" />
     <MESSAGE value="day80 개별 게시물 삭제" />
@@ -557,11 +560,7 @@
     <MESSAGE value="day86 파일다운로드" />
     <MESSAGE value="day86 드래그앤드랍" />
     <MESSAGE value="day86 ref 제거" />
-    <MESSAGE value="day86 드랍후 색상변경 추가" />
-    <MESSAGE value="day88 제품 entity , dto , repository , controller, service 파이프라인" />
-    <MESSAGE value="day88 제품 service CRUD 기본로직" />
-    <MESSAGE value="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="day86 ref 제거" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
