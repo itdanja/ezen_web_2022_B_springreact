@@ -16,5 +16,5 @@ public class ProductController { /* 리액트와 통신 역할[매핑] */
     @GetMapping("")     public List<ProductDto> get(){ return productService.get();  }
     @PostMapping("")    public boolean post( @RequestBody ProductDto productDto){ return productService.post(productDto);  }
     @PutMapping("")     public boolean put( @RequestBody ProductDto productDto){ return productService.put(productDto);  }
-    @DeleteMapping("")  public boolean delete( @RequestParam int id ){ return productService.delete(id);  }
+    @DeleteMapping("")  public boolean delete( @RequestParam String id ){ return productService.delete(id);  }
 }

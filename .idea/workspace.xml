@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day86 드랍후 색상변경 추가">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day88 제품 entity , dto , repository , controller, service 파이프라인">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,13 +176,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00049" summary="day77 라우터를 이용한 페이지[컴포넌트] 전환">
-      <created>1682047307798</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1682047307798</updated>
     </task>
     <task id="LOCAL-00050" summary="day77 signup -&gt; Signup 오타">
       <created>1682047393187</created>
@@ -518,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683177227026</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="day88 제품 entity , dto , repository , controller, service 파이프라인">
+      <created>1683595749058</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1683595749058</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -533,7 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day79 카테고리별 페이징 처리" />
     <MESSAGE value="day79 과제[ AppTodo ] 헤더 포함해서 페이징처리 기능 추가" />
     <MESSAGE value="day80 페이징처리 + 검색처리" />
     <MESSAGE value="day80 URL경로상의 매개변수 호출[ useParams() ]" />
@@ -558,7 +559,8 @@
     <MESSAGE value="day86 드래그앤드랍" />
     <MESSAGE value="day86 ref 제거" />
     <MESSAGE value="day86 드랍후 색상변경 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="day86 드랍후 색상변경 추가" />
+    <MESSAGE value="day88 제품 entity , dto , repository , controller, service 파이프라인" />
+    <option name="LAST_COMMIT_MESSAGE" value="day88 제품 entity , dto , repository , controller, service 파이프라인" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
