@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day88 제품 service CRUD 기본로직">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
@@ -179,13 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00051" summary="day77 Signup 리액트 컴포넌트">
-      <created>1682051616666</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1682051616666</updated>
     </task>
     <task id="LOCAL-00052" summary="day77 login 컴포넌트 변환 [ Login.js , SecurityConfiguration cors 정책 설정 ,  AuthSuccessFailHandler 반환값 설정 , MemberDto[ cdate의 type String 변환  ]">
       <created>1682053849080</created>
@@ -523,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683598655388</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]">
+      <created>1683601818334</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1683601818334</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day80 페이징처리 + 검색처리" />
     <MESSAGE value="day80 URL경로상의 매개변수 호출[ useParams() ]" />
     <MESSAGE value="day80 개별 게시물 조회 요청" />
     <MESSAGE value="day80 개별 게시물 삭제" />
@@ -563,7 +560,8 @@
     <MESSAGE value="day86 드랍후 색상변경 추가" />
     <MESSAGE value="day88 제품 entity , dto , repository , controller, service 파이프라인" />
     <MESSAGE value="day88 제품 service CRUD 기본로직" />
-    <option name="LAST_COMMIT_MESSAGE" value="day88 제품 service CRUD 기본로직" />
+    <MESSAGE value="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="day88 제품 출력 컴포넌트[ mui-&gt; dataTable ]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
