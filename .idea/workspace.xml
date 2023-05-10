@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day89 연관관계 제약조건 설정">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day89 첨부파일전송">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/product/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/domain/product/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00055" summary="day77 logout 세션 스토리지 사용">
-      <created>1682058812443</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1682058812443</updated>
     </task>
     <task id="LOCAL-00056" summary="day78 라우터 , JS스토리지">
       <created>1682302814675</created>
@@ -523,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683682353380</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="day89 첨부파일전송">
+      <created>1683685380229</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1683685380229</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day80 수정 페이지 이동" />
     <MESSAGE value="day81 댓글 도메인 , 컨트롤 매핑 구현" />
     <MESSAGE value="day81 댓글 서비스 구현" />
     <MESSAGE value="day84 댓글/답글 작성" />
@@ -563,7 +558,8 @@
     <MESSAGE value="day88 제품 삭제 onRowSelectionModelChange" />
     <MESSAGE value="day89 관리자페이지에 mui tabs 적용" />
     <MESSAGE value="day89 연관관계 제약조건 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="day89 연관관계 제약조건 설정" />
+    <MESSAGE value="day89 첨부파일전송" />
+    <option name="LAST_COMMIT_MESSAGE" value="day89 첨부파일전송" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
