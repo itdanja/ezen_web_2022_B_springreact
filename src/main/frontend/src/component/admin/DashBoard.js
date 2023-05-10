@@ -1,6 +1,8 @@
 import React,{ useState , useEffect } from 'react';
 import axios from 'axios';
 import ProductTable from './ProductTable';
+import ProductWrite from './ProductWrite';
+
 import Container from '@mui/material/Container';
 
 import Box from '@mui/material/Box';
@@ -46,7 +48,7 @@ export default function DashBoard( props ) {
                     <button onClick={ setCategory } type="button"> 카테고리 등록</button>
                 </TabPanel>
                 <TabPanel value="2">
-                    제품등록 구역
+                    <ProductWrite />
                 </TabPanel>
                 <TabPanel value="3">
                     <ProductTable />
