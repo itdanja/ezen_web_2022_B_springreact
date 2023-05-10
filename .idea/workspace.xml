@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day89 첨부파일전송">
+    <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day89 첨부파일 업로드/ 삭제시 첨부파일삭제">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductWrite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductWrite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680490086271</updated>
-    </task>
-    <task id="LOCAL-00056" summary="day78 라우터 , JS스토리지">
-      <created>1682302814675</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1682302814675</updated>
     </task>
     <task id="LOCAL-00057" summary="day78 아이디 중복검사">
       <created>1682306059027</created>
@@ -519,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683685380229</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="day89 첨부파일 업로드/ 삭제시 첨부파일삭제">
+      <created>1683687957468</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1683687957468</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day81 댓글 도메인 , 컨트롤 매핑 구현" />
     <MESSAGE value="day81 댓글 서비스 구현" />
     <MESSAGE value="day84 댓글/답글 작성" />
     <MESSAGE value="day84 댓글/답글 출력" />
@@ -559,7 +561,8 @@
     <MESSAGE value="day89 관리자페이지에 mui tabs 적용" />
     <MESSAGE value="day89 연관관계 제약조건 설정" />
     <MESSAGE value="day89 첨부파일전송" />
-    <option name="LAST_COMMIT_MESSAGE" value="day89 첨부파일전송" />
+    <MESSAGE value="day89 첨부파일 업로드/ 삭제시 첨부파일삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="day89 첨부파일 업로드/ 삭제시 첨부파일삭제" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
