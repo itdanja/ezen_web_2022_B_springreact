@@ -37,6 +37,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //super.configure(http); // super : 부모 클래스 호출
         http
+                .authorizeHttpRequests() // 1.인증[권한]에 따른 http 요청 제한
+                    .antMatchers("/admin/**").hasRole("ADMIN")// 관리자페이지는 관리자 권한이 있는 유저만 가능
+                    .antMatchers("/board/update").hasAnyRole("USER" ,"ADMIN" )
+                    .antMatchers("/board/delete").hasRole("USER")
+                    .antMatchers("/board/write").hasRole("USER")
+                    .antMatchers("/**").permitAll()
+                .and()
                 .formLogin()
                         .loginPage("/member/login") // 로그인 으로 사용될 페이지의 매핑 URL
                         .loginProcessingUrl("/member/login") // 로그인을 처리할 매핑 URL
@@ -57,7 +64,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     //.successHandler( authSuccessFailHandler )
                     .userInfoEndpoint()
                     .userService( memberService ); //  oauth2 서비스를 처리할 서비스 구현
-
         http.cors(); // CORS 정책 사용
         http.csrf().disable(); // csrf 사용 해제
     } // configure end

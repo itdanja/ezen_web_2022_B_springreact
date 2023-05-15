@@ -76,14 +76,14 @@ public class MemberService implements UserDetailsService , OAuth2UserService<OAu
         memberDto.setMemail( email );
         memberDto.setMname( name );
             Set<GrantedAuthority> 권한목록 = new HashSet<>();
-            SimpleGrantedAuthority 권한 = new SimpleGrantedAuthority("ROLE_user");
+            SimpleGrantedAuthority 권한 = new SimpleGrantedAuthority("ROLE_USER");
             권한목록.add( 권한 );
         memberDto.set권한목록( 권한목록 );
         // 1. DB 저장하기 전에 해당 이메일로 된 이메일 존재하는지 검사
         MemberEntity entity = memberEntityRepository.findByMemail( email );
         if( entity == null ){ // 첫방문
             // DB 처리 [ 첫 방문시에만 db등록  , 두번째 방문시 부터는 db수정  ]
-            memberDto.setMrole("oauthuser"); // DB에 저장할 권한명
+            memberDto.setMrole("USER"); // DB에 저장할 권한명
             memberEntityRepository.save( memberDto.toEntity() );
         }else{// 두번째 방문 이상 수정 처리
             entity.setMname( name );
