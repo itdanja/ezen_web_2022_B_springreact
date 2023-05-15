@@ -39,9 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeHttpRequests() // 1.인증[권한]에 따른 http 요청 제한
                     .antMatchers("/admin/**").hasRole("ADMIN")// 관리자페이지는 관리자 권한이 있는 유저만 가능
-                    .antMatchers("/board/update").hasAnyRole("USER" ,"ADMIN" )
-                    .antMatchers("/board/delete").hasRole("USER")
-                    .antMatchers("/board/write").hasRole("USER")
+                    .antMatchers("/board/write").hasAnyRole("USER","ADMIN")
                     .antMatchers("/**").permitAll()
                 .and()
                 .formLogin()
