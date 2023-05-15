@@ -1,6 +1,7 @@
 package ezenweb.web.domain.product;
 
 import ezenweb.web.domain.BaseTime;
+import ezenweb.web.domain.file.FileDto;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
@@ -9,6 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor @Builder
 @Entity@Table(name="product")
@@ -40,7 +42,21 @@ public class ProductEntity extends BaseTime {
                 .build();
     }
     // 2. 출력용 [ 사용자보는 입장 - 메인 페이지에서 출력용 ]
-    // public ProductDto toMainDto(){ }
+    public ProductDto toMainDto(){
+        List<FileDto> list =
+            this.getProductImgEntityList().stream().map(
+
+                    imgEntity -> imgEntity.toFileDto()
+
+            ).collect(Collectors.toList() );
+
+        return ProductDto.builder()
+                .id( this.id ).pname( this.pname )
+                .pprice( this.pprice ).pcategory(this.pcategory)
+                .pmanufacturer( this.pmanufacturer )
+                .files( list )
+                .build();
+    }
 }
 /*
 제약조건 : pk객체가 삭제되면 fk객체의 제약조건

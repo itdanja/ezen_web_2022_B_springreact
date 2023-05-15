@@ -1,11 +1,13 @@
 package ezenweb.web.domain.product;
 
+import ezenweb.web.domain.file.FileDto;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor @Builder
@@ -23,6 +25,8 @@ public class ProductDto {
     private String udate;
     // 첨부파일 입력용
     private List<MultipartFile> pimgs ;
+    // 첨부파일 출력용
+    private List<FileDto> files = new ArrayList<>();
 
     // 1. 저장용 [ 관리자 페이지 ]
     public ProductEntity toSaveEntity(){

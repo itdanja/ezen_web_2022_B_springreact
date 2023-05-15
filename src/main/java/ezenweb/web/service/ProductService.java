@@ -25,12 +25,21 @@ public class ProductService {       /* 주요기능과 DB처리 요청 역찰[ T
 
     @Autowired private ProductEntityRepository productEntityRepository;
 
-    // 1.
+    // 1. [ main 출력용 ] 현재 판매중인 제품만 호출
+    @Transactional      public List<ProductDto> mainGet() {
+        List<ProductEntity> productEntityList = productEntityRepository.findAllState();
+        List<ProductDto> productDtoList = productEntityList.stream().map( o ->  o.toMainDto()  ).collect(Collectors.toList());
+        return productDtoList;
+    }
+
+    // 1. [ admin 출력용 ] 모든 제품 호출
     @Transactional      public List<ProductDto> get(){ log.info("get : ");
         // 1.모든 엔티티 호출
         List<ProductEntity> productEntityList = productEntityRepository.findAll();
         // 2. 모든 엔티티를 dto로 변환 [ 리스트명.stream().map( o -> 실행문 ).collect(Collectors.toList() ); ]
-        List<ProductDto> productDtoList = productEntityList.stream().map( o -> o.toAdminDto() ).collect( Collectors.toList() );
+        List<ProductDto> productDtoList = productEntityList.stream().map(
+                o -> o.toAdminDto()
+        ).collect( Collectors.toList() );
         return productDtoList;
     }
     // 2.

@@ -1,4 +1,19 @@
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
+import axios from 'axios';
 export default function Main( props ) {
-   return (<div> 대문 입니다</div>)
+   const [ items , setItems ] = useState([]);
+   useEffect( () =>{
+        axios.get( '/product/main' ).then( r=>{ setItems( r.data ) })
+   } , [])
+   console.log( items );
+   return (<div>
+        {
+            items.map( item => {
+                return(<div>
+                        <img src={ 'http://localhost:8080/static/media/'+item.files[0].uuidFile} />
+                        <div>{ item.pname }</div>
+                </div>)
+            })
+        }
+   </div>)
  }

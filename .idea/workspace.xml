@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day89 첨부파일 업로드/ 삭제시 첨부파일삭제">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/DashBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductWrite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/admin/ProductWrite.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +82,7 @@
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\frontend\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\504t\Desktop\team\ezen_web_2022_B_springreact\src\main\frontend\src\img" />
       <recent name="C:\Users\504t\Desktop\team\ezen_web_2022_B_springreact\src\main\frontend\src\component\member" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\static" />
       <recent name="C:\Users\504t\Desktop\ezen_web_2022_B_springreact\src\main\resources\templates\error" />
