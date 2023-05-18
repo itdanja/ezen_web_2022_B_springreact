@@ -10,7 +10,7 @@ export default function Main( props ) {
         {
             items.map( item => {
                 return(<div>
-                        <img src={ 'http://localhost:8080/static/media/'+item.files[0].uuidFile} />
+                        <img src={ '/static/media/'+item.files[0].uuidFile} />
                         <div>{ item.pname }</div>
                 </div>)
             })

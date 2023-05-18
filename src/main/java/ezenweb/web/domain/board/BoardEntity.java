@@ -1,6 +1,6 @@
 package ezenweb.web.domain.board;
 
-import ezenweb.example.day06_객체관계.Board;
+
 import ezenweb.web.domain.BaseTime;
 import ezenweb.web.domain.member.MemberEntity;
 import lombok.*;

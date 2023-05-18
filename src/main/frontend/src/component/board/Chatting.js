@@ -17,7 +17,7 @@ export default function Chatting(props){
     let ws = useRef( null ) ;   // 1.모든 함수 사용할 클라이언트소켓 변수
     useEffect( ()=>{            // 2. 컴포넌트 실행시 1번만 실행
         if( !ws.current ){      // 3.클라이언트소켓이 접속이 안되어있을때. [ * 유효성검사 ]
-            ws.current = new WebSocket("ws://localhost:8080/chat") ; // 4. 서버소켓 연결
+            ws.current = new WebSocket("ws://ec2-13-125-115-184.ap-northeast-2.compute.amazonaws.com:8080/chat") ; // 4. 서버소켓 연결
              // 3. 서버소켓에 접속했을때 이벤트
             ws.current.onopen = () => {   console.log('서버 접속했습니다.');
                 let randId = Math.floor( Math.random() * ( 9999 - 1 ) + 1  );    setId( '익명' + randId );

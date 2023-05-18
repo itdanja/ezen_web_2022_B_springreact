@@ -28,7 +28,8 @@ public class FileService {
     // JS[react] 로컬드라이브[c] 접근 불가능--> 리액트서버 에 업로드
     // springboot + react 통합
     // react build --> spring resources --> spring build --> 프로젝트내 build
-    String path = "C:\\Users\\504t\\Desktop\\team\\ezen_web_2022_B_springreact\\build\\resources\\main\\static\\static\\media\\";
+    //String path = "C:\\Users\\504t\\Desktop\\team\\ezen_web_2022_B_springreact\\build\\resources\\main\\static\\static\\media\\";
+    String path ="/home/ec2-user/app/ezen_web_2022_B_springreact/build/resources/main/static/static/media/";
 
     public FileDto fileupload( MultipartFile multipartFile ){
         log.info("File upload : " + multipartFile);
