@@ -33,11 +33,8 @@ public class FileService {
     @Value("${cloud.aws.s3.bucket.url}")
     private String defaultUrl;
 
-    private final AmazonS3Client amazonS3Client;
-
-    public FileService(AmazonS3Client amazonS3Client) {
-        this.amazonS3Client = amazonS3Client;
-    }
+    @Autowired
+    private  AmazonS3Client amazonS3Client;
 
 
     public void fileDelete(String fileUrl)  {
@@ -123,7 +120,6 @@ public class FileService {
     private HttpServletResponse response; // 응답 객체
 
     public void filedownload( String uuidFile ){ // spring 다운로드 관한 API 없음
-
 
         String pathFile =  uuidFile; // 경로+uuid파일명 : 실제 파일이 존재하는 위치
         try {
