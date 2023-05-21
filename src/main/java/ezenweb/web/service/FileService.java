@@ -74,7 +74,7 @@ public class FileService {
     // springboot + react 통합
     // react build --> spring resources --> spring build --> 프로젝트내 build
     //String path = "C:\\Users\\504t\\Desktop\\team\\ezen_web_2022_B_springreact\\build\\resources\\main\\static\\static\\media\\";
-    String path ="/home/ec2-user/app/ezen_web_2022_B_springreact/build/resources/main/static/static/media/";
+    //String path ="/home/ec2-user/app/ezen_web_2022_B_springreact/build/resources/main/static/static/media/";
 
 
     String url;
@@ -123,11 +123,11 @@ public class FileService {
     private HttpServletResponse response; // 응답 객체
 
     public void filedownload( String uuidFile ){ // spring 다운로드 관한 API 없음
-        String pathFile = path + uuidFile; // 경로+uuid파일명 : 실제 파일이 존재하는 위치
+        String pathFile =  uuidFile; // 경로+uuid파일명 : 실제 파일이 존재하는 위치
         try {
             // 1. 다운로드 형식 구성
             response.setHeader(  "Content-Disposition", // 헤더 구성 [ 브라우저 다운로드 형식 ]
-                    "attchment;filename = " + URLEncoder.encode( uuidFile.split("_")[1], "UTF-8") // 다운로드시 표시될 이름
+                    "attchment;filename = " + URLEncoder.encode(   uuidFile.replace(defaultUrl,"").split("_")[1], "UTF-8") // 다운로드시 표시될 이름
             );
             //2. 다운로드 스트림 구성
             File file = new File( pathFile ); // 다운로드할 파일의 경로에서 파일객체화

@@ -106,9 +106,9 @@ public class ProductService {       /* 주요기능과 DB처리 요청 역찰[ T
             if( o.getProductImgEntityList().size() != 0 ) {
                 o.getProductImgEntityList().forEach( (img) -> {
                     // 1. 해당 이미지 경로를 찾아서 파일 객체화
-                    File file = new File( fileService.path + img.getUuidFile() );
-                    // 2. 만약에 해당 경로의 파일이 존재하면 삭제
-                    if( file.exists() ) { file.delete();}
+//                    File file = new File( fileService.path + img.getUuidFile() );
+//                    // 2. 만약에 해당 경로의 파일이 존재하면 삭제
+//                    if( file.exists() ) { file.delete();}
                     fileService.fileDelete( img.getUuidFile() );
                 });
             }
