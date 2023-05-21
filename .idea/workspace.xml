@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fabd22b3-3d41-4ecd-aa26-6a25e1f9331d" name="Changes" comment="day89 첨부파일 업로드/ 삭제시 첨부파일삭제">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezenweb/web/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +98,7 @@
       <recent name="ezenweb.example.day02.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStart">
+  <component name="RunManager" selected="애플리케이션.AppStart">
     <configuration name="실행" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ezenweb.example.day06_객체관계.실행" />
       <module name="ezenweb.main" />
@@ -159,11 +166,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppStart" />
-        <item itemvalue="Application.실행" />
-        <item itemvalue="Application.SpringStart" />
-        <item itemvalue="Application.ezenweb.example.day05.AppStart" />
-        <item itemvalue="Application.ezenweb.example.day04.AppStart" />
+        <item itemvalue="애플리케이션.AppStart" />
       </list>
     </recent_temporary>
   </component>

@@ -37,6 +37,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security' // 스프링 시큐리티
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client' // Oauth2
     implementation 'org.springframework.boot:spring-boot-starter-websocket' // 웹소켓
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
 
 }
 

@@ -109,6 +109,7 @@ public class ProductService {       /* 주요기능과 DB처리 요청 역찰[ T
                     File file = new File( fileService.path + img.getUuidFile() );
                     // 2. 만약에 해당 경로의 파일이 존재하면 삭제
                     if( file.exists() ) { file.delete();}
+                    fileService.fileDelete( img.getUuidFile() );
                 });
             }
 
